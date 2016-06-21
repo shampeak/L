@@ -1,0 +1,31 @@
+{
+    "name": "lulu/db-driver",
+    "version":"1.0.0",
+    "description": "DBDriver",
+    "type": "library",
+    "keywords":["database","pdo"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "siluzhou",
+            "email": "siluzhou_pku@163.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : ">=5.4",
+        "ext-mbstring" : "*",
+        "monolog/monolog": "~1.7"
+    },
+    "autoload":{
+        "psr-4":{
+            "Lulu\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+    
+}
