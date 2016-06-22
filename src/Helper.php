@@ -73,13 +73,6 @@
     }
 
 
-    //view
-    if (! function_exists('view')) {
-        function view($tpl='',$data = [])
-        {
-            return app('smarty')->router()->display($tpl,$data);
-        }
-    }
 
     /*
     |------------------------------------------------------
@@ -148,6 +141,14 @@
         {
             return app('Smarty')->router(req('Router'))->assign($key, $value);
 //            return app('View')->assign($key, $value);
+        }
+    }
+
+    //view
+    if (! function_exists('view')) {
+        function view($tpl='',$data = [])
+        {
+            return app('smarty')->router()->display($tpl,$data);
         }
     }
 

@@ -64,10 +64,10 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="index.html"><i class="icon-home icon-white"></i>用户管理</a></li>
-                <li class="active"><a href="tables.html"><i class="icon-th icon-white"></i>调查问卷</a></li>
-                <li><a href="login.html"><i class="icon-lock icon-white"></i>知识问答</a></li>
-                <li><a href="user.html"><i class="icon-user icon-white"></i>整点签到</a></li>
+                <li><a href="/admin/"><i class="icon-home icon-white"></i>用户管理</a></li>
+                <li><a href="/admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
+                <li class="active"><a href="/admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
+                <li><a href="/admin/qiandao"><i class="icon-user icon-white"></i>整点签到</a></li>
 
             </ul>
         </div><!--/.nav-collapse -->
@@ -79,57 +79,6 @@
 <!-- CONTENT -->
 <div class="row">
 <div class="col-sm-12 col-lg-12">
-<h4><strong>Basic Table</strong></h4>
-<table class="display">
-    <thead>
-    <tr>
-        <th>序号</th>
-        <th>手机号</th>
-        <th>Instrument</th>
-        <th>Influence</th>
-        <th>操作</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-        <td>Queen</td>
-        <td>Brian May</td>
-        <td>Guitar</td>
-        <td class="center"> 7</td>
-        <td class="center">9</td>
-    </tr>
-    <tr class="even">
-        <td>Queen</td>
-        <td>Roger Taylor</td>
-        <td>Drums</td>
-        <td class="center">5</td>
-        <td class="center">7</td>
-    </tr>
-    <tr class="odd">
-        <td>Beatles</td>
-        <td>Paul McCartney</td>
-        <td>Guitar &amp; Piano</td>
-        <td class="center">8</td>
-        <td class="center">9</td>
-    </tr>
-    <tr class="even">
-        <td>Adele</td>
-        <td>Adele</td>
-        <td>None</td>
-        <td class="center">8</td>
-        <td class="center">8</td>
-    </tr>
-    <tr class="odd">
-        <td>Britney Spears</td>
-        <td>Britney Spears</td>
-        <td>None</td>
-        <td class="center">7</td>
-        <td class="center">-5 <a href="">用户信息 签到 知识问答 调查问卷 积分</a></td>
-    </tr>
-    </tbody>
-</table><!--/END First Table -->
-<br>
-<!--SECOND Table -->
 
 
 <h4><strong>Data Table</strong></h4>
@@ -486,8 +435,8 @@
             <!-- FOOTER -->
             <div id="footerwrap">
                 <footer class="clearfix"></footer>
-                <p><img src="/ui/images/logo.png"" alt=""></p>
-                <p>Blocks Dashboard Theme - Crafted With Love - Copyright 2013</p>
+                <hr>
+                <p>@Sham Copyright &copy;2016</p>
                 </footer>
             </div>
         </div>

@@ -8,39 +8,32 @@ class Admin extends BaseController {
         parent::__construct();
     }
 
-    public function doIndex()
-    {
-        view('',[
-            'res'=> $res
-        ]);
-    }
 
 
-    public function doLogin()
+    //签到
+    public function doQiandao()
     {
         view('',[
         ]);
     }
 
-    //处理验证
-    public function doLoginPost()
+
+
+
+
+    public function doUserjifen()
     {
+        echo '用户积分查看';
+    }
 
-        $username = req('Post')['username'];
-        $password = req('Post')['password'];
+    public function doUserdiaocha()
+    {
+        echo '用户调查查看';
+    }
 
-        if($username == 'irones' && $password == '123'){
-            $code = 200;
-
-        }else{
-            $code = -200;
-            $msg = '用户验证没有通过';
-        }
-        $this->AjaxReturn([
-            "code"  => $code,
-            "msg"   => $msg,
-            "js"    => 'if(data.code>0){window.location.href="/admin/";}else{alert(data.msg);}'
-        ]);
+    public function doUserzhishi()
+    {
+        echo '用户知识查看';
     }
 
 }

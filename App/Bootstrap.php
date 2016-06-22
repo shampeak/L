@@ -63,7 +63,8 @@ class Bootstrap
         $_mothed       = $router['mothed'];
 
 //方法_执行
-        $__mothedAction = ($router['type'] == 'GET')?($router['Prefix'].$router['mothed']):($router['Prefix'].$router['mothed'].ucfirst(strtolower($router['type'])));
+        $__mothedAction     = ($router['type'] == 'GET')?($router['Prefix'].$router['mothed']):($router['Prefix'].$router['mothed'].ucfirst(strtolower($router['type'])));
+        $__mothedActionbk   = ($router['type'] == 'GET')?($router['Prefix'].$router['mothed'].'_'.$params):($router['Prefix'].$router['mothed'].'_'.$params.ucfirst(strtolower($router['type'])));
 
 //控制器_执行
         $__controllerAction = '\App\Controller\\'.$router['controller'];
@@ -81,27 +82,36 @@ class Bootstrap
         $file = $basepath.$_controller.'/BaseController.php';
         includeIfExist($file);
 
-//没有寻找到,尝试 controller/controller.php
-        $file = $basepath.$_controller.'/'.$_controller.'.php';
-        $_file[] = $file;
+        //controller/action.php
+        $file = $basepath.$_controller.'/'.$_mothed.'.php';
         includeIfExist($file);
+        $_file[] = $file;
+
+        if(!method_exists($__controllerAction, $__mothedActionbk) && !method_exists($__controllerAction, $__mothedAction)) {
+            //没有寻找到,尝试 controller/controller.php
+            $file = $basepath.$_controller.'/'.$_controller.'.php';
+            $_file[] = $file;
+            includeIfExist($file);
+        }
 
 //如果还没有
 //报错啦
-        if(!method_exists($__controllerAction, $__mothedAction)){
+        if(!method_exists($__controllerAction, $__mothedActionbk) && !method_exists($__controllerAction, $__mothedAction)) {
             //没有找到执行方法
             //执行404;
-            echo 'Miss file : <br>';
-            echo $__controllerAction;
-            echo '::'.$__mothedAction;
+            echo 'Miss file : <br>',$__controllerAction,'::'.$__mothedAction;
+            echo '<br>or : ',$__controllerAction,'::'.$__mothedActionbk;
             D($_file);
         }
 
 //实例化
         $controller = new $__controllerAction();
 
-//根据action执行相关的操作
-        $controller->$__mothedAction($params);         //执行方法
+        if(method_exists($__controllerAction, $__mothedActionbk)) {
+            $controller->$__mothedActionbk($params);         //执行方法
+        }else{
+            $controller->$__mothedAction($params);         //执行方法
+        }
 
     }
 
