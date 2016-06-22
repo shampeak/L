@@ -1,3 +1,26 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-06-22 01:32:57
+  from "C:\www\Grace\L\App\Views\Admin\Index.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_57697a49d578e1_97770098',
+  'file_dependency' => 
+  array (
+    '5a441b6614105dd896e8dfb5db7b897e07b347d4' => 
+    array (
+      0 => 'C:\\www\\Grace\\L\\App\\Views\\Admin\\Index.tpl',
+      1 => 1466530368,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_57697a49d578e1_97770098 ($_smarty_tpl) {
+?>
 <!doctype html>
 <html><head>
     <meta charset="utf-8">
@@ -12,10 +35,16 @@
     <!-- DATA TABLE CSS -->
     <link href="/ui/css/table.css" rel="stylesheet">
 
-    <script type="text/javascript" src="/assets/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="/assets/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="/assets/jquery-1.11.1.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="/assets/bootstrap-3.3.5/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
 
-    <script type="text/javascript" src="/ui/js/admin.js"></script>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="/ui/js/admin.js"><?php echo '</script'; ?>
+>
 
     <style type="text/css">
         body {
@@ -25,22 +54,28 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <?php echo '<script'; ?>
+ src="http://html5shim.googlecode.com/svn/trunk/html5.js"><?php echo '</script'; ?>
+>
     <![endif]-->
 
     <!-- Google Fonts call. Font Used Open Sans -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
     <!-- DataTables Initialization -->
-    <script type="text/javascript" src="/assets/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" charset="utf-8">
+    <?php echo '<script'; ?>
+ type="text/javascript" src="/assets/jquery.dataTables.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             $('#dt1').dataTable({
                 "aLengthMenu": [[20, 25, 50, -1], [20, 25, 50, "All"]],
                 "iDisplayLength":20
             });
         });
-    </script>
+    <?php echo '</script'; ?>
+>
 
 
 </head>
@@ -67,7 +102,7 @@
                 <li><a href="index.html"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li class="active"><a href="tables.html"><i class="icon-th icon-white"></i>调查问卷</a></li>
                 <li><a href="login.html"><i class="icon-lock icon-white"></i>知识问答</a></li>
-                <li><a href="user.html"><i class="icon-user icon-white"></i>整点签到</a></li>
+                <li><a href="user.html"><i class="icon-user icon-white"></i> User</a></li>
 
             </ul>
         </div><!--/.nav-collapse -->
@@ -497,4 +532,5 @@
 </div>
 <!-- /footerwrap -->
 
-</body></html>
+</body></html><?php }
+}

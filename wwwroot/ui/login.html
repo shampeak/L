@@ -9,7 +9,7 @@
     <!-- Le styles -->
     <link rel="stylesheet" type="text/css" href="/assets/bootstrap-3.3.5/css/bootstrap.min.css" />
 
-    <link href="css/login.css" rel="stylesheet">
+    <link href="/ui/css/login.css" rel="stylesheet">
     
     <script type="text/javascript" src="/assets/jquery-1.11.1.min.js"></script>    
     <script type="text/javascript" src="/assets/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -40,7 +40,25 @@
 		<script type="text/javascript">
 		
 		$.validator.setDefaults({
-			submitHandler: function() { window.open ('dashboard.html','_self',false) }
+			submitHandler: function() { 
+			//提交数据
+			$.ajax({ 
+					type: "POST", 
+					url: $('#signupForm').attr("action"), 
+					data: $('#signupForm').serialize(), 
+					dataType:'json',
+					success: function(data){ 
+						var JS = data.js;
+						eval(JS);
+						},
+					error : function() {  
+						   alert("异常！");  
+					  }  
+				});
+						
+			
+			//window.open ('/admin/loginp','_self',false)
+			 }
 		});
 		
 		$().ready(function() {
@@ -133,31 +151,7 @@
            
   	<!-- NAVIGATION MENU -->
 
-    <div class="navbar-nav navbar-inverse navbar-fixed-top">
-        <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-<a class="navbar-brand" href="javascript:void(0)">
-	<img alt="Brand" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNmlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjarY6xSsNQFEDPi6LiUCsEcXB4kygotupgxqQtRRCs1SHJ1qShSmkSXl7VfoSjWwcXd7/AyVFwUPwC/0Bx6uAQIYODCJ7p3MPlcsGo2HWnYZRhEGvVbjrS9Xw5+8QMUwDQCbPUbrUOAOIkjvjB5ysC4HnTrjsN/sZ8mCoNTIDtbpSFICpA/0KnGsQYMIN+qkHcAaY6addAPAClXu4vQCnI/Q0oKdfzQXwAZs/1fDDmADPIfQUwdXSpAWpJOlJnvVMtq5ZlSbubBJE8HmU6GmRyPw4TlSaqo6MukP8HwGK+2G46cq1qWXvr/DOu58vc3o8QgFh6LFpBOFTn3yqMnd/n4sZ4GQ5vYXpStN0ruNmAheuirVahvAX34y/Axk/96FpPYgAAACBjSFJNAAB6JQAAgIMAAPn/AACA6AAAUggAARVYAAA6lwAAF2/XWh+QAAACRUlEQVR42ozUSWjWVxQF8F+SzwETq0RRCVVxFimFgtPCgIKLGogUaQzdOGAQSl0pboq0UCgUQQiCA4q4MLoSWxXcqcVGi4IWSgsOdUCjEmfj0MjXJm7OBx8x0Vz48+e9d98dzjn3VWw/0mgAa8AqHMVhFLP/OdbgOA72d7GASvT0c3YKtViA0fgL0/EZfsOJgaopoAkdONvnrBttCb4DO9GOr5MApqAXt7Keh9qqZc2zmtCC4biCIahKwnUJ8iLVPUcjxuImlgSWDqzFZnQXsA3/YCnmYBxe4g7q8R/+xFVMwngsx6dJPgErMBMH8EshVbThGDZgPYbhEvbiOmZhcaprxcf4BvNzf0/WHSVMS9aFn/AKX+ExvsC9JGjHGHyJiemgHfuigmI5UeXWk1Zn4xo+wVxMLmN/Iv7A3+GhvTygyKmvTcW0nJ3G/jDckv8hnAzuM/K9I6mhAbsLz4JRZVodgU5cQDXOxWdSCP0//kJqERcrE6ARP4aAp3gQ54pcrgrGNZFTMT6dGInV2JJkxUJEfjJS+T5Oo/AGT6KE2lTdE+Kqg3d9oDqDraUBKhF1Gd9hITZFr8NxI63fRx1e52xeOnyBn7H7feyfx5H8X2VK6oLlmyhhAn4NYQ1RyXvZr4tGi9iFlZHSRjTjdlTwbYbi0UAPSt9H5PfSZOShaA3Oc7J/PWfFPIn/fijokwDem3UF7uIHLAokH+FhJqqrv0r7tt8b7fWUrYXtmkzbQx+wSoOzsRndmsE4Dzboszx9rwfj/HYAl92e7KDhDE4AAAAASUVORK5CYII=">
-</a>
-<a class="navbar-brand" href="javascript:void(0)"> 后台管理 </a>
 
-        </div> 
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="index.html"><i class="icon-home icon-white"></i>Home</a></li>
-              <li><a href="tables.html"><i class="icon-th icon-white"></i> Tables</a></li>
-              <li class="active"><a href="login.html"><i class="icon-lock icon-white"></i> Login</a></li>
-              <li><a href="user.html"><i class="icon-user icon-white"></i> User</a></li>
-
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-    </div>
 
     <div class="container">
         <div class="row">
@@ -166,10 +160,11 @@
    				<img src="images/face80x80.jpg" alt="" class="img-circle">
    				<br>
    				<br>
-					<form class="cmxform" id="signupForm" method="get" action="">
+					<form class="cmxform" id="signupForm" method="post" action="/admin/login/">
 						<fieldset>
 							<p>
 								<input id="username" name="username" type="text" placeholder="Username">
+
 								<input id="password" name="password" type="password" placeholder="Password">
 							</p>
 								<input class="submit btn-success btn btn-large" type="submit" value="Login">
