@@ -8,8 +8,11 @@ class Home extends BaseController {
         parent::__construct();
     }
 
+    //只有一个首页,没有登录跳转登录界面
+
     public function doIndex()
     {
+        app('Vcode')->test();
        // $res = Model('md')->getar();
 //D($res);
         view('',[

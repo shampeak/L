@@ -38,8 +38,29 @@
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             $('#dt1').dataTable({
-                "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                "iDisplayLength":20
+				"aaSorting": [[ 0, "desc" ]],
+                "aLengthMenu": [[30, 50, -1], [30, 50, "All"]],
+                "iDisplayLength":30,			//一页多少条
+				"bAutoWidth": true,	//自动宽度
+				"bStateSave": false,
+				"bLengthChange": true, //改变每页显示数据数量  
+				
+				"oLanguage": {
+					"sLengthMenu": "每页显示 _MENU_ 条记录",
+					"sZeroRecords": "抱歉， 没有找到",
+					"sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+					"sInfoEmpty": "没有数据",
+					"sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+					"oPaginate": {
+						"sFirst": "首页",
+						"sPrevious": "前一页",
+						"sNext": "后一页",
+						"sLast": "尾页"
+					},
+					"sZeroRecords": "没有检索到数据",
+					"sProcessing": "<img src='./loading.gif' />"
+				}
+
             });
         });
     </script>
@@ -90,32 +111,30 @@
 <table class="display" id="dt1">
 <thead>
 <tr>
-    <th width="90">序号</th>
+    <th width="90">排序</th>
     <th>问题</th>
-    <th>A</th>
-    <th>B</th>
-    <th>C</th>
-    <th>D</th>
-    <th>答案</th>
-    <th width="220">操作[修改,删除]</th>
+    <th>选项A</th>
+    <th>选项B</th>
+    <th>选项C</th>
+    <th>选项D</th>
+    <th width="120">操作</th>
 </tr>
 </thead>
 <tbody>
 {foreach from=$res item=$value}
 <tr>
-    <td>{$value['id']}</td>
+    <td>{$value['sort']}</td>
     <td>{$value['title']}</td>
     <td>{$value['optionA']}</td>
     <td>{$value['optionB']}</td>
     <td>{$value['optionC']}</td>
     <td>{$value['optionD']}</td>
-    <td>{$value['da']}</td>
     <td>
-<a class="shambox" rel="/admin/user/edit?uid={$value['uid']}">用户信息</a>
+<a class="shambox" rel="/admin/diaocha/edit?id={$value['id']}">信息</a>
 <!-- a class="shamboxl" rel="/admin/userzhishi?uid={$value['uid']}">知识</a>
 <a class="shamboxl" rel="/admin/userdiaocha?uid={$value['uid']}">调查</a>
 <a class="shamboxl" rel="/admin/userjifen?uid={$value['uid']}">积分</a -->
-<a class="formact" relid="{$value['uid']}" act="delete" confirm="确定?">删除</a>
+<a class="formact" relid="{$value['id']}" tag="/admin/diaocha/delete" act="delete" confirm="确定?">删除</a>
 
     </td>
 </tr>

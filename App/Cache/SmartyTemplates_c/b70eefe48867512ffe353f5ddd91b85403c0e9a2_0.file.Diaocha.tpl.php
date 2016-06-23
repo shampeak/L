@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-22 19:25:08
+/* Smarty version 3.1.29, created on 2016-06-23 15:47:08
   from "E:\phpleague\Grace\L\App\Views\Admin\Diaocha.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576a759430d1b5_82611322',
+  'unifunc' => 'content_576b93fc73f6f2_28067635',
   'file_dependency' => 
   array (
     'b70eefe48867512ffe353f5ddd91b85403c0e9a2' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Diaocha.tpl',
-      1 => 1466594705,
+      1 => 1466668026,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576a759430d1b5_82611322 ($_smarty_tpl) {
+function content_576b93fc73f6f2_28067635 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
@@ -74,8 +74,29 @@ function content_576a759430d1b5_82611322 ($_smarty_tpl) {
  type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             $('#dt1').dataTable({
-                "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                "iDisplayLength":20
+				"aaSorting": [[ 0, "desc" ]],
+                "aLengthMenu": [[30, 50, -1], [30, 50, "All"]],
+                "iDisplayLength":30,			//一页多少条
+				"bAutoWidth": true,	//自动宽度
+				"bStateSave": false,
+				"bLengthChange": true, //改变每页显示数据数量  
+				
+				"oLanguage": {
+					"sLengthMenu": "每页显示 _MENU_ 条记录",
+					"sZeroRecords": "抱歉， 没有找到",
+					"sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+					"sInfoEmpty": "没有数据",
+					"sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+					"oPaginate": {
+						"sFirst": "首页",
+						"sPrevious": "前一页",
+						"sNext": "后一页",
+						"sLast": "尾页"
+					},
+					"sZeroRecords": "没有检索到数据",
+					"sProcessing": "<img src='./loading.gif' />"
+				}
+
             });
         });
     <?php echo '</script'; ?>
@@ -127,14 +148,13 @@ function content_576a759430d1b5_82611322 ($_smarty_tpl) {
 <table class="display" id="dt1">
 <thead>
 <tr>
-    <th width="90">序号</th>
+    <th width="90">排序</th>
     <th>问题</th>
-    <th>A</th>
-    <th>B</th>
-    <th>C</th>
-    <th>D</th>
-    <th>答案</th>
-    <th width="220">操作[修改,删除]</th>
+    <th>选项A</th>
+    <th>选项B</th>
+    <th>选项C</th>
+    <th>选项D</th>
+    <th width="120">操作</th>
 </tr>
 </thead>
 <tbody>
@@ -151,7 +171,7 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 $__foreach_value_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 ?>
 <tr>
-    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['sort'];?>
 </td>
     <td><?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
 </td>
@@ -163,19 +183,17 @@ $__foreach_value_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 </td>
     <td><?php echo $_smarty_tpl->tpl_vars['value']->value['optionD'];?>
 </td>
-    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['da'];?>
-</td>
     <td>
-<a class="shambox" rel="/admin/user/edit?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
-">用户信息</a>
+<a class="shambox" rel="/admin/diaocha/edit?id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+">信息</a>
 <!-- a class="shamboxl" rel="/admin/userzhishi?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
 ">知识</a>
 <a class="shamboxl" rel="/admin/userdiaocha?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
 ">调查</a>
 <a class="shamboxl" rel="/admin/userjifen?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
 ">积分</a -->
-<a class="formact" relid="<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
-" act="delete" confirm="确定?">删除</a>
+<a class="formact" relid="<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+" tag="/admin/diaocha/delete" act="delete" confirm="确定?">删除</a>
 
     </td>
 </tr>

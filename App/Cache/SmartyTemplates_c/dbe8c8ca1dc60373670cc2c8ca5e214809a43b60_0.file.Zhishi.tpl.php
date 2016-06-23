@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-22 13:51:32
+/* Smarty version 3.1.29, created on 2016-06-23 16:30:11
   from "E:\phpleague\Grace\L\App\Views\Admin\Zhishi.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576a2764f11250_92794561',
+  'unifunc' => 'content_576b9e13a794a7_17599811',
   'file_dependency' => 
   array (
     'dbe8c8ca1dc60373670cc2c8ca5e214809a43b60' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Zhishi.tpl',
-      1 => 1466574691,
+      1 => 1466670609,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576a2764f11250_92794561 ($_smarty_tpl) {
+function content_576b9e13a794a7_17599811 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
@@ -34,6 +34,7 @@ function content_576a2764f11250_92794561 ($_smarty_tpl) {
 
     <!-- DATA TABLE CSS -->
     <link href="/ui/css/table.css" rel="stylesheet">
+    <link href="/assets/css/color.css" rel="stylesheet">
 
     <?php echo '<script'; ?>
  type="text/javascript" src="/assets/jquery-1.11.1.min.js"><?php echo '</script'; ?>
@@ -44,6 +45,9 @@ function content_576a2764f11250_92794561 ($_smarty_tpl) {
 
     <?php echo '<script'; ?>
  type="text/javascript" src="/ui/js/admin.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="/assets/app.js"><?php echo '</script'; ?>
 >
 
     <style type="text/css">
@@ -70,10 +74,61 @@ function content_576a2764f11250_92794561 ($_smarty_tpl) {
  type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             $('#dt1').dataTable({
-                "aLengthMenu": [[20, 25, 50, -1], [20, 25, 50, "All"]],
-                "iDisplayLength":20
+                "aaSorting": [[ 0, "desc" ]],
+                "aLengthMenu": [[30, 50, -1], [30, 50, "All"]],
+                "iDisplayLength":30,			//一页多少条
+                "bAutoWidth": true,	//自动宽度
+                "bStateSave": false,
+                "bLengthChange": true, //改变每页显示数据数量
+
+                "oLanguage": {
+                    "sLengthMenu": "每页显示 _MENU_ 条记录",
+                    "sZeroRecords": "抱歉， 没有找到",
+                    "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+                    "sInfoEmpty": "没有数据",
+                    "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+                    "oPaginate": {
+                        "sFirst": "首页",
+                        "sPrevious": "前一页",
+                        "sNext": "后一页",
+                        "sLast": "尾页"
+                    },
+                    "sZeroRecords": "没有检索到数据",
+                    "sProcessing": "<img src='./loading.gif' />"
+                },
+				"fnRowCallback": function( nRow, aData, iDisplayIndex ) {
+					/* Append the grade to the default row class name */
+					if ( aData[6] == "A" )
+					{
+						$('td:eq(2)', nRow).html( '<span class="white b_red">'+aData[2]+'</span>' );
+					}
+					if ( aData[6] == "B" )
+					{
+						$('td:eq(3)', nRow).html( '<span class="white b_red">'+aData[3]+'</span>' );
+					}
+					if ( aData[6] == "C" )
+					{
+						$('td:eq(4)', nRow).html( '<span class="white b_red">'+aData[4]+'</span>' );
+					}
+					if ( aData[6] == "D" )
+					{
+						$('td:eq(5)', nRow).html( '<span class="white b_red">'+aData[5]+'</span>' );
+					}
+					return nRow;
+				},
+				"aoColumnDefs": [ {
+						"sClass": "center",
+						"aTargets": [ -1, -2 ]
+				} ]		
+				
+
+
+
+
             });
+			
         });
+		
     <?php echo '</script'; ?>
 >
 
@@ -99,11 +154,10 @@ function content_576a2764f11250_92794561 ($_smarty_tpl) {
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/admin/"><i class="icon-home icon-white"></i>用户管理</a></li>
+                <li><a href="/admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li><a href="/admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
                 <li class="active"><a href="/admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
                 <li><a href="/admin/qiandao"><i class="icon-user icon-white"></i>整点签到</a></li>
-
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -111,358 +165,119 @@ function content_576a2764f11250_92794561 ($_smarty_tpl) {
 
 <div class="container-fluid">
 
-<!-- CONTENT -->
-<div class="row">
-<div class="col-sm-12 col-lg-12">
+    <!-- CONTENT -->
+    <div class="row">
+        <div class="col-sm-12 col-lg-12">
 
 
-<h4><strong>Data Table</strong></h4>
+            <h4><strong>知识问答</strong></h4>
 
-<table class="display" id="dt1">
-<thead>
-<tr>
-    <th width="70">序号</th>
-    <th width="180">手机号</th>
-    <th width="150">姓名</th>
-    <th width="70">性别</th>
-    <th>公司</th>
-    <th>职位</th>
-    <th>微信号</th>
-    <th width="260">操作</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd gradeX">
-    <td>1</td>
-    <td>051113800189199</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center"> 4</td>
-    <td>用户信息 签到 知识问答 调查问卷 积分</td>
-</tr>
-<tr class="even gradeC">
-    <td>Trident</td>
-    <td>Internet Explorer 5.0</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">5</td>
-    <td class="center">C</td>
-</tr>
-<tr class="odd gradeA">
-    <td>Trident</td>
-    <td>Internet Explorer 5.5</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">5.5</td>
-    <td class="center">A</td>
-</tr>
-<tr class="even gradeA">
-    <td>Trident</td>
-    <td>Internet Explorer 6</td>
-    <td>Win 98+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">6</td>
-    <td class="center">A</td>
-</tr>
-<tr class="odd gradeA">
-    <td>Trident</td>
-    <td>Internet Explorer 7</td>
-    <td>Win XP SP2+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">7</td>
-    <td class="center">A</td>
-</tr>
-<tr class="even gradeA">
-    <td>Trident</td>
-    <td>AOL browser (AOL desktop)</td>
-    <td>Win XP</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">6</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Firefox 1.0</td>
-    <td>Win 98+ / OSX.2+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.7</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Firefox 1.5</td>
-    <td>Win 98+ / OSX.2+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.8</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Firefox 2.0</td>
-    <td>Win 98+ / OSX.2+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.8</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Firefox 3.0</td>
-    <td>Win 2k+ / OSX.3+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.9</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Camino 1.0</td>
-    <td>OSX.2+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.8</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Camino 1.5</td>
-    <td>OSX.3+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.8</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Netscape 7.2</td>
-    <td>Win 95+ / Mac OS 8.6-9.2</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.7</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Netscape Browser 8</td>
-    <td>Win 98SE+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.7</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Netscape Navigator 9</td>
-    <td>Win 98+ / OSX.2+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.8</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Mozilla 1.0</td>
-    <td>Win 95+ / OSX.1+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Mozilla 1.1</td>
-    <td>Win 95+ / OSX.1+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.1</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Mozilla 1.2</td>
-    <td>Win 95+ / OSX.1+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.2</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Mozilla 1.3</td>
-    <td>Win 95+ / OSX.1+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.3</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Mozilla 1.4</td>
-    <td>Win 95+ / OSX.1+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.4</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Gecko</td>
-    <td>Mozilla 1.5</td>
-    <td>Win 95+ / OSX.1+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">1.5</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Webkit</td>
-    <td>Safari 2.0</td>
-    <td>OSX.4+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">419.3</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Webkit</td>
-    <td>Safari 3.0</td>
-    <td>OSX.4+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">522.1</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Webkit</td>
-    <td>OmniWeb 5.5</td>
-    <td>OSX.4+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">420</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Webkit</td>
-    <td>iPod Touch / iPhone</td>
-    <td>iPod</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">420.1</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Webkit</td>
-    <td>S60</td>
-    <td>S60</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">413</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Presto</td>
-    <td>Opera 7.0</td>
-    <td>Win 95+ / OSX.1+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">-</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Presto</td>
-    <td>Opera 7.5</td>
-    <td>Win 95+ / OSX.2+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">-</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Presto</td>
-    <td>Opera 8.0</td>
-    <td>Win 95+ / OSX.2+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">-</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeA">
-    <td>Presto</td>
-    <td>Opera 8.5</td>
-    <td>Win 95+ / OSX.2+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td class="center">-</td>
-    <td class="center">A</td>
-</tr>
-<tr class="gradeC">
-    <td>Misc</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>PSP browser</td>
-    <td>PSP</td>
-    <td class="center">-</td>
-    <td class="center">C</td>
-</tr>
-<tr class="gradeU">
-    <td>Other browsers</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>Win 95+</td>
-    <td>All others</td>
-    <td>-</td>
-    <td class="center">-</td>
-    <td class="center">U</td>
-</tr>
-</tbody>
-</table><!--/END SECOND TABLE -->
+            <a class="shambox" rel="/admin/zhishi/add">添加</a>
 
-</div><!--/span12 -->
-</div><!-- /row -->
+
+            <table class="display" id="dt1">
+                <thead>
+                <tr>
+                    <th width="90">排序</th>
+                    <th>问题</th>
+                    <th>选项A</th>
+                    <th>选项B</th>
+                    <th>选项C</th>
+                    <th>选项D</th>
+                    <th>答案</th>
+                    <th width="120">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+$_from = $_smarty_tpl->tpl_vars['res']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_value_0_saved_item = isset($_smarty_tpl->tpl_vars['value']) ? $_smarty_tpl->tpl_vars['value'] : false;
+$_smarty_tpl->tpl_vars['value'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['value']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
+$_smarty_tpl->tpl_vars['value']->_loop = true;
+$__foreach_value_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
+?>
+                    <tr>
+                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['sort'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['optionA'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['optionB'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['optionC'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['optionD'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['da'];?>
+</td>
+                        <td>
+                            <a class="shambox" rel="/admin/zhishi/edit?id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+">信息</a>
+                            <!-- a class="shamboxl" rel="/admin/userzhishi?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
+">知识</a>
+<a class="shamboxl" rel="/admin/userzhishi?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
+">调查</a>
+<a class="shamboxl" rel="/admin/userjifen?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
+">积分</a -->
+                            <a class="formact" relid="<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+" tag="/admin/zhishi/delete" act="delete" confirm="确定?">删除</a>
+
+                        </td>
+                    </tr>
+                <?php
+$_smarty_tpl->tpl_vars['value'] = $__foreach_value_0_saved_local_item;
+}
+if ($__foreach_value_0_saved_item) {
+$_smarty_tpl->tpl_vars['value'] = $__foreach_value_0_saved_item;
+}
+?>
+                </tbody>
+            </table><!--/END SECOND TABLE -->
+
+        </div><!--/span12 -->
+    </div><!-- /row -->
 
 
 
 
 </div> <!-- /container -->
 <br>
+
+<!-- Modal - ->
+<a class="btnnew" data-toggle="modal" role="button" href="#myModal">Example Modal Window</a>
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title">Modal title</h4>
+    </div>
+    <div class="modal-body">
+      ...
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- /.modal -->
+
+
+
+
+
 
 <div class="container-fluid">
     <div class="row">
@@ -480,6 +295,9 @@ function content_576a2764f11250_92794561 ($_smarty_tpl) {
     <!-- /container -->
 </div>
 <!-- /footerwrap -->
+
+
+
 
 </body></html><?php }
 }

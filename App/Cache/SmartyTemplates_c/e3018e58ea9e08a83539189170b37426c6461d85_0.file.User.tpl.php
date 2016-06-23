@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-22 19:07:28
+/* Smarty version 3.1.29, created on 2016-06-23 15:47:43
   from "E:\phpleague\Grace\L\App\Views\Admin\User.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576a7170d45668_72241672',
+  'unifunc' => 'content_576b941f6ff870_30096033',
   'file_dependency' => 
   array (
     'e3018e58ea9e08a83539189170b37426c6461d85' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\User.tpl',
-      1 => 1466593645,
+      1 => 1466668058,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576a7170d45668_72241672 ($_smarty_tpl) {
+function content_576b941f6ff870_30096033 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
@@ -74,8 +74,29 @@ function content_576a7170d45668_72241672 ($_smarty_tpl) {
  type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             $('#dt1').dataTable({
-                "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                "iDisplayLength":20
+				"aaSorting": [[ 0, "desc" ]],
+                "aLengthMenu": [[30, 50, -1], [30, 50, "All"]],
+                "iDisplayLength":30,			//一页多少条
+				"bAutoWidth": true,	//自动宽度
+				"bStateSave": false,
+				"bLengthChange": true, //改变每页显示数据数量  
+				
+				"oLanguage": {
+					"sLengthMenu": "每页显示 _MENU_ 条记录",
+					"sZeroRecords": "抱歉， 没有找到",
+					"sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+					"sInfoEmpty": "没有数据",
+					"sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+					"oPaginate": {
+						"sFirst": "首页",
+						"sPrevious": "前一页",
+						"sNext": "后一页",
+						"sLast": "尾页"
+					},
+					"sZeroRecords": "没有检索到数据",
+					"sProcessing": "<img src='./loading.gif' />"
+				}
+
             });
         });
     <?php echo '</script'; ?>

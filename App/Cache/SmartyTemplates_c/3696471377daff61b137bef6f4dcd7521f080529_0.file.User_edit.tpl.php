@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-22 18:59:20
+/* Smarty version 3.1.29, created on 2016-06-23 16:34:03
   from "E:\phpleague\Grace\L\App\Views\Admin\User_edit.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576a6f8823bdd3_21143884',
+  'unifunc' => 'content_576b9efb96efb2_32685040',
   'file_dependency' => 
   array (
     '3696471377daff61b137bef6f4dcd7521f080529' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\User_edit.tpl',
-      1 => 1466593146,
+      1 => 1466664551,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576a6f8823bdd3_21143884 ($_smarty_tpl) {
+function content_576b9efb96efb2_32685040 ($_smarty_tpl) {
 ?>
 <div class="row">
     <div class="col-md-12">

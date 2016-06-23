@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-21 17:56:39
+/* Smarty version 3.1.29, created on 2016-06-23 17:14:30
   from "E:\phpleague\Grace\L\App\Views\Home\Index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57690f57230f25_35433260',
+  'unifunc' => 'content_576ba876c5d844_11581468',
   'file_dependency' => 
   array (
     '8eca8fd479596c6e1a10a61c3a6404564f24d3dd' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Home\\Index.tpl',
-      1 => 1466479118,
+      1 => 1466673267,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57690f57230f25_35433260 ($_smarty_tpl) {
+function content_576ba876c5d844_11581468 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -57,66 +57,79 @@ function content_57690f57230f25_35433260 ($_smarty_tpl) {
   </head>
   <body>
   
-
-<div class="container-fluid">
-
-<div class="row">
-  <div class="col-md-12" id="te">
   
-<div class="list-group">
-  <a href="javascript:void(0)" class="list-group-item active">
-    Shampeak's PHP之道
-  </a>
-  <?php
-$_from = $_smarty_tpl->tpl_vars['res']->value['list'];
-if (!is_array($_from) && !is_object($_from)) {
-settype($_from, 'array');
-}
-$__foreach_foo_0_saved_item = isset($_smarty_tpl->tpl_vars['value']) ? $_smarty_tpl->tpl_vars['value'] : false;
-$__foreach_foo_0_saved_key = isset($_smarty_tpl->tpl_vars['key']) ? $_smarty_tpl->tpl_vars['key'] : false;
-$_smarty_tpl->tpl_vars['value'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['key'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['value']->_loop = false;
-foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['value']->value) {
-$_smarty_tpl->tpl_vars['value']->_loop = true;
-$__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
-?>
-  <a href="lm?chr=<?php echo $_smarty_tpl->tpl_vars['value']->value['chr'];?>
-" class="list-group-item"><?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
-</a>
-  <?php
-$_smarty_tpl->tpl_vars['value'] = $__foreach_foo_0_saved_local_item;
-}
-if ($__foreach_foo_0_saved_item) {
-$_smarty_tpl->tpl_vars['value'] = $__foreach_foo_0_saved_item;
-}
-if ($__foreach_foo_0_saved_key) {
-$_smarty_tpl->tpl_vars['key'] = $__foreach_foo_0_saved_key;
-}
-?>
+<div class="i-login-con">
+<div class="login-con-dt" style="width: 400px;position:relative; z-index:1;">
+<div id="register-by" class="register-by">
+<div id="hrimgshow" style="display:none;text-align:center;height:330px;padding-top:30px;">
+<div id="hrimghide" class="inner">
+<div class="popupInput inputdiv">
+<div id="phoneNotice" class="point-out" style="width: 348px;top:-38px; left:0px; display: none;"></div>
+<input id="phone" class="input input-lg" type="text" style="width:302px;padding:10px;" value="" maxlength="20">
+<span class="popupInputText">手机</span>
+</div>
+<div class="hr20"></div>
+<div class="hr10"></div>
+<div>
+<div class="popupInput inputdiv">
+<div id="phonecodeNotice" class="point-out" style="left: 0px; top: -29px; display: none;"></div>
+<input id="phonecode" class="input input-lg" type="text" style="width:190px;padding:10px;" maxlength="6" name="phonecode">
+<span class="popupInputText">验证码</span>
+<a id="phonecodes" class="btn " style="padding:10px">发送验证码</a>
+</div>
+</div>
+<div class="hr20"></div>
+<div class="hr10"></div>
+<div style="position:relative">
+<div class="popupInput inputdiv">
+</div>
+<div class="hr10"></div>
+<div style="position:relative">
+<div id="addcheckNotice" class="point-out" style="left: 0px; top: -29px; display: none;"></div>
+<input id="addcheck" type="checkbox" style="13px;" value="1" checked="checked">
+同意
+<a class="undeline" target="target" href="/common/userprotocol.php">无忧精英网用户协议</a>
+</div>
+<div class="hr10"></div>
+<div class="i-btn-box">
+<a id="addphonelogin" class="btn btn-lg btn-primary">注册</a>
+<a id="login" class="i-zc-undeline">已有51job账号？立即登录</a>
+</div>
 </div>  
   
-
-  </div>
-</div>
-
-
-
-</div>
-
-
-
-
-
-
+  
+  
+  
+  <p>shouye
+    
+    
+    
+    
+    菜单 : 
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <?php echo '<script'; ?>
  src="/assets/jquery-1.11.1.min.js"><?php echo '</script'; ?>
 >
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <?php echo '<script'; ?>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->  </p>
+  <p>整点签到 -&gt; <a href="/home/qiandao">qiandao</a></p>
+  <p>知识问答 -&gt; <a href="/home/zhishi">zhishi</a></p>
+  <p>调查问卷 -&gt; <a href="/home/diaocha">diaocha</a></p>
+  <p>完善资料 -&gt; <a href="/home/ziliao">ziliao</a></p>
+  <p>&nbsp;</p>
+  <p>1 : 我的积分 -&gt; <a href="/home/myjifen">myjifen</a></p>
+  <p>2 : 我的好友 -&gt; <a href="/home/myfriend">myfriend</a></p>
+  <p>3 : 积分互赠 -&gt; <a href="/home/fensend">fensend</a></p>
+  <p>4 :  
+  积分排行 -&gt; <a href="/home/fenranking">fenranking</a></p>
+  <p>  登录注册 -&gt; <a href="/home/login">login</a><?php echo '<script'; ?>
  src="/assets/bootstrap-3.3.5/js/bootstrap.min.js"><?php echo '</script'; ?>
 >
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
   </body>
 </html>
 <?php }
