@@ -16,8 +16,8 @@ class Home extends BaseController {
  * 测试验证码程序
  */
 
-
-        app('Vcode')->test();
+echo '首页';
+       // app('Vcode')->test();
 
 exit;
 
