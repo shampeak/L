@@ -11,6 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/assets/jquery-1.11.1.min.js"></script>
 
 
 <style>
@@ -61,7 +62,7 @@ body {
 
 <div class="container">
     <div class="row">
-    <form class="form-signin">
+    <form class="form-signin ulogin"  action="">
 		    <table width="100%">
                 <tr>
                   <td><h2 class="form-signin-heading">请登录</h2></td>
@@ -80,7 +81,7 @@ body {
             </div></td>
                 </tr>
                 <tr>
-                  <td><button class="btn btn-lg btn-primary btn-block" type="submit">登录</button></td>
+                  <td><button class=" combit btn btn-lg btn-primary btn-block" type="submit">登录</button></td>
                 </tr>
             </table>
             
@@ -107,6 +108,29 @@ body {
 
 </div> <!-- /container -->
 
+ <script type="text/javascript" charset="utf-8">
+        $(document).ready(function () {
+     
+
+		$('.combit').click(function(){
+			var tag = '.ulogin';
+			$.ajax({
+				type: "POST",
+				url: $(tag).attr("action"),
+				data: $(tag).serialize(),
+				dataType:'json',
+				success: function(data){
+					var JS = data.js;
+					eval(JS);
+					},
+				error : function() {
+					   alert("异常！");
+				  }
+			});
+		});
+
+        });
+    </script>
 
   </body>
 </html>
