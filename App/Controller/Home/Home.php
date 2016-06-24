@@ -12,8 +12,19 @@ class Home extends BaseController {
 
     public function doIndex()
     {
+/*
+ * ²âÊÔÑéÖ¤Âë³ÌĞò
+ */
+
+
         app('Vcode')->test();
-       // $res = Model('md')->getar();
+
+exit;
+
+
+
+//        app('Vcode')->test();
+//       // $res = Model('md')->getar();
 //D($res);
         view('',[
             'res'=> $res

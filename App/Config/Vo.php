@@ -13,7 +13,6 @@ return [
         'Smarty'   => '../App/Config/Smarty.php',
         'Db'       => '../App/Config/Db.php',
         'Cookies'  => '../App/Config/Cookies.php',
-        'Vcode'     => '../App/Config/Vcode.php',
 
     ],
 
@@ -24,7 +23,6 @@ return [
         'Smarty'    => Grace\Smarty\Smarty::class,           //
         'Db'        => Grace\Db\Db::class,           //
         'Cookies'   => Grace\Cookies\Cookies::class,
-        'Vcode'   => Grace\Vcode\Vcode::class,
     ],
 
 ];
