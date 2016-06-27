@@ -13,7 +13,7 @@
 <body>
 	<!-- 内容区 -->
 	<div class="main bg-index">
-		<div class="banner-box"><img src="/static/pic/img-banner.png"></div>
+		<div class="banner-box"><img src="/static/images/jifen.png"></div>
 		<div class="nav-container">
 			<ul class="clearfix">
 				<li><a href="/home/qiandao" class="nav-sign"><span>整点签到</span></a></li>

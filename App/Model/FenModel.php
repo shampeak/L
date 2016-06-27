@@ -36,8 +36,8 @@ class FenModel
         $fen += $this->diaocha($uid);       //调查分
         $fen += $this->ziliao($uid);        //资料分
         $fen += $this->qiandao($uid);       //签到分
+        $fen += $this->zhishi($uid);       //知识
         $fen += $this->receive($uid);       //收到的分
-        $fen += $this->zhishi($uid);       //收到的分
         $fen -= $this->send($uid);          //送出的分
         return $fen;
     }
@@ -47,7 +47,11 @@ class FenModel
      */
     public function diaocha($uid = 0)
     {
-        return 10;
+        //核对该用户的答案计算积分
+        $sql = "SELECT * FROM `s_da` where `type` = 'diaocha' and uid = $uid";
+        $row = app('db')->getrow($sql);
+        $fen = empty($row)?0:10;
+        return intval($fen);
     }
 
     /**
@@ -66,15 +70,17 @@ class FenModel
         return 10;
     }
 
-
-
-
     /**
      * @return int
      */
     public function receive($uid = 0)
     {
 
+        //收到的
+        $sql = "select count(*) from jifengzengsong where `to` = $uid";
+        $count = app('db')->getone($sql);
+
+        $fen = $count*5;
         return intval($fen);
     }
 
@@ -84,38 +90,38 @@ class FenModel
     public function send($uid = 0)
     {
 
+        $sql = "select count(*) from jifengzengsong where `from` = $uid";
+       // echo $sql;
+        $count = app('db')->getone($sql);
+
+        $fen = $count*5;
         return intval($fen);
     }
 
+    //计算有用户的知识分
     public function zhishi($uid = 0)
     {
-
+        //核对该用户的答案计算积分
+        $sql = "SELECT fen FROM `s_da` where `type` = 'zhishi' and uid = $uid";
+        $fen = app('db')->getone($sql);
         return intval($fen);
     }
 
 
-
-    /**
-     * 我的排名
-     * @param int $uid
-     */
-    public function paiming($uid = 0)
-    {
-    }
-
-    /**
-     * 积分讲台 1 2 3
-     */
-    public function jiangtai()
-    {
-    }
 
     public function senddetail($uid = 0)
     {
+        $sql = "select tm from jifengzengsong where `from` = $uid order by tm desc";
+        $tmlist = app('db')->getcol($sql);
+        return $tmlist;
     }
 
-    public function receiveddetail($uid = 0)
+    public function receivedetail($uid = 0)
     {
+        $sql = "select tm from jifengzengsong where `to` = $uid order by tm desc";
+        $tmlist = app('db')->getcol($sql);
+        return $tmlist;
+
     }
 
 

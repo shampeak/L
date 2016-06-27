@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors','On');
-error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(E_ALL);
 
 include("../vendor/autoload.php");
 define('APPROOT', '../App/');
@@ -15,5 +15,4 @@ ini_set('error_reporting', $error_reporting);
 
 //时区
 ini_set('date.timezone','Asia/Shanghai');
-
 \App\Bootstrap::Run();

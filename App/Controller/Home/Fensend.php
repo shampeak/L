@@ -54,6 +54,8 @@ class Home extends BaseController {
         $res['from']    = $uid;
         $res['to']      = $fid;
         $res['fenshu']  = 5;
+        $res['tm']  = time();
+
         app('db')->autoExecute('jifengzengsong',$res,'INSERT');
 
         //赠送加1

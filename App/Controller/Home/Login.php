@@ -12,6 +12,7 @@ class Home extends BaseController {
     public function doLoginPost()
     {
 
+       echo  app('cookies')->get('uid');
 
         /*
          * 判断用户名和密码是否正确
@@ -21,6 +22,8 @@ class Home extends BaseController {
          * */
         D( Model('auth')->authlogin(req('Post')));
 
+
+exit;
         $this->AjaxReturn([
             'code'  => -200,
             'js'    => "window.location.href='/';"

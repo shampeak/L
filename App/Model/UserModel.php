@@ -30,6 +30,7 @@ class UserModel
     public function uid()
     {
         return 1;
+        return app('cookies')->get('uid');
     }
 
     /**

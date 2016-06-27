@@ -22,14 +22,21 @@ class AuthModel
     public function authlogin($post = array())
     {
         //对login password 进行验证
-        /*
-        通过
-            记录cookie
-            返回true
-        错误
-            返回false
-        */
-        return $post;
+        $login = trim($post['login']);
+        $password = md5($post['password']);
+
+        $sql = "select * from user where mobile = '$login'";
+        $row = app('db')->getrow($sql);
+        //D($sql);
+        //echo $password,'-',$row['password'];
+        if($row['password'] != $password){
+            return false;
+        }
+
+        //记录cookie
+        app('cookies')->set('uid',$row['uid'],3600);
+        return true;
+
     }
 
     /**

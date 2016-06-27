@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-24 15:13:00
+/* Smarty version 3.1.29, created on 2016-06-27 12:54:17
   from "E:\phpleague\Grace\L\App\Views\Home\Login.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576cdd7cbf1826_24566478',
+  'unifunc' => 'content_5770b1798254c3_80441757',
   'file_dependency' => 
   array (
     'af3f3b31a3f51b0c1480393c5fd1ea178e25cbc5' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Home\\Login.tpl',
-      1 => 1466752309,
+      1 => 1466990653,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576cdd7cbf1826_24566478 ($_smarty_tpl) {
+function content_5770b1798254c3_80441757 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -87,18 +87,18 @@ body {
 
 <div class="container">
     <div class="row">
-    <form class="form-signin ulogin"  action="">
+    <form class="form-signin ulogin" method="post"  action="">
 		    <table width="100%">
                 <tr>
                   <td><h2 class="form-signin-heading">请登录</h2></td>
                 </tr>
                 <tr>
                   <td><label for="inputEmail" class="sr-only">手机号</label>
-            <input type="text" id="inputEmail" class="form-control" placeholder="请输入手机号" required autofocus></td>
+            <input name="login" type="text" id="inputEmail" class="form-control" placeholder="请输入手机号" required autofocus></td>
                 </tr>
                 <tr>
                   <td><label for="inputPassword" class="sr-only">密码</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="请输入密码" required></td>
+            <input name="password" type="password" id="inputPassword" class="form-control" placeholder="请输入密码" required></td>
                 </tr>
                 <tr>
                   <td><div class="checkbox" style="padding-left:40px">
@@ -106,7 +106,7 @@ body {
             </div></td>
                 </tr>
                 <tr>
-                  <td><button class=" combit btn btn-lg btn-primary btn-block" type="submit">登录</button></td>
+                  <td><a class=" combit btn btn-lg btn-primary btn-block">登录</a></td>
                 </tr>
             </table>
             
