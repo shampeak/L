@@ -289,7 +289,7 @@ class Db extends Base
                   $fields = $values = array();
                   foreach ($field_names AS $value){
                         if (array_key_exists($value, $field_values) == true){
-                              $fields[] = $value;
+                              $fields[] = '`'.$value.'`';
                               $values[] = "'" . $field_values[$value] . "'";
                         }
                   }

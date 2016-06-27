@@ -8,11 +8,40 @@ class Home extends BaseController {
         parent::__construct();
     }
 
-    //Ö»ÓÐÒ»¸öÊ×Ò³,Ã»ÓÐµÇÂ¼Ìø×ªµÇÂ¼½çÃæ
+    //å¤©å‡å¥½å‹,å¹¶ä¸”è¿”å›ž
+    public function doMyfriend_addPost()
+    {
+        $uid = Model('user')->uid();
+
+        $uname = req('Post')['haoyou'];     //å¥½å‹åå­—
+        $fid = Model('user')->name2uid($uname);
+
+        $res['tm']  =time();
+
+        //å…ˆåˆ é™¤
+        app('db')->query("delete from haoyou where uid = $uid and fid = $fid");
+        app('db')->query("delete from haoyou where uid = $fid and fid = $uid");
+
+
+        $res['uid'] = $uid;
+        $res['fid'] = $fid;
+        app('db')->autoExecute('haoyou',$res,'INSERT');
+        $res['fid'] = $uid;
+        $res['uid'] = $fid;
+        app('db')->autoExecute('haoyou',$res,'INSERT');
+
+        R('/home/myfriend/');
+    }
 
     public function doMyfriend()
     {
-        echo '/home/doMyfriend';
+        $friends = Model('user')->haoyou();     //å¥½å‹åˆ—è¡¨
+
+//D($friends);
+        view('',[
+            'friends'=> $friends
+        ]);
+
     }
 
 }

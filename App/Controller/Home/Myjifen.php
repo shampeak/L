@@ -8,11 +8,24 @@ class Home extends BaseController {
         parent::__construct();
     }
 
-    //Ö»ÓĞÒ»¸öÊ×Ò³,Ã»ÓĞµÇÂ¼Ìø×ªµÇÂ¼½çÃæ
 
+    //
     public function doMyjifen()
     {
-        echo '/home/doMyjifen';
+        $uid    = Model('user')->uid();
+        $fen    = Model('fen')->fen($uid);           //æ€»åˆ†
+        $jichu  = Model('fen')->jichu($uid);           //åŸºç¡€åˆ†
+        $zhishi =  Model('fen')->zhishi($uid);
+        $diaocha =  Model('fen')->diaocha($uid);
+        $qiandao =  Model('fen')->qiandao($uid);
+
+
+
+
+        view('',[
+            'res'=> $res
+        ]);
+
     }
 
 }

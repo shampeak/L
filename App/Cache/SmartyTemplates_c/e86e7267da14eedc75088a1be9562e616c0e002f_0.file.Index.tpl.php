@@ -1,123 +1,61 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-22 00:20:30
+/* Smarty version 3.1.29, created on 2016-06-26 09:55:36
   from "C:\www\Grace\L\App\Views\Home\Index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5769694e50c3f5_99992966',
+  'unifunc' => 'content_576f3618aae0b8_07411330',
   'file_dependency' => 
   array (
     'e86e7267da14eedc75088a1be9562e616c0e002f' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Home\\Index.tpl',
-      1 => 1466509691,
+      1 => 1466906134,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5769694e50c3f5_99992966 ($_smarty_tpl) {
+function content_576f3618aae0b8_07411330 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="<?php echo $_smarty_tpl->tpl_vars['res']->value['description'];?>
-">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title><?php echo $_smarty_tpl->tpl_vars['res']->value['title'];?>
-</title>
-   
-    <!-- Bootstrap -->
-    <link href="/assets/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <?php echo '<script'; ?>
- src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"><?php echo '</script'; ?>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<title>首页</title>
+	<link rel="stylesheet" href="/static/css/reset.css">
+	<link rel="stylesheet" href="/static/css/qa_style.css">
+	<?php echo '<script'; ?>
+ src="/static/js/flexible.js"><?php echo '</script'; ?>
 >
-      <?php echo '<script'; ?>
- src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"><?php echo '</script'; ?>
->
-    <![endif]-->
-  <style>
-    #te {
-		padding-left: 0px;
-		padding-right: 0px;
-    }
-    </style>
+</head>
+<body>
+	<!-- 内容区 -->
+	<div class="main bg-index">
+		<div class="banner-box"><img src="/static/pic/img-banner.png"></div>
+		<div class="nav-container">
+			<ul class="clearfix">
+				<li><a href="/home/qiandao" class="nav-sign"><span>整点签到</span></a></li>
+				<li><a href="/home/zhishi" class="nav-question"><span>知识问答</span></a></li>
+				<li><a href="/home/diaocha" class="nav-survey"><span>问卷调查</span></a></li>
+				<li><a href="/home/ziliao" class="nav-user"><span>资料完善</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /内容区 -->
 
-
-  </head>
-  <body>
-  
-
-<div class="container-fluid">
-
-<div class="row">
-  <div class="col-md-12" id="te">
-  
-<div class="list-group">
-  <a href="javascript:void(0)" class="list-group-item active">
-    Shampeak's PHP之道
-  </a>
-  <?php
-$_from = $_smarty_tpl->tpl_vars['res']->value['list'];
-if (!is_array($_from) && !is_object($_from)) {
-settype($_from, 'array');
-}
-$__foreach_foo_0_saved_item = isset($_smarty_tpl->tpl_vars['value']) ? $_smarty_tpl->tpl_vars['value'] : false;
-$__foreach_foo_0_saved_key = isset($_smarty_tpl->tpl_vars['key']) ? $_smarty_tpl->tpl_vars['key'] : false;
-$_smarty_tpl->tpl_vars['value'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['key'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['value']->_loop = false;
-foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['value']->value) {
-$_smarty_tpl->tpl_vars['value']->_loop = true;
-$__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
+	<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>'foo'), 0, false);
 ?>
-  <a href="lm?chr=<?php echo $_smarty_tpl->tpl_vars['value']->value['chr'];?>
-" class="list-group-item"><?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
-</a>
-  <?php
-$_smarty_tpl->tpl_vars['value'] = $__foreach_foo_0_saved_local_item;
-}
-if ($__foreach_foo_0_saved_item) {
-$_smarty_tpl->tpl_vars['value'] = $__foreach_foo_0_saved_item;
-}
-if ($__foreach_foo_0_saved_key) {
-$_smarty_tpl->tpl_vars['key'] = $__foreach_foo_0_saved_key;
-}
-?>
-</div>  
-  
 
-  </div>
-</div>
+    
+</body>
 
-
-
-</div>
-
-
-
-
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <?php echo '<script'; ?>
- src="/assets/jquery-1.11.1.min.js"><?php echo '</script'; ?>
->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <?php echo '<script'; ?>
- src="/assets/bootstrap-3.3.5/js/bootstrap.min.js"><?php echo '</script'; ?>
->
-  </body>
-</html>
-<?php }
+</html><?php }
 }

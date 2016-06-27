@@ -9,18 +9,24 @@ class Home extends BaseController {
     }
 
 
-
-    //只有一个首页,没有登录跳转登录界面
     public function doLoginPost()
     {
-        //登录设置cookie
-        //然后返回
+
+
+        /*
+         * 鍒ゆ柇鐢ㄦ埛鍚嶅拰瀵嗙爜鏄惁姝ｇ‘
+         *
+         *
+         *
+         * */
+        D( Model('auth')->authlogin(req('Post')));
+
         $this->AjaxReturn([
             'code'  => -200,
-            'js'    => "window.location.href='http://www.ddhbb.com';"
+            'js'    => "window.location.href='/';"
         ]);
 
-        $this->AjaxReturn();
+        //$this->AjaxReturn();
     }
 
     public function doLogin()
@@ -30,7 +36,6 @@ class Home extends BaseController {
         ]);
     }
 
-    //注册
     public function doLogin_Signup()
     {
         view('',[
@@ -38,10 +43,9 @@ class Home extends BaseController {
         ]);
     }
 
-    //注册
     public function doLogin_Signcall()
     {
-        echo '找回密码';
+
     }
 
 

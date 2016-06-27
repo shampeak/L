@@ -8,18 +8,9 @@ class Home extends BaseController {
         parent::__construct();
     }
 
-    //只有一个首页,没有登录跳转登录界面
 
     public function doIndex()
     {
-/*
- * 测试验证码程序
- */
-
-echo '首页';
-       // app('Vcode')->test();
-
-exit;
 
 
 

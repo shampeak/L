@@ -8,11 +8,14 @@ class Home extends BaseController {
         parent::__construct();
     }
 
-    //Ö»ÓĞÒ»¸öÊ×Ò³,Ã»ÓĞµÇÂ¼Ìø×ªµÇÂ¼½çÃæ
+    //Ö»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ò³,Ã»ï¿½Ğµï¿½Â¼ï¿½ï¿½×ªï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
 
     public function doFenranking()
     {
-        echo '/home/doFenranking';
+        view('',[
+            'res'=> $res
+        ]);
+
     }
 
 }
