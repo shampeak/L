@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-27 05:32:22
+/* Smarty version 3.1.29, created on 2016-06-28 06:21:18
   from "C:\www\Grace\L\App\Views\Home\Myjifen.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_577049e6afe142_81941754',
+  'unifunc' => 'content_5771a6de4d5398_19254002',
   'file_dependency' => 
   array (
     '70dd705835d0b33c17ec1755c6a19527dfddf563' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Home\\Myjifen.tpl',
-      1 => 1466976696,
+      1 => 1467026889,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_577049e6afe142_81941754 ($_smarty_tpl) {
+function content_5771a6de4d5398_19254002 ($_smarty_tpl) {
+if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\www\\Grace\\L\\App\\Library\\Smarty\\plugins\\modifier.date_format.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,95 +44,84 @@ function content_577049e6afe142_81941754 ($_smarty_tpl) {
 	<div class="main main-myscore">
 		<h2>恭喜您，您目前已获得</h2>
 		<div class="score-box">
-			<h3>50&nbsp;积分</h3>
+			<h3><?php echo $_smarty_tpl->tpl_vars['fen']->value;?>
+&nbsp;积分</h3>
 			<div class="score-detail">
-				<span>基础分10分</span>
-				<span>完善资料10分</span>
-				<span>基础分10分</span>
-				<span>完善资料10分</span>
+				<span>基础分<?php echo $_smarty_tpl->tpl_vars['jichu']->value;?>
+分</span>
+				<span>完善资料<?php echo $_smarty_tpl->tpl_vars['ziliao']->value;?>
+分</span>
+				<span>问卷调查<?php echo $_smarty_tpl->tpl_vars['diaocha']->value;?>
+分</span>
+				<span>知识问答<?php echo $_smarty_tpl->tpl_vars['zhishi']->value;?>
+分</span>
+				<span>签到<?php echo $_smarty_tpl->tpl_vars['qiandao']->value;?>
+分</span>
+				<span>收到<?php echo $_smarty_tpl->tpl_vars['receive']->value;?>
+分</span>
+				<span>送出<?php echo $_smarty_tpl->tpl_vars['send']->value;?>
+分</span>
 			</div>
 		</div>
 		<div class="score-list clearfix">
 			<div class="list-item fl">
 				<h5>我获得的积分</h5>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<th>8:40</th>
+                <?php
+$_from = $_smarty_tpl->tpl_vars['senddetail']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_foo_0_saved_item = isset($_smarty_tpl->tpl_vars['value']) ? $_smarty_tpl->tpl_vars['value'] : false;
+$_smarty_tpl->tpl_vars['value'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['value']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
+$_smarty_tpl->tpl_vars['value']->_loop = true;
+$__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
+?>
+                    <tr>
+						<th><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['value']->value,'%m-%d %H:%M');?>
+</th>
 						<td>+5分</td>
 					</tr>
-					<tr>
-						<th>10:21</th>
-						<td>+1分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
+                <?php
+$_smarty_tpl->tpl_vars['value'] = $__foreach_foo_0_saved_local_item;
+}
+if ($__foreach_foo_0_saved_item) {
+$_smarty_tpl->tpl_vars['value'] = $__foreach_foo_0_saved_item;
+}
+?>
+                    
 				</table>
 			</div>
 			<div class="list-item fr">
 				<h5>我送出的积分</h5>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<th>8:40</th>
+                <?php
+$_from = $_smarty_tpl->tpl_vars['receivedetail']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_foo_1_saved_item = isset($_smarty_tpl->tpl_vars['value']) ? $_smarty_tpl->tpl_vars['value'] : false;
+$_smarty_tpl->tpl_vars['value'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['value']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
+$_smarty_tpl->tpl_vars['value']->_loop = true;
+$__foreach_foo_1_saved_local_item = $_smarty_tpl->tpl_vars['value'];
+?>
+                    <tr>
+						<th><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['value']->value,'%m-%d %H:%M');?>
+</th>
 						<td>+5分</td>
 					</tr>
-					<tr>
-						<th>10:21</th>
-						<td>+1分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
-					<tr>
-						<th>12:52</th>
-						<td>+5分</td>
-					</tr>
+                <?php
+$_smarty_tpl->tpl_vars['value'] = $__foreach_foo_1_saved_local_item;
+}
+if ($__foreach_foo_1_saved_item) {
+$_smarty_tpl->tpl_vars['value'] = $__foreach_foo_1_saved_item;
+}
+?>
+
 				</table>
 			</div>
 		</div>

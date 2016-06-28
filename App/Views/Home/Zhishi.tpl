@@ -19,7 +19,7 @@
 			<h2>说明：共10题，每答对一题可获得5分奖励。</h2>
 		</div>
 		<div class="question-box">
-<form class="zhishi form-horizontal" action="/home/zhishi"  method="post">
+<form class="zhishi form-horizontal" action="?z=home/zhishi"  method="post">
 			<ul>
             	{foreach from=$res item=value name=foo}
 				<li>

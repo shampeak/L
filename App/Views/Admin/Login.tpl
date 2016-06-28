@@ -160,7 +160,7 @@
                 <img src="/ui/images/face80x80.jpg" alt="" class="img-circle">
                 <br>
                 <br>
-                <form class="cmxform" id="signupForm" method="post" action="/admin/login/">
+                <form class="cmxform" id="signupForm" method="post" action="?z=admin/login">
                     <fieldset>
                         <p>
                             <input id="username" name="username" type="text" placeholder="Username">

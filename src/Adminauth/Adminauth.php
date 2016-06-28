@@ -10,7 +10,7 @@ namespace Grace\Adminauth;
 class Adminauth{ // class start
 
     private $_config    = array();                       // default expire
-    private $clientScrect  = 'f2g3gh4h5';
+    private $clientScrect  = 'f2g3g33h4h5';
     private $adminName  = '';
     private $password   = '';                       // default expire
 

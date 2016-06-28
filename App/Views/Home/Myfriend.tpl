@@ -12,7 +12,7 @@
 </head>
 <body style="background:#fbfbfb;">
 
-<form action="/home/myfriend/add" class="haoyou" method="post">
+<form action="?z=home/myfriend/add" class="haoyou" method="post">
 	<!-- 内容区 -->
 	<div class="main main-friend">
 		<div class="input-box clearfix">
@@ -23,7 +23,7 @@
 			<ul class="cleafix">
 				{foreach from=$friends item=value name=foo}
                 <li>
-					<a href="/home/myfriend/add/?fid={$value['uid']}">
+					<a href="?z=home/myfriend/add/?fid={$value['uid']}">
 						<img src="{$value['headimg']}">
 						<span>{$value['fen']}分</span>
 					</a>

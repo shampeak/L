@@ -16,10 +16,12 @@
 		<div class="banner-box"><img src="/static/images/jifen.png"></div>
 		<div class="nav-container">
 			<ul class="clearfix">
-				<li><a href="/home/qiandao" class="nav-sign"><span>整点签到</span></a></li>
-				<li><a href="/home/zhishi" class="nav-question"><span>知识问答</span></a></li>
-				<li><a href="/home/diaocha" class="nav-survey"><span>问卷调查</span></a></li>
-				<li><a href="/home/ziliao" class="nav-user"><span>资料完善</span></a></li>
+				<!--li><a href="?z=home/qiandao" class="nav-sign"><span>整点签到</span></a></ li-->
+                <li><a href="#" class="nav-sign"><span>整点签到</span></a></li>
+                
+				<li><a href="?z=home/zhishi" class="nav-question"><span>知识问答</span></a></li>
+				<li><a href="?z=home/diaocha" class="nav-survey"><span>问卷调查</span></a></li>
+				<li><a href="?z=home/ziliao" class="nav-user"><span>资料完善</span></a></li>
 			</ul>
 		</div>
 	</div>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-26 10:03:42
+/* Smarty version 3.1.29, created on 2016-06-28 06:21:24
   from "C:\www\Grace\L\App\Views\Home\Fenranking.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576f37fea03941_11405966',
+  'unifunc' => 'content_5771a6e42b59a7_20695858',
   'file_dependency' => 
   array (
     'e11857f563ecd29e3b10b7bb8988e8ae2e613168' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Home\\Fenranking.tpl',
-      1 => 1466906568,
+      1 => 1467026889,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_576f37fea03941_11405966 ($_smarty_tpl) {
+function content_5771a6e42b59a7_20695858 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,22 +42,30 @@ function content_576f37fea03941_11405966 ($_smarty_tpl) {
 	<div class="main main-rank">
 		<div class="top-box">
 			<div class="top-item top1">
-				<img src="/static/pic/img-other.jpg">
-				<span>80分</span>
+				<img src="<?php echo $_smarty_tpl->tpl_vars['rc']->value[0]['headimg'];?>
+">
+				<span><?php echo $_smarty_tpl->tpl_vars['rc']->value[0]['fen'];?>
+分</span>
 			</div>
 			<div class="top-item top2">
-				<img src="/static/pic/img-other.jpg">
-				<span>50分</span>
+				<img src="<?php echo $_smarty_tpl->tpl_vars['rc']->value[1]['headimg'];?>
+">
+				<span><?php echo $_smarty_tpl->tpl_vars['rc']->value[1]['fen'];?>
+分</span>
 			</div>
 			<div class="top-item top3">
-				<img src="/static/pic/img-other.jpg">
-				<span>30分</span>
+				<img src="<?php echo $_smarty_tpl->tpl_vars['rc']->value[2]['headimg'];?>
+">
+				<span><?php echo $_smarty_tpl->tpl_vars['rc']->value[2]['fen'];?>
+分</span>
 			</div>
 		</div>
 		<div class="my-score-info">
 			<dl class="clearfix">
 				<dt class="fl"><img src="/static/pic/img-user.jpg"></dt>
-				<dd class="score-info fr">刘晶晶,您目前排名在200开外……</dd>
+				<dd class="score-info fr"><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
+,您目前排名是<?php echo $_smarty_tpl->tpl_vars['pm']->value;?>
+……</dd>
 				<dd class="score-tip fr"><i>加油吧！</i></dd>
 			</dl>
 		</div>

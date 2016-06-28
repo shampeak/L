@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-25 23:04:13
+/* Smarty version 3.1.29, created on 2016-06-27 22:40:00
   from "C:\www\Grace\L\App\Views\Admin\Diaocha.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576e9d6d4ed739_54595424',
+  'unifunc' => 'content_57713ac0978bb3_08588716',
   'file_dependency' => 
   array (
     'ac7262e9a79f21451afefbd5c4ef1dece7c34d67' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Admin\\Diaocha.tpl',
-      1 => 1466683657,
+      1 => 1467038387,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576e9d6d4ed739_54595424 ($_smarty_tpl) {
+function content_57713ac0978bb3_08588716 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
@@ -124,10 +124,10 @@ function content_576e9d6d4ed739_54595424 ($_smarty_tpl) {
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
-                <li class="active"><a href="/admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
-                <li><a href="/admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
-                <li><a href="/admin/qiandao"><i class="icon-user icon-white"></i>整点签到</a></li>
+                <li><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
+                <li class="active"><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
+                <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
+
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -142,7 +142,7 @@ function content_576e9d6d4ed739_54595424 ($_smarty_tpl) {
 
 <h4><strong>调查问卷</strong></h4>
 
-<a class="shambox" rel="/admin/diaocha/add">添加</a>
+<a class="shambox" rel="?z=admin/diaocha/add">添加</a>
 
 
 <table class="display" id="dt1">
@@ -184,7 +184,7 @@ $__foreach_value_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
     <td><?php echo $_smarty_tpl->tpl_vars['value']->value['optionD'];?>
 </td>
     <td>
-<a class="shambox" rel="/admin/diaocha/edit?id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+<a class="shambox" rel="?z=admin/diaocha/edit&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 ">信息</a>
 <!-- a class="shamboxl" rel="/admin/userzhishi?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
 ">知识</a>
@@ -193,7 +193,7 @@ $__foreach_value_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 <a class="shamboxl" rel="/admin/userjifen?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
 ">积分</a -->
 <a class="formact" relid="<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
-" tag="/admin/diaocha/delete" act="delete" confirm="确定?">删除</a>
+" tag="?z=admin/diaocha/delete" act="delete" confirm="确定?">删除</a>
 
     </td>
 </tr>

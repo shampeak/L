@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-26 22:22:37
+/* Smarty version 3.1.29, created on 2016-06-28 05:54:58
   from "C:\www\Grace\L\App\Views\Home\Zhishi.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576fe52d0aadb0_37107386',
+  'unifunc' => 'content_5771a0b2111295_77307031',
   'file_dependency' => 
   array (
     '855e434784454f3f88d98dfe70e8ca22011e1e32' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Home\\Zhishi.tpl',
-      1 => 1466950955,
+      1 => 1467064220,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_576fe52d0aadb0_37107386 ($_smarty_tpl) {
+function content_5771a0b2111295_77307031 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +45,7 @@ function content_576fe52d0aadb0_37107386 ($_smarty_tpl) {
 			<h2>说明：共10题，每答对一题可获得5分奖励。</h2>
 		</div>
 		<div class="question-box">
-<form class="zhishi form-horizontal" action="/home/zhishi"  method="post">
+<form class="zhishi form-horizontal" action="?z=home/zhishi"  method="post">
 			<ul>
             	<?php
 $_from = $_smarty_tpl->tpl_vars['res']->value;

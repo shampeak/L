@@ -87,10 +87,9 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
-                <li><a href="/admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
-                <li><a href="/admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
-                <li><a href="/admin/qiandao"><i class="icon-user icon-white"></i>整点签到</a></li>
+                <li class="active"><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
+                <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
+                <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -105,7 +104,7 @@
 
 <h4><strong>用户管理</strong></h4>
 
-<a class="shambox" rel="/admin/user/add">添加用户</a>
+<a class="shambox" rel="?z=admin/user/add">添加用户</a>
 
 
 <table class="display" id="dt1">
@@ -132,7 +131,7 @@
     <td>{$value['title']}</td>
     <td>{$value['weixin']}</td>
     <td>
-<a class="shambox" rel="/admin/user/edit?uid={$value['uid']}">用户信息</a>
+<a class="shambox" rel="?z=admin/user/edit&uid={$value['uid']}">用户信息</a>
 <!-- a class="shamboxl" rel="/admin/userzhishi?uid={$value['uid']}">知识</a>
 <a class="shamboxl" rel="/admin/userdiaocha?uid={$value['uid']}">调查</a>
 <a class="shamboxl" rel="/admin/userjifen?uid={$value['uid']}">积分</a -->

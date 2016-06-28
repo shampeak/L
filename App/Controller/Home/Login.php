@@ -5,29 +5,28 @@ namespace App\Controller;
 class Home extends BaseController {
 
     public function __construct(){
-        parent::__construct();
+        //parent::__construct();
     }
 
 
     public function doLoginPost()
     {
+        $login = req('Post')['login'];
+        $password = req('Post')['password'];
 
-       echo  app('cookies')->get('uid');
+        if(Model('user')->login($login,$password)){
+            $this->AjaxReturn([
+                'code'  => 200,
+                'js'    => "window.location.href='/';"
+            ]);
+        }else{
+            $this->AjaxReturn([
+                'code'  => -200,
+                'msg'    => "用户名密码错误"
+            ]);
+        }
 
-        /*
-         * 判断用户名和密码是否正确
-         *
-         *
-         *
-         * */
-        D( Model('auth')->authlogin(req('Post')));
 
-
-exit;
-        $this->AjaxReturn([
-            'code'  => -200,
-            'js'    => "window.location.href='/';"
-        ]);
 
         //$this->AjaxReturn();
     }

@@ -26,15 +26,17 @@ class Admin extends BaseController {
 
         if($username == 'irones' && $password == '123'){
             $code = 200;
-
+            //记录cookie
+            app('cookies')->set('admin',1,36000);
         }else{
             $code = -200;
             $msg = '用户验证没有通过';
         }
+
         $this->AjaxReturn([
             "code"  => $code,
             "msg"   => $msg,
-            "js"    => 'if(data.code>0){window.location.href="/admin/user/";}else{alert(data.msg);}'
+            "js"    => 'if(data.code>0){window.location.href="?z=admin/user";}else{alert(data.msg);}'
         ]);
     }
 

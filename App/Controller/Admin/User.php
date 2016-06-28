@@ -26,6 +26,8 @@ class Admin extends BaseController {
     //用户列表
     public function doUser()
     {
+
+
         $res = app('db')->getall("select * from user order by sort desc,uid desc");
         view('',[
             'res' => $res

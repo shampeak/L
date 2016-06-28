@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <form class="useredit form-horizontal" action="/admin/user/edit/"  method="post">
+        <form class="useredit form-horizontal" action="?z=admin/user/edit/"  method="post">
 
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
@@ -15,8 +15,23 @@
       {$row['mobile']}	<span class="red">手机号不能修改</span>
     </div>
   </div>
-  
-  <div class="form-group">
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">密码</label>
+                <div class="col-sm-10">
+                    <input type="text" name="mima" class="form-control" value="{$row['mima']}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">code</label>
+                <div class="col-sm-10">
+                    <input type="text" name="code" class="form-control" value="{$row['code']}">
+                </div>
+            </div>
+
+
+            <div class="form-group">
     <label for="inputPassword3" class="col-sm-2 control-label">性别</label>
     <div class="col-sm-10">
     <input type="radio" name="gender" id="radio" value="1" {if $row['gender']  ==1}checked="checked"{/if}/> 男

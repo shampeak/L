@@ -19,7 +19,7 @@
 			<h2>说明：完成全部调查问卷的填写可以积10分奖励</h2>
 		</div>
 		<div class="question-box">
-        <form class="diaocha form-horizontal" action="/home/diaocha"  method="post">
+        <form class="diaocha form-horizontal" action="?z=home/diaocha"  method="post">
 
 			<ul>
 

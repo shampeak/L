@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <form class="diaochaedit form-horizontal" action="/admin/diaocha/edit/"  method="post">
+        <form class="diaochaedit form-horizontal" action="?z=admin/diaocha/edit/"  method="post">
 
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">title</label>

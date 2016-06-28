@@ -9,7 +9,7 @@ class Admin extends BaseController {
     }
 
     public function doIndex(){
-        R('/Admin/User');
+        R('?z=Admin/User');
     }
 
 }

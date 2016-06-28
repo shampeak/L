@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-25 23:02:23
+/* Smarty version 3.1.29, created on 2016-06-27 22:47:22
   from "C:\www\Grace\L\App\Views\Admin\User.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576e9cffb70a97_00255439',
+  'unifunc' => 'content_57713c7a457a16_58598866',
   'file_dependency' => 
   array (
     'ae88ec5f6560ad51143841b14f7aa30d608ad72b' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Admin\\User.tpl',
-      1 => 1466683657,
+      1 => 1467038387,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576e9cffb70a97_00255439 ($_smarty_tpl) {
+function content_57713c7a457a16_58598866 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
@@ -124,10 +124,9 @@ function content_576e9cffb70a97_00255439 ($_smarty_tpl) {
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
-                <li><a href="/admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
-                <li><a href="/admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
-                <li><a href="/admin/qiandao"><i class="icon-user icon-white"></i>整点签到</a></li>
+                <li class="active"><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
+                <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
+                <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -142,7 +141,7 @@ function content_576e9cffb70a97_00255439 ($_smarty_tpl) {
 
 <h4><strong>用户管理</strong></h4>
 
-<a class="shambox" rel="/admin/user/add">添加用户</a>
+<a class="shambox" rel="?z=admin/user/add">添加用户</a>
 
 
 <table class="display" id="dt1">
@@ -186,7 +185,7 @@ $__foreach_value_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
     <td><?php echo $_smarty_tpl->tpl_vars['value']->value['weixin'];?>
 </td>
     <td>
-<a class="shambox" rel="/admin/user/edit?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
+<a class="shambox" rel="?z=admin/user/edit&uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
 ">用户信息</a>
 <!-- a class="shamboxl" rel="/admin/userzhishi?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
 ">知识</a>

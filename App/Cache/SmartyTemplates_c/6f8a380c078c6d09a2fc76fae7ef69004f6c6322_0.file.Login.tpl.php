@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-22 00:49:55
+/* Smarty version 3.1.29, created on 2016-06-27 22:51:41
   from "C:\www\Grace\L\App\Views\Admin\Login.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57697033d9ace9_26449793',
+  'unifunc' => 'content_57713d7ded2872_24708931',
   'file_dependency' => 
   array (
     '6f8a380c078c6d09a2fc76fae7ef69004f6c6322' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Admin\\Login.tpl',
-      1 => 1466527793,
+      1 => 1467039097,
       2 => 'file',
     ),
   ),
@@ -19,12 +19,12 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57697033d9ace9_26449793 ($_smarty_tpl) {
+function content_57713d7ded2872_24708931 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
     <meta charset="utf-8">
-    <title>BLOCKS - Bootstrap Dashboard Theme</title>
+    <title>登录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Carlos Alvarez - Alvarez.is">
@@ -193,7 +193,7 @@ function content_57697033d9ace9_26449793 ($_smarty_tpl) {
                 <img src="/ui/images/face80x80.jpg" alt="" class="img-circle">
                 <br>
                 <br>
-                <form class="cmxform" id="signupForm" method="post" action="/admin/login/">
+                <form class="cmxform" id="signupForm" method="post" action="?z=admin/login">
                     <fieldset>
                         <p>
                             <input id="username" name="username" type="text" placeholder="Username">

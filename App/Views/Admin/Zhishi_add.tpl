@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <form class="zhishiadd form-horizontal" action="/admin/zhishi/add/"  method="post">
+        <form class="zhishiadd form-horizontal" action="?z=admin/zhishi/add/"  method="post">
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">title</label>
     <div class="col-sm-10">

@@ -30,7 +30,7 @@ class Home extends BaseController {
         $res['uid'] = $fid;
         app('db')->autoExecute('haoyou',$res,'INSERT');
 
-        R('/home/myfriend/');
+        R('?z=home/myfriend/');
     }
 
     public function doMyfriend()

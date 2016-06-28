@@ -11,7 +11,7 @@
 	<script src="/static/js/flexible.js"></script>
 </head>
 <body style="background:#fefbed;">
-<form action="/home/fensend/" class="zengsong" method="post">
+<form action="?z=home/fensend/" class="zengsong" method="post">
 
 	<!-- 内容区 -->
 	<div class="main main-interact">

@@ -7,6 +7,9 @@ namespace App\Controller;
 class BaseController{
 
     public function __construct(){
+        if(Model('User')->islogin()){}else{
+            R('?z=home/login');
+        }
     }
 
     public function AjaxReturn($res = []){

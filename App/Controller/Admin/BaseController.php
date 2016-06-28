@@ -7,6 +7,9 @@ namespace App\Controller;
 class BaseController{
 
     public function __construct(){
+        if(app('Adminauth')->islogin()){}else{
+            R('?z=login/admin');
+        };
     }
 
     public function AjaxReturn($res = []){

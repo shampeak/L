@@ -27,7 +27,7 @@
                     size: results.base64.length // 校验用，防止未完整接收
                 };
 
-				xhr.open('POST', '/home/ziliao/up/');
+				xhr.open('POST', '?z=home/ziliao/up');
                 xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
                 
 				xhr.onreadystatechange = function () {

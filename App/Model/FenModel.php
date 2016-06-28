@@ -59,7 +59,18 @@ class FenModel
      */
     public function ziliao($uid = 0)
     {
-        return 10;
+        //看用户资料是否填写完成
+        $sql = "select * from user where uid = $uid";
+        $row = app('db')->getrow($sql);
+        if(!empty($row['headimg']) && !empty($row['name']) && !empty($row['gender']) && !empty($row['company']) && !empty($row['title']) && !empty($row['weixin'])){
+            $fen = 10;
+        }else{
+            $fen = 0;
+        }
+
+
+
+        return $fen;
     }
 
     /**
@@ -67,7 +78,7 @@ class FenModel
      */
     public function qiandao($uid = 0)
     {
-        return 10;
+        return 0;
     }
 
     /**

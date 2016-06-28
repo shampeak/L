@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-27 04:49:35
+/* Smarty version 3.1.29, created on 2016-06-28 06:21:21
   from "C:\www\Grace\L\App\Views\Home\Myfriend.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57703fdf4ca694_41108743',
+  'unifunc' => 'content_5771a6e10d4254_46895865',
   'file_dependency' => 
   array (
     '6c459c33289fc913fc21b697bdceb79cf2b2a9dd' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Home\\Myfriend.tpl',
-      1 => 1466974022,
+      1 => 1467064220,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_57703fdf4ca694_41108743 ($_smarty_tpl) {
+function content_5771a6e10d4254_46895865 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +38,7 @@ function content_57703fdf4ca694_41108743 ($_smarty_tpl) {
 </head>
 <body style="background:#fbfbfb;">
 
-<form action="/home/myfriend/add" class="haoyou" method="post">
+<form action="?z=home/myfriend/add" class="haoyou" method="post">
 	<!-- 内容区 -->
 	<div class="main main-friend">
 		<div class="input-box clearfix">
@@ -60,7 +60,7 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 $__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 ?>
                 <li>
-					<a href="/home/myfriend/add/?fid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
+					<a href="?z=home/myfriend/add/?fid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
 ">
 						<img src="<?php echo $_smarty_tpl->tpl_vars['value']->value['headimg'];?>
 ">

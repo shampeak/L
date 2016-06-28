@@ -13,10 +13,6 @@ class Home extends BaseController {
     {
 
 
-
-//        app('Vcode')->test();
-//       // $res = Model('md')->getar();
-//D($res);
         view('',[
             'res'=> $res
         ]);

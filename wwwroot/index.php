@@ -1,16 +1,16 @@
 <?php
 ini_set('display_errors','On');
 error_reporting(E_ALL ^ E_NOTICE);
-
-include("../vendor/autoload.php");
 define('APPROOT', '../App/');
 
-error_reporting(1);
+include("../vendor/autoload.php");
 
-$error_reporting       = E_ALL;
+//error_reporting(1);
+
+//$error_reporting       = E_ALL;
 //$error_reporting       = E_ALL ^ E_NOTICE;
 //错误提示
-ini_set('error_reporting', $error_reporting);
+//ini_set('error_reporting', $error_reporting);
 //or
 
 //时区

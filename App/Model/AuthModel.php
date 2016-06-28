@@ -34,7 +34,7 @@ class AuthModel
         }
 
         //记录cookie
-        app('cookies')->set('uid',$row['uid'],3600);
+        app('cookies')->set('uid',$row['uiid'],3600);
         return true;
 
     }
@@ -44,7 +44,7 @@ class AuthModel
      */
     public function islogin()
     {
-
+        return app('cookies')->get('uiid');
     }
 
     /**

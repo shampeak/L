@@ -117,10 +117,10 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
-                <li><a href="/admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
-                <li class="active"><a href="/admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
-                <li><a href="/admin/qiandao"><i class="icon-user icon-white"></i>整点签到</a></li>
+                <li><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
+                <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
+                <li class="active"><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
+
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -135,7 +135,7 @@
 
             <h4><strong>知识问答</strong></h4>
 
-            <a class="shambox" rel="/admin/zhishi/add">添加</a>
+            <a class="shambox" rel="?z=admin/zhishi/add">添加</a>
 
 
             <table class="display" id="dt1">
@@ -162,11 +162,11 @@
                         <td>{$value['optionD']}</td>
                         <td>{$value['da']}</td>
                         <td>
-                            <a class="shambox" rel="/admin/zhishi/edit?id={$value['id']}">信息</a>
+                            <a class="shambox" rel="?z=admin/zhishi/edit&id={$value['id']}">信息</a>
                             <!-- a class="shamboxl" rel="/admin/userzhishi?uid={$value['uid']}">知识</a>
 <a class="shamboxl" rel="/admin/userzhishi?uid={$value['uid']}">调查</a>
 <a class="shamboxl" rel="/admin/userjifen?uid={$value['uid']}">积分</a -->
-                            <a class="formact" relid="{$value['id']}" tag="/admin/zhishi/delete" act="delete" confirm="确定?">删除</a>
+                            <a class="formact" relid="{$value['id']}" tag="?z=admin/zhishi/delete" act="delete" confirm="确定?">删除</a>
 
                         </td>
                     </tr>

@@ -16,6 +16,33 @@ class UserModel
     private $uid     = 0;
 
 
+    public function login($login='',$password='')
+    {
+        if(empty($login) || empty($password)){
+            return false;
+        }
+
+        $login = saddslashes($login);
+        $info = app('db')->getrow("select * from user where mobile = '$login'");
+
+        if($info['mima'] == $password){
+            app('cookies')->set('uid',$info['uid'],36000);
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+    public function islogin()
+    {
+        $uid = app('cookies')->get('uid');
+        $res = $uid?true:false;
+        return $res;
+    }
+
+
+
     public function userinfo($userid = 0)
     {
         $uid = empty($userid)?$this->uid():$userid;
@@ -26,10 +53,10 @@ class UserModel
 
 
 
+
     //返回用户id
     public function uid()
     {
-        return 1;
         return app('cookies')->get('uid');
     }
 

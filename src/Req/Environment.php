@@ -58,7 +58,9 @@ class Environment extends Base
     {
         $env = array();
 
-        $env['path'] = $this::pathinfo_query_extend('path');
+        //$env['path'] = $this::pathinfo_query_extend('path');          //路由变更
+        $env['path'] = trim($_GET['z'],'/');
+
         $env['query'] = $this::pathinfo_query_extend('query');
 
         //The HTTP request method
@@ -117,6 +119,7 @@ class Environment extends Base
     |
     */
     public static function pathinfo_query_extend($key = null){
+
         $pathinfo = @parse_url(SELF::request_uri());
         /*
         /----------------------------------------------------

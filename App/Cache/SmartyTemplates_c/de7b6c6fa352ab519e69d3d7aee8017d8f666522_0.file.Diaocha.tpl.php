@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-26 22:45:58
+/* Smarty version 3.1.29, created on 2016-06-28 06:21:47
   from "C:\www\Grace\L\App\Views\Home\Diaocha.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576feaa6c72f43_47697607',
+  'unifunc' => 'content_5771a6fb6f3001_31022583',
   'file_dependency' => 
   array (
     'de7b6c6fa352ab519e69d3d7aee8017d8f666522' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Home\\Diaocha.tpl',
-      1 => 1466952357,
+      1 => 1467064148,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_576feaa6c72f43_47697607 ($_smarty_tpl) {
+function content_5771a6fb6f3001_31022583 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +45,7 @@ function content_576feaa6c72f43_47697607 ($_smarty_tpl) {
 			<h2>说明：完成全部调查问卷的填写可以积10分奖励</h2>
 		</div>
 		<div class="question-box">
-        <form class="diaocha form-horizontal" action="/home/diaocha"  method="post">
+        <form class="diaocha form-horizontal" action="?z=home/diaocha"  method="post">
 
 			<ul>
 
