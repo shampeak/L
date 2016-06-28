@@ -26,7 +26,26 @@ class Admin extends BaseController {
     //用户列表
     public function doUser()
     {
+        //导入
+        //远程最小的id
+        $minid = app('db')->getall("SELECT max(rid) FROM `remote`");
+        $minid = intval($minid);
 
+        //获取远程数据,进行比对,执行导入操作
+        $remote = app('db2')->getall("select * from attend_order where id > $minid");
+
+        //获取本地ID 列表 进行过滤
+        $localtel = app('db')->getcol("select mobile from user");
+        foreach($remote as $key=>$value){
+            if(in_array($remote['tel'],$localtel)){
+                unset($remote[$key]);
+            }
+        }
+
+        foreach($remote as $key=>$value){
+            Model('remote')->daorunr($value);       //静默
+        }
+        //导入结束
 
         $res = app('db')->getall("select * from user order by sort desc,uid desc");
         view('',[
@@ -44,6 +63,7 @@ class Admin extends BaseController {
                 "msg"   => "手机号必须填写"
             ]);
         }
+
         if(preg_match("/^1[34578]{1}\d{9}$/",$res['mobile'])){
             //echo "是手机号码";
         }else{

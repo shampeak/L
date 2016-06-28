@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-23 16:34:03
+/* Smarty version 3.1.29, created on 2016-06-28 18:45:51
   from "E:\phpleague\Grace\L\App\Views\Admin\User_edit.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576b9efb96efb2_32685040',
+  'unifunc' => 'content_5772555f046b89_66229299',
   'file_dependency' => 
   array (
     '3696471377daff61b137bef6f4dcd7521f080529' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\User_edit.tpl',
-      1 => 1466664551,
+      1 => 1467082122,
       2 => 'file',
     ),
   ),
@@ -19,11 +19,11 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576b9efb96efb2_32685040 ($_smarty_tpl) {
+function content_5772555f046b89_66229299 ($_smarty_tpl) {
 ?>
 <div class="row">
     <div class="col-md-12">
-        <form class="useredit form-horizontal" action="/admin/user/edit/"  method="post">
+        <form class="useredit form-horizontal" action="?z=admin/user/edit/"  method="post">
 
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
@@ -40,8 +40,25 @@ function content_576b9efb96efb2_32685040 ($_smarty_tpl) {
 	<span class="red">手机号不能修改</span>
     </div>
   </div>
-  
-  <div class="form-group">
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">密码</label>
+                <div class="col-sm-10">
+                    <input type="text" name="mima" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['mima'];?>
+">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">code</label>
+                <div class="col-sm-10">
+                    <input type="text" name="code" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['code'];?>
+">
+                </div>
+            </div>
+
+
+            <div class="form-group">
     <label for="inputPassword3" class="col-sm-2 control-label">性别</label>
     <div class="col-sm-10">
     <input type="radio" name="gender" id="radio" value="1" <?php if ($_smarty_tpl->tpl_vars['row']->value['gender'] == 1) {?>checked="checked"<?php }?>/> 男

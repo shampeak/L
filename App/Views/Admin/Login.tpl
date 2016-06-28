@@ -29,9 +29,6 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Google Fonts call. Font Used Open Sans & Raleway -->
-    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
     <!-- Jquery Validate Script -->
     <script type="text/javascript" src="/assets/jquery.validate.js"></script>

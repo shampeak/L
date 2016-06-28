@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-23 14:57:17
+/* Smarty version 3.1.29, created on 2016-06-28 16:05:51
   from "E:\phpleague\Grace\L\App\Views\Admin\Diaocha_add.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576b884d30d100_25249864',
+  'unifunc' => 'content_57722fdfbb3846_39316694',
   'file_dependency' => 
   array (
     '7914349d5285d057b53256f6ad53a1c5fae34ba8' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Diaocha_add.tpl',
-      1 => 1466665034,
+      1 => 1467082122,
       2 => 'file',
     ),
   ),
@@ -19,11 +19,11 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576b884d30d100_25249864 ($_smarty_tpl) {
+function content_57722fdfbb3846_39316694 ($_smarty_tpl) {
 ?>
 <div class="row">
     <div class="col-md-12">
-        <form class="diaochaadd form-horizontal" action="/admin/diaocha/add/"  method="post">
+        <form class="diaochaadd form-horizontal" action="?z=admin/diaocha/add/"  method="post">
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">title</label>
     <div class="col-sm-10">

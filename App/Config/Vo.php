@@ -12,6 +12,7 @@ return [
         'Dsn'      => '../App/Config/Dsn.php',
         'Smarty'   => '../App/Config/Smarty.php',
         'Db'       => '../App/Config/Db.php',
+        'Db2'       => '../App/Config/Db2.php',
         'Cookies'  => '../App/Config/Cookies.php',
         'Adminauth'  => '../App/Config/Adminauth.php',
     ],
@@ -22,6 +23,7 @@ return [
         'View'      => Grace\View\View::class,           //
         'Smarty'    => Grace\Smarty\Smarty::class,           //
         'Db'        => Grace\Db\Db::class,           //
+        'Db2'        => Grace\Db\Db::class,           //
         'Cookies'   => Grace\Cookies\Cookies::class,
         'Adminauth'   => Grace\Adminauth\Adminauth::class,
     ],

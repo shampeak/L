@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-28 18:48:29
-  from "E:\phpleague\Grace\L\App\Views\Admin\Zhishi.tpl" */
+/* Smarty version 3.1.29, created on 2016-06-28 17:46:12
+  from "E:\phpleague\Grace\L\App\Views\Admin\Yc.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_577255fd1bb7d4_27611618',
+  'unifunc' => 'content_57724764266278_90510276',
   'file_dependency' => 
   array (
-    'dbe8c8ca1dc60373670cc2c8ca5e214809a43b60' => 
+    '91735c918db17d845e29db6fe9b5cdc00b69df51' => 
     array (
-      0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Zhishi.tpl',
-      1 => 1467104576,
+      0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Yc.tpl',
+      1 => 1467107169,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_577255fd1bb7d4_27611618 ($_smarty_tpl) {
+function content_57724764266278_90510276 ($_smarty_tpl) {
+if (!is_callable('smarty_modifier_date_format')) require_once 'E:\\phpleague\\Grace\\L\\App\\Library\\Smarty\\plugins\\modifier.date_format.php';
 ?>
 <!doctype html>
 <html><head>
@@ -63,7 +64,6 @@ function content_577255fd1bb7d4_27611618 ($_smarty_tpl) {
 >
     <![endif]-->
 
-
     <!-- DataTables Initialization -->
     <?php echo '<script'; ?>
  type="text/javascript" src="/assets/jquery.dataTables.min.js"><?php echo '</script'; ?>
@@ -72,61 +72,31 @@ function content_577255fd1bb7d4_27611618 ($_smarty_tpl) {
  type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             $('#dt1').dataTable({
-                "aaSorting": [[ 0, "desc" ]],
+				"aaSorting": [[ 0, "desc" ]],
                 "aLengthMenu": [[30, 50, -1], [30, 50, "All"]],
                 "iDisplayLength":30,			//一页多少条
-                "bAutoWidth": true,	//自动宽度
-                "bStateSave": false,
-                "bLengthChange": true, //改变每页显示数据数量
-
-                "oLanguage": {
-                    "sLengthMenu": "每页显示 _MENU_ 条记录",
-                    "sZeroRecords": "抱歉， 没有找到",
-                    "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
-                    "sInfoEmpty": "没有数据",
-                    "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
-                    "oPaginate": {
-                        "sFirst": "首页",
-                        "sPrevious": "前一页",
-                        "sNext": "后一页",
-                        "sLast": "尾页"
-                    },
-                    "sZeroRecords": "没有检索到数据",
-                    "sProcessing": "<img src='./loading.gif' />"
-                },
-				"fnRowCallback": function( nRow, aData, iDisplayIndex ) {
-					/* Append the grade to the default row class name */
-					if ( aData[6] == "A" )
-					{
-						$('td:eq(2)', nRow).html( '<span class="white b_red">'+aData[2]+'</span>' );
-					}
-					if ( aData[6] == "B" )
-					{
-						$('td:eq(3)', nRow).html( '<span class="white b_red">'+aData[3]+'</span>' );
-					}
-					if ( aData[6] == "C" )
-					{
-						$('td:eq(4)', nRow).html( '<span class="white b_red">'+aData[4]+'</span>' );
-					}
-					if ( aData[6] == "D" )
-					{
-						$('td:eq(5)', nRow).html( '<span class="white b_red">'+aData[5]+'</span>' );
-					}
-					return nRow;
-				},
-				"aoColumnDefs": [ {
-						"sClass": "center",
-						"aTargets": [ -1, -2 ]
-				} ]		
+				"bAutoWidth": true,	//自动宽度
+				"bStateSave": false,
+				"bLengthChange": true, //改变每页显示数据数量  
 				
-
-
-
+				"oLanguage": {
+					"sLengthMenu": "每页显示 _MENU_ 条记录",
+					"sZeroRecords": "抱歉， 没有找到",
+					"sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+					"sInfoEmpty": "没有数据",
+					"sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+					"oPaginate": {
+						"sFirst": "首页",
+						"sPrevious": "前一页",
+						"sNext": "后一页",
+						"sLast": "尾页"
+					},
+					"sZeroRecords": "没有检索到数据",
+					"sProcessing": "<img src='./loading.gif' />"
+				}
 
             });
-			
         });
-		
     <?php echo '</script'; ?>
 >
 
@@ -154,8 +124,8 @@ function content_577255fd1bb7d4_27611618 ($_smarty_tpl) {
             <ul class="nav navbar-nav">
                 <li><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
-                <li class="active"><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
-                <li><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
+                <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
+                <li class="active"><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
 
             </ul>
         </div><!--/.nav-collapse -->
@@ -164,32 +134,30 @@ function content_577255fd1bb7d4_27611618 ($_smarty_tpl) {
 
 <div class="container-fluid">
 
-    <!-- CONTENT -->
-    <div class="row">
-        <div class="col-sm-12 col-lg-12">
+<!-- CONTENT -->
+<div class="row">
+<div class="col-sm-12 col-lg-12">
 
 
-            <h4><strong>知识问答</strong></h4>
+<h4><strong>调查问卷</strong></h4>
 
-            <a class="shambox" rel="?z=admin/zhishi/add">添加</a>
-
-
-            <table class="display" id="dt1">
-                <thead>
-                <tr>
-                    <th width="90">排序</th>
-                    <th>问题</th>
-                    <th>选项A</th>
-                    <th>选项B</th>
-                    <th>选项C</th>
-                    <th>选项D</th>
-                    <th>答案</th>
-                    <th width="120">操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
-$_from = $_smarty_tpl->tpl_vars['res']->value;
+<table class="display" id="dt1">
+<thead>
+<tr>
+    <th width="30">ID</th>
+    <th>姓名</th>
+    <th>电话</th>
+    <th>职位</th>
+    <th>公司C</th>
+    <th>创建时间</th>
+    <th>支付时间</th>
+    <th width="210">状态</th>
+    <th width="100">操作</th>
+</tr>
+</thead>
+<tbody>
+<?php
+$_from = $_smarty_tpl->tpl_vars['remote']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
 }
@@ -200,47 +168,64 @@ foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
 $_smarty_tpl->tpl_vars['value']->_loop = true;
 $__foreach_value_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 ?>
-                    <tr>
-                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['sort'];?>
+<tr>
+    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
+    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['name'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['optionA'];?>
+    <td>
+    <?php if (in_array($_smarty_tpl->tpl_vars['value']->value['tel'],$_smarty_tpl->tpl_vars['tellist']->value)) {?>
+    <span class="b_red white"><?php echo $_smarty_tpl->tpl_vars['value']->value['tel'];?>
+</span>
+    <?php } else { ?>
+    <?php echo $_smarty_tpl->tpl_vars['value']->value['tel'];?>
+
+    <?php }?>
+    </td>
+    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['postion'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['optionB'];?>
+    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['company'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['optionC'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['optionD'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['da'];?>
-</td>
-                        <td>
-                            <a class="shambox" rel="?z=admin/zhishi/edit&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
-">信息</a>
-                            <!-- a class="shamboxl" rel="/admin/userzhishi?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
+    <td>
+    <?php if ($_smarty_tpl->tpl_vars['value']->value['c_time'] != 0) {
+echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['value']->value['c_time'],'%m-%d %H:%M');
+}?>
+    </td>
+    <td><?php if ($_smarty_tpl->tpl_vars['value']->value['pay_time'] != 0) {
+echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['value']->value['pay_time'],'%m-%d %H:%M');
+}?></td>
+    <td>
+    
+    <?php if (in_array($_smarty_tpl->tpl_vars['value']->value['tel'],$_smarty_tpl->tpl_vars['tellist']->value)) {?><span class="label label-info">匹配电话</span><?php }?>
+    <?php if ($_smarty_tpl->tpl_vars['bj']->value[$_smarty_tpl->tpl_vars['value']->value['id']]['deny']) {?><span class="label label-default">拒绝</span><?php }?>
+    <?php if ($_smarty_tpl->tpl_vars['bj']->value[$_smarty_tpl->tpl_vars['value']->value['id']]['save']) {?><span class="label label-danger">导入</span><?php }?>
+    </td>
+    <td>
+<a class="btn btn-primary  btn-sm formact" relid="<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+" tag="?z=admin/yc/actdr" act="dr">导入</a>
+<!-- a class="shamboxl" rel="/admin/userzhishi?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
 ">知识</a>
-<a class="shamboxl" rel="/admin/userzhishi?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
+<a class="shamboxl" rel="/admin/userdiaocha?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
 ">调查</a>
 <a class="shamboxl" rel="/admin/userjifen?uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>
 ">积分</a -->
-                            <a class="formact" relid="<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
-" tag="?z=admin/zhishi/delete" act="delete" confirm="确定?">删除</a>
+<!-- a class="btn btn-primary  btn-sm formact" relid="<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+" tag="?z=admin/yc/actpb" act="pb">屏蔽</a -->
 
-                        </td>
-                    </tr>
-                <?php
+    </td>
+</tr>
+<?php
 $_smarty_tpl->tpl_vars['value'] = $__foreach_value_0_saved_local_item;
 }
 if ($__foreach_value_0_saved_item) {
 $_smarty_tpl->tpl_vars['value'] = $__foreach_value_0_saved_item;
 }
 ?>
-                </tbody>
-            </table><!--/END SECOND TABLE -->
+</tbody>
+</table><!--/END SECOND TABLE -->
 
-        </div><!--/span12 -->
-    </div><!-- /row -->
+</div><!--/span12 -->
+</div><!-- /row -->
 
 
 
