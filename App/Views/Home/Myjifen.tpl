@@ -30,7 +30,7 @@
 		</div>
 		<div class="score-list clearfix">
 			<div class="list-item fl">
-				<h5>我获得的积分</h5>
+				<h5>我送出的积分</h5>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
                 {foreach from=$senddetail item=value name=foo}
                     <tr>
@@ -42,7 +42,7 @@
 				</table>
 			</div>
 			<div class="list-item fr">
-				<h5>我送出的积分</h5>
+				<h5>我获得的积分</h5>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
                 {foreach from=$receivedetail item=value name=foo}
                     <tr>

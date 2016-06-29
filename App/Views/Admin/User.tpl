@@ -111,6 +111,7 @@
     <th width="90">序号</th>
     <th width="150">姓名</th>
     <th width="180">手机号</th>
+    <th>密码</th>
     <th>code</th>
     <th>url</th>
     <th width="90">性别</th>
@@ -126,8 +127,9 @@
     <td>{$value['uid']}</td>
     <td>{$value['name']}</td>
     <td>{$value['mobile']}</td>
+    <td>{$value['mima']}</td>
     <td>{$value['code']}</td>
-    <td><a href="http://jifen.netconcepts.cn/?z=w&code={$value['code']}" target="_blank">http://jifen.netconcepts.cn/?z=w&code={$value['code']}</a></td>
+    <td><a href="http://jifen.netconcepts.cn/?code={$value['code']}" target="_blank">http://jifen.netconcepts.cn/?code={$value['code']}</a></td>
     
     <td>{if $value['gender'] eq 1}男{else}女{/if}</td>
     <td>{$value['company']}</td>
