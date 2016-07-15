@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>TIME-CZG</title>
+
+</head>
+
+<body>
+
+
+
+</div>
+
+<a href="#" onclick="weixinAddContact('gh_1a9acbdbea37')">test </a>
+
+<script>
+function weixinAddContact(name){
+        WeixinJSBridge.invoke("addContact", {webtype: "1",username: name}, function(e) {
+            WeixinJSBridge.log(e.err_msg);
+            //e.err_msg:add_contact:added 已经添加
+            //e.err_msg:add_contact:cancel 取消添加
+            //e.err_msg:add_contact:ok 添加成功
+            if(e.err_msg == 'add_contact:added' || e.err_msg == 'add_contact:ok'){
+            //关注成功，或者已经关注过
+            }
+        })
+}
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-27 12:53:39
+/* Smarty version 3.1.29, created on 2016-07-15 14:07:37
   from "E:\phpleague\Grace\L\App\Views\Home\Fenranking.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5770b153b75451_81831273',
+  'unifunc' => 'content_57887da9b63554_57043808',
   'file_dependency' => 
   array (
     '8264ebda098a6f8ac875e9f31c7da35774b1a28f' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Home\\Fenranking.tpl',
-      1 => 1467003217,
+      1 => 1468561921,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5770b153b75451_81831273 ($_smarty_tpl) {
+function content_57887da9b63554_57043808 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">

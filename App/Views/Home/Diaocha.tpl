@@ -9,6 +9,14 @@
 	<link rel="stylesheet" href="/static/css/reset.css">
 	<link rel="stylesheet" href="/static/css/qa_style.css">
 	<script src="/static/js/flexible.js"></script>
+<style>
+.clearfix{
+	margin-bottom: 0px;
+}
+</style>    
+         <link rel="stylesheet" href="/assets/bootstrap-3.3.5/css/bootstrap.min.css">
+
+    
 </head>
 <body>
 
@@ -25,7 +33,7 @@
 
                 {foreach from=$res item=value name=foo}
 				<li>
-					<p class="question">{$smarty.foreach.foo.index+1}、{$value['title']}</p>
+					<h3>{$smarty.foreach.foo.index+1}、{$value['title']}</h3>
 					<div class="choose-item">
                     
 {if $value['optionA'] neq ''}

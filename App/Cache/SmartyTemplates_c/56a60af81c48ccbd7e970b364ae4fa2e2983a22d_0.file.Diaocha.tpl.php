@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-27 13:21:53
+/* Smarty version 3.1.29, created on 2016-07-15 16:43:31
   from "E:\phpleague\Grace\L\App\Views\Home\Diaocha.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5770b7f19dd675_56376014',
+  'unifunc' => 'content_5788a233667b13_70563383',
   'file_dependency' => 
   array (
     '56a60af81c48ccbd7e970b364ae4fa2e2983a22d' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Home\\Diaocha.tpl',
-      1 => 1466990653,
+      1 => 1468571608,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5770b7f19dd675_56376014 ($_smarty_tpl) {
+function content_5788a233667b13_70563383 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +35,14 @@ function content_5770b7f19dd675_56376014 ($_smarty_tpl) {
 	<?php echo '<script'; ?>
  src="/static/js/flexible.js"><?php echo '</script'; ?>
 >
+<style>
+.clearfix{
+	margin-bottom: 0px;
+}
+</style>    
+         <link rel="stylesheet" href="/assets/bootstrap-3.3.5/css/bootstrap.min.css">
+
+    
 </head>
 <body>
 
@@ -45,7 +53,7 @@ function content_5770b7f19dd675_56376014 ($_smarty_tpl) {
 			<h2>说明：完成全部调查问卷的填写可以积10分奖励</h2>
 		</div>
 		<div class="question-box">
-        <form class="diaocha form-horizontal" action="/home/diaocha"  method="post">
+        <form class="diaocha form-horizontal" action="?z=home/diaocha"  method="post">
 
 			<ul>
 
@@ -65,9 +73,9 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']++;
 $__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 ?>
 				<li>
-					<p class="question"><?php echo (isset($_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index'] : null)+1;?>
+					<h3><?php echo (isset($_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index'] : null)+1;?>
 、<?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
-</p>
+</h3>
 					<div class="choose-item">
                     
 <?php if ($_smarty_tpl->tpl_vars['value']->value['optionA'] != '') {?>

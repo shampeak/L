@@ -10,21 +10,25 @@ class Home extends BaseController {
 
     public function doQiandaoPost()
     {
+        $uid        = Model('user')->uid();
+        Model('qiandao')->qiandao($uid);
+
         //签到
-        $this->AjaxReturn();
+        $this->AjaxReturn([
+            'code'  => 200,
+            'msg'   => 'OK',
+            'js'    => 'if(data.code>0){$(".btn-sign").addClass("btn-signdisable");$(".btn-sign").removeClass("btn-sign");}else{alert(data.msg);}'
+        ]);
     }
 
     public function doQiandao()
     {
         //克签到时间
         //11点 10点 13点 16点
-
-        //前后五分钟开放签到按钮
-        //检查是否已经签到,签到过才可以继续签
-        $triger = false;
+        $uid        = Model('user')->uid();
 
         view('',[
-            'avtive' => $triger,              //是否能签到的开关
+            'triger' => Model('qiandao')->isQiandao($uid),              //是否能签到的开关
             'ratate'=>[
                 'hours'     =>'1',              //初始旋转角度
                 'miniute'   =>'1',

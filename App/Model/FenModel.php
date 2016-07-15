@@ -78,7 +78,10 @@ class FenModel
      */
     public function qiandao($uid = 0)
     {
-        return 0;
+        //计算数据库中有几个签到
+        $count = app('db')->getone("select count(*) from qiandao where uid= $uid");
+        $res = $count*5;
+        return $res;
     }
 
     /**

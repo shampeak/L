@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-27 11:43:00
+/* Smarty version 3.1.29, created on 2016-07-15 14:19:02
   from "E:\phpleague\Grace\L\App\Views\Home\Fensend.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5770a0c433f5b3_24128599',
+  'unifunc' => 'content_578880560b4ab9_71962776',
   'file_dependency' => 
   array (
     'e303f902c00bc284457095966ed3e1bcc8ada020' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Home\\Fensend.tpl',
-      1 => 1466990653,
+      1 => 1468561921,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5770a0c433f5b3_24128599 ($_smarty_tpl) {
+function content_578880560b4ab9_71962776 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +37,7 @@ function content_5770a0c433f5b3_24128599 ($_smarty_tpl) {
 >
 </head>
 <body style="background:#fefbed;">
-<form action="/home/fensend/" class="zengsong" method="post">
+<form action="?z=home/fensend/" class="zengsong" method="post">
 
 	<!-- 内容区 -->
 	<div class="main main-interact">

@@ -16,7 +16,7 @@
 <div class="inte">
     <img src="assets/img/wel-bg.jpg" alt="" class="inte-bg"/>
     <p class="title">
-        <span class="name">游晓峰 </span>
+        <span class="name">游晓峰，</span>
         <span class="txt">欢迎来到您的专属页面</span>
     </p>
     <p class="inte-ps">积分系统将在8月11日开启</p>

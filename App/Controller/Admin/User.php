@@ -26,14 +26,35 @@ class Admin extends BaseController {
     //用户列表
     public function doUser()
     {
+
+        //远程数据
+        $remote = app('db2')->getall("select * from attend_order where tel <>''");
+
+        //拒绝和保存标记
+        $bj = app('db')->getall("SELECT * FROM `remote` ",'rid');
+
+        //如果存在新的数据则INSERT
+        foreach($remote as $key => $value){
+            //$rid = $value['id'];
+            if(empty($bj[$value['id']])){
+                //tianjia
+                $res['rid'] = $value['id'];
+                $res['deny'] = 0;
+                $res['save'] = 0;
+                app('db')->autoExecute('remote',$res,'INSERT');
+            }
+        }
+
+        //==================================================
+        //==================================================
         //导入
         //远程最小的id
-        $minid = app('db')->getall("SELECT max(rid) FROM `remote`");
+
+        $minid = app('db')->getone("SELECT max(rid) FROM `remote`");
         $minid = intval($minid);
 
         //获取远程数据,进行比对,执行导入操作
         $remote = app('db2')->getall("select * from attend_order where id > $minid");
-
         //获取本地ID 列表 进行过滤
         $localtel = app('db')->getcol("select mobile from user");
         foreach($remote as $key=>$value){

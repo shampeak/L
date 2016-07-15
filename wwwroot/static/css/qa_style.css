@@ -289,8 +289,9 @@ input[type=radio]:checked{
 }
 
 .question-box .choose-item label{
-	font-size: 0.3125rem;
+	font-size: 0.425rem;
 	color: #424242;
+	font-weight:400;
 	margin-right:0.234375rem;
 }
 .question-box .submit-box {

@@ -52,3 +52,6 @@ Temporary Items
 .idea
 wwwroot/phpMyAdmin
 _
+App/Cache/
+App/Views/Home/7.15
+conf

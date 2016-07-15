@@ -8,51 +8,51 @@ class Admin extends BaseController {
         parent::__construct();
     }
 
-    //ÆÁ±Î
+    //å±è”½
     public function doYc_actpbPost()
     {
         $id = intval(req('Post')['relid']);
-        //ÐÞ¸Ä±ê¼Ç
+        //ä¿®æ”¹æ ‡è®°
         $res['deny'] = 1;
         app('db')->autoExecute('remote',$res,'UPDATE',"rid = $id");
         $this->AjaxReturn();
 
-        //Ö»ÐèÒªÔÚÊý¾Ý¿âÖÐ½øÐÐ±ê¼Ç
+        //åªéœ€è¦åœ¨æ•°æ®åº“ä¸­è¿›è¡Œæ ‡è®°
     }
 
-    //µ¼Èë
+    //å¯¼å…¥
     public function doYc_actdrPost()
     {
         $id = intval(req('Post')['relid']);
-        //µ¼Èë²Ù×÷
+        //å¯¼å…¥æ“ä½œ
         //do something
         //daoru($id);
-        //µ¼Èë
-//        if(Model('remote')->daoru($id)){
-            //µ¼Èë³É¹¦
-            //ÐÞ¸Ä±ê¼Ç
+        //å¯¼å…¥
+        if(Model('remote')->daoru($id)){
+            //å¯¼å…¥æˆåŠŸ
+            //ä¿®æ”¹æ ‡è®°
             $res['save'] = 1;
             app('db')->autoExecute('remote',$res,'UPDATE',"rid = $id");
             $this->AjaxReturn();
-//        }else{
-//            $this->AjaxReturn([
-//                'code'  => -100,
-//                'msg'   => 'µ¼ÈëÊ§°Ü'
-//            ]);
-//        }
+        }else{
+            $this->AjaxReturn([
+                'code'  => -100,
+                'msg'   => 'å¯¼å…¥å¤±è´¥:å·²ç»å¯¼å…¥æˆ–å…¶ä»–'
+            ]);
+        }
 
     }
 
-    //Ô¶³ÌÊý¾ÝÆÁ±Î
+    //è¿œç¨‹æ•°æ®å±è”½
     public function doYc()
     {
         //like
         /*
         [id] => 88
-                [name] => öÃÉºÉº
+                [name] => é›’çŠçŠ
                 [tel] => 13789002222
-                [postion] => Ö÷¹Ü
-                [company] => ÄÍÌØ¿µÈü
+                [postion] => ä¸»ç®¡
+                [company] => è€ç‰¹åº·èµ›
                 [pay_time] => 0
                 [email] => xingcn@126.com
         [address] =>
@@ -61,7 +61,7 @@ class Admin extends BaseController {
         [source] => 1
         [trade_no] =>
         [trade_id] => 201606280949446713944564318776
-        [trade_name] => µÚÁù½ìÖÐ¹úSEOÅÅÐÐ°ñ´ó»áÃÅÆ±1ÕÅ
+        [trade_name] => ç¬¬å…­å±Šä¸­å›½SEOæŽ’è¡Œæ¦œå¤§ä¼šé—¨ç¥¨1å¼ 
         [pay_num] => 1
         [invoice] => 2
         [pay_type] => 1
@@ -69,13 +69,13 @@ class Admin extends BaseController {
         [c_time] => 1467078584
          */
 
-        //Ô¶³ÌÊý¾Ý
+        //è¿œç¨‹æ•°æ®
         $remote = app('db2')->getall("select * from attend_order where tel <>''");
 
-        //¾Ü¾øºÍ±£´æ±ê¼Ç
+        //æ‹’ç»å’Œä¿å­˜æ ‡è®°
         $bj = app('db')->getall("SELECT * FROM `remote` ",'rid');
 
-        //Èç¹û´æÔÚÐÂµÄÊý¾ÝÔòINSERT
+        //å¦‚æžœå­˜åœ¨æ–°çš„æ•°æ®åˆ™INSERT
         foreach($remote as $key => $value){
             //$rid = $value['id'];
             if(empty($bj[$value['id']])){
@@ -87,8 +87,10 @@ class Admin extends BaseController {
             }
         }
 
+        //ä¸Šé¢çš„è¿‡ç¨‹å·²ç»åœ¨userlisté¡µé¢å®Œæˆ
 
-        //¼ìË÷ËùÓÐÒÑ¾­´æÔÚµÄÓÃ»§ÕËºÅ
+
+        //æ£€ç´¢æ‰€æœ‰å·²ç»å­˜åœ¨çš„ç”¨æˆ·è´¦å·
         $tellist = app('db')->getcol("SELECT mobile FROM `user` ");
 
         view('',[

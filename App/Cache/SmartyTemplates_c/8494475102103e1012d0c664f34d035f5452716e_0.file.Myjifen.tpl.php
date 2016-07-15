@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-27 11:42:53
+/* Smarty version 3.1.29, created on 2016-07-15 14:07:33
   from "E:\phpleague\Grace\L\App\Views\Home\Myjifen.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5770a0bd843fe9_40777758',
+  'unifunc' => 'content_57887da54dac81_79117116',
   'file_dependency' => 
   array (
     '8494475102103e1012d0c664f34d035f5452716e' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Home\\Myjifen.tpl',
-      1 => 1466998970,
+      1 => 1468561921,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5770a0bd843fe9_40777758 ($_smarty_tpl) {
+function content_57887da54dac81_79117116 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'E:\\phpleague\\Grace\\L\\App\\Library\\Smarty\\plugins\\modifier.date_format.php';
 ?>
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'E:\\phpleague\\Gr
 		</div>
 		<div class="score-list clearfix">
 			<div class="list-item fl">
-				<h5>我获得的积分</h5>
+				<h5>我送出的积分</h5>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <?php
 $_from = $_smarty_tpl->tpl_vars['senddetail']->value;
@@ -95,7 +95,7 @@ $_smarty_tpl->tpl_vars['value'] = $__foreach_foo_0_saved_item;
 				</table>
 			</div>
 			<div class="list-item fr">
-				<h5>我送出的积分</h5>
+				<h5>我获得的积分</h5>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <?php
 $_from = $_smarty_tpl->tpl_vars['receivedetail']->value;

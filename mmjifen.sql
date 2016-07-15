@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: 127.0.0.1
--- 生成日期: 2016 年 06 月 28 日 19:54
+-- 生成日期: 2016 年 07 月 15 日 13:57
 -- 服务器版本: 5.6.23-log
 -- PHP 版本: 5.6.9
 
@@ -66,7 +66,14 @@ CREATE TABLE IF NOT EXISTS `jifengzengsong` (
   PRIMARY KEY (`id`),
   KEY `from` (`from`),
   KEY `to` (`to`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- 转存表中的数据 `jifengzengsong`
+--
+
+INSERT INTO `jifengzengsong` (`id`, `from`, `to`, `fenshu`, `tm`) VALUES
+(3, 29, 23, 5, 1467128474);
 
 -- --------------------------------------------------------
 
@@ -77,10 +84,17 @@ CREATE TABLE IF NOT EXISTS `jifengzengsong` (
 CREATE TABLE IF NOT EXISTS `qiandao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
-  `tm` int(11) NOT NULL COMMENT '签到时间',
+  `tm` varchar(64) NOT NULL COMMENT '签到时间',
   PRIMARY KEY (`id`),
   KEY `uid` (`uid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `qiandao`
+--
+
+INSERT INTO `qiandao` (`id`, `uid`, `tm`) VALUES
+(1, 87, '2016-07-07 11:00:00');
 
 -- --------------------------------------------------------
 
@@ -95,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `remote` (
   `save` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `rid` (`rid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=90 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=94 ;
 
 --
 -- 转存表中的数据 `remote`
@@ -157,10 +171,14 @@ INSERT INTO `remote` (`id`, `rid`, `deny`, `save`) VALUES
 (53, 83, 0, 0),
 (54, 84, 0, 0),
 (55, 85, 0, 0),
-(56, 86, 0, 0),
-(57, 87, 0, 0),
+(56, 86, 0, 1),
+(57, 87, 0, 1),
 (58, 88, 0, 0),
-(59, 89, 0, 0);
+(59, 89, 0, 0),
+(90, 90, 0, 0),
+(91, 91, 0, 0),
+(92, 92, 0, 0),
+(93, 93, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -263,23 +281,21 @@ CREATE TABLE IF NOT EXISTS `user` (
   KEY `sort` (`sort`),
   KEY `send` (`send`),
   KEY `received` (`received`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=88 ;
 
 --
 -- 转存表中的数据 `user`
 --
 
 INSERT INTO `user` (`uid`, `name`, `mima`, `code`, `headimg`, `mobile`, `password`, `gender`, `company`, `title`, `weixin`, `createAt`, `regAt`, `active`, `sort`, `send`, `received`) VALUES
-(31, '雒珊珊', '6476036', '2635703', NULL, '18519330917', NULL, NULL, '市场主管', '市场主管', NULL, 1467110969, 0, 1, 0, 0, 0),
+(43, '雒珊珊', '5525175', '7794674', NULL, '18519330917', NULL, NULL, '市场主管', '市场主管', NULL, 1467712717, 0, 1, 0, 0, 0),
 (12, ' 游晓峰', 'you4045', '1005367', NULL, '13513644045', NULL, 1, '', '', '', 1467066948, 0, 1, 0, 0, 0),
-(30, 'lipeng', '4427185', '3978856', NULL, '13800001111', NULL, NULL, '是加', '是加', NULL, 1467110969, 0, 1, 0, 0, 0),
-(29, '测试', '5186649', '5799371', NULL, '18666666666', NULL, NULL, '好', '好', NULL, 1467110969, 0, 1, 0, 0, 0),
-(23, '123', '3505958', '4318397', NULL, '15677896578', NULL, NULL, '123', '123', NULL, 1467110969, 0, 1, 0, 0, 0),
-(24, '新年', '7927708', '6924622', NULL, '13789002222', NULL, NULL, '主管', '主管', NULL, 1467110969, 0, 1, 0, 0, 0),
+(87, '测试', '123', '123', '/upload/201607/07/b4189e598f2a971a7b88c4571d30e7db.jpg', '13811069199', NULL, 1, 'h s j d j', 'd h d j j d', 'hshdjd', 1467860468, 0, 1, 0, 0, 0),
 (25, '陈合喜', '8994143', '9043818', NULL, '13255316043', NULL, NULL, 'SEO', 'SEO', NULL, 1467110969, 0, 1, 0, 0, 0),
-(26, 'mandy', '6141604', '5663440', NULL, '18601212206', NULL, NULL, 'Marketing Director', 'Marketing Director', NULL, 1467110969, 0, 1, 0, 0, 0),
-(27, '微信', '1759249', '1270547', NULL, '15910801822', NULL, NULL, 'PHP', 'PHP', NULL, 1467110969, 0, 1, 0, 0, 0),
-(28, 'leibo@netconcepts.cn', '5725769', '2049272', NULL, '13827292981', NULL, NULL, '大大大是', '大大大是', NULL, 1467110969, 0, 1, 0, 0, 0);
+(45, 'leibo@netconcepts.cn', '5842386', '1536983', NULL, '13827292981', NULL, NULL, '大大大是', '大大大是', NULL, 1467712721, 0, 1, 0, 0, 0),
+(32, '洪永志', '8239251', '3310686', NULL, '18401482381', NULL, NULL, '员工', '员工', NULL, 1467192091, 0, 1, 0, 0, 0),
+(33, '封小洋', '5488563', '4273689', NULL, '15821162195', NULL, NULL, 'sem/seo', 'sem/seo', NULL, 1467712668, 0, 1, 0, 0, 0),
+(34, '刘海政', '4940371', '8590972', NULL, '13466589581', NULL, NULL, '营销策划', '营销策划', NULL, 1467712668, 0, 1, 0, 0, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
