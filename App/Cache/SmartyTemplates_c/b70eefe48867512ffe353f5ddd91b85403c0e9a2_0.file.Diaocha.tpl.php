@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-28 18:48:30
+/* Smarty version 3.1.29, created on 2016-07-18 19:09:37
   from "E:\phpleague\Grace\L\App\Views\Admin\Diaocha.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_577255fe605259_20523270',
+  'unifunc' => 'content_578cb8f1501066_45594518',
   'file_dependency' => 
   array (
     'b70eefe48867512ffe353f5ddd91b85403c0e9a2' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Diaocha.tpl',
-      1 => 1467104527,
+      1 => 1468840102,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_577255fe605259_20523270 ($_smarty_tpl) {
+function content_578cb8f1501066_45594518 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
@@ -123,7 +123,8 @@ function content_577255fe605259_20523270 ($_smarty_tpl) {
             <ul class="nav navbar-nav">
                 <li><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li class="active"><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
-                <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
+                <!-- li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li -->
+                <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
                 <li><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
 
             </ul>

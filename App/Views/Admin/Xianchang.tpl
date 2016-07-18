@@ -87,8 +87,8 @@
                 <li><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
                 <!-- li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li -->
-                <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
-                <li class="active"><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
+                <li class="active"><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
+                <li><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
 
             </ul>
         </div><!--/.nav-collapse -->
@@ -101,59 +101,22 @@
 <div class="row">
 <div class="col-sm-12 col-lg-12">
 
-
-<h4><strong>调查问卷</strong></h4>
-
-<table class="display" id="dt1">
-<thead>
-<tr>
-    <th width="30">ID</th>
-    <th>姓名</th>
-    <th>电话</th>
-    <th>职位</th>
-    <th>公司C</th>
-    <th>创建时间</th>
-    <th>支付时间</th>
-    <th width="210">状态</th>
-    <th width="100">操作</th>
-</tr>
-</thead>
-<tbody>
-{foreach from=$remote item=$value}
-<tr>
-    <td>{$value['id']}</td>
-    <td>{$value['name']}</td>
-    <td>
-    {if $value['tel']|in_array:$tellist}
-    <span class="b_red white">{$value['tel']}</span>
-    {else}
-    {$value['tel']}
-    {/if}
-    </td>
-    <td>{$value['postion']}</td>
-    <td>{$value['company']}</td>
-    <td>
-    {if $value['c_time'] neq 0}{$value['c_time']|date_format:'%m-%d %H:%M'}{/if}
-    </td>
-    <td>{if $value['pay_time'] neq 0}{$value['pay_time']|date_format:'%m-%d %H:%M'}{/if}</td>
-    <td>
-    
-    {if $value['tel']|in_array:$tellist}<span class="label label-info">匹配电话</span>{/if}
-    {if $bj[$value['id']]['deny']}<span class="label label-default">拒绝</span>{/if}
-    {if $bj[$value['id']]['save']}<span class="label label-danger">导入</span>{/if}
-    </td>
-    <td>
-<a class="btn btn-primary  btn-sm formact" relid="{$value['id']}" tag="?z=admin/yc/actdr" act="dr">导入</a>
-<!-- a class="shamboxl" rel="/admin/userzhishi?uid={$value['uid']}">知识</a>
-<a class="shamboxl" rel="/admin/userdiaocha?uid={$value['uid']}">调查</a>
-<a class="shamboxl" rel="/admin/userjifen?uid={$value['uid']}">积分</a -->
-<!-- a class="btn btn-primary  btn-sm formact" relid="{$value['id']}" tag="?z=admin/yc/actpb" act="pb">屏蔽</a -->
-
-    </td>
-</tr>
-{/foreach}
-</tbody>
-</table><!--/END SECOND TABLE -->
+    <h4><strong>现场提示</strong></h4>
+    <form class="xianchang form-horizontal" action="?z=admin/xianchang/"  method="post">
+    <table class="table table-bordered table-condensed  table-condensed">
+        {foreach from =$res key=key item=item name=foo}
+            <tr class="active">
+                <td><input name="rc[{$smarty.foreach.foo.index+1}][id]" value="{$smarty.foreach.foo.index+1}"> {$key}</td>
+                <td><input name="rc[{$smarty.foreach.foo.index+1}][sort]" value="{$item['sort']}">{$key}</td>
+                <td><input name="rc[{$smarty.foreach.foo.index+1}][tm]" value="{$item['tm']}">{$key}</td>
+                <td><input name="rc[{$smarty.foreach.foo.index+1}][title]" value="{$item['title']}">{$key}</td>
+                <td><input name="rc[{$smarty.foreach.foo.index+1}][nr]" value="{$item['nr']}">{$key}</td>
+            </tr>
+        {/foreach}
+    </table>
+    </form>
+<a class="mmmbtr btn btn-primary ">提交</a>
+    <!--/END SECOND TABLE -->
 
 </div><!--/span12 -->
 </div><!-- /row -->
@@ -211,7 +174,24 @@
 </div>
 <!-- /footerwrap -->
 
-
-
-
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        $('.mmmbtr').click(function(){
+            var tag = '.xianchang';
+            $.ajax({
+                type: "POST",
+                url: $(tag).attr("action"),
+                data: $(tag).serialize(),
+                dataType:'json',
+                success: function(data){
+                    var JS = data.js;
+                    eval(JS);
+                },
+                error : function() {
+                    alert("异常！");
+                }
+            });
+        });
+    });
+</script>
 </body></html>

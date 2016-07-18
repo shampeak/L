@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-28 17:03:08
+/* Smarty version 3.1.29, created on 2016-07-18 19:09:35
   from "E:\phpleague\Grace\L\App\Views\Admin\User.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57723d4c30f274_39435112',
+  'unifunc' => 'content_578cb8ef8efa54_00956975',
   'file_dependency' => 
   array (
     'e3018e58ea9e08a83539189170b37426c6461d85' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\User.tpl',
-      1 => 1467104569,
+      1 => 1468840137,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57723d4c30f274_39435112 ($_smarty_tpl) {
+function content_578cb8ef8efa54_00956975 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
@@ -123,7 +123,8 @@ function content_57723d4c30f274_39435112 ($_smarty_tpl) {
             <ul class="nav navbar-nav">
                 <li class="active"><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
-                <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
+                <!-- li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li -->
+                <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
                 <li><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
             </ul>
         </div><!--/.nav-collapse -->
@@ -148,6 +149,9 @@ function content_57723d4c30f274_39435112 ($_smarty_tpl) {
     <th width="90">序号</th>
     <th width="150">姓名</th>
     <th width="180">手机号</th>
+    <th>密码</th>
+    <th>code</th>
+    <th>url</th>
     <th width="90">性别</th>
     <th>公司</th>
     <th>职位</th>
@@ -175,6 +179,14 @@ $__foreach_value_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 </td>
     <td><?php echo $_smarty_tpl->tpl_vars['value']->value['mobile'];?>
 </td>
+    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['mima'];?>
+</td>
+    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['code'];?>
+</td>
+    <td><a href="http://jifen.netconcepts.cn/?code=<?php echo $_smarty_tpl->tpl_vars['value']->value['code'];?>
+" target="_blank">http://jifen.netconcepts.cn/?code=<?php echo $_smarty_tpl->tpl_vars['value']->value['code'];?>
+</a></td>
+    
     <td><?php if ($_smarty_tpl->tpl_vars['value']->value['gender'] == 1) {?>男<?php } else { ?>女<?php }?></td>
     <td><?php echo $_smarty_tpl->tpl_vars['value']->value['company'];?>
 </td>

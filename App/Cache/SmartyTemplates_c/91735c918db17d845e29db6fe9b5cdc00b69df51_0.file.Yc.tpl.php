@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-28 17:46:12
+/* Smarty version 3.1.29, created on 2016-07-18 19:09:39
   from "E:\phpleague\Grace\L\App\Views\Admin\Yc.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57724764266278_90510276',
+  'unifunc' => 'content_578cb8f30be504_09426802',
   'file_dependency' => 
   array (
     '91735c918db17d845e29db6fe9b5cdc00b69df51' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Yc.tpl',
-      1 => 1467107169,
+      1 => 1468840151,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57724764266278_90510276 ($_smarty_tpl) {
+function content_578cb8f30be504_09426802 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'E:\\phpleague\\Grace\\L\\App\\Library\\Smarty\\plugins\\modifier.date_format.php';
 ?>
 <!doctype html>
@@ -124,7 +124,8 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'E:\\phpleague\\Gr
             <ul class="nav navbar-nav">
                 <li><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
-                <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
+                <!-- li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li -->
+                <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
                 <li class="active"><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
 
             </ul>

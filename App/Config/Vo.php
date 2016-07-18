@@ -15,6 +15,7 @@ return [
         'Db2'       => '../App/Config/Db2.php',
         'Cookies'  => '../App/Config/Cookies.php',
         'Adminauth'  => '../App/Config/Adminauth.php',
+        'Mmcfile'  => '../App/Config/Mmcfile.php',
     ],
 
     'Providers'=>[
@@ -26,6 +27,7 @@ return [
         'Db2'        => Grace\Db\Db::class,           //
         'Cookies'   => Grace\Cookies\Cookies::class,
         'Adminauth'   => Grace\Adminauth\Adminauth::class,
+        'Mmcfile'   => Grace\Mmcfile\Mmcfile::class,
     ],
 
 ];
