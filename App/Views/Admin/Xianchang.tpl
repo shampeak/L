@@ -104,15 +104,40 @@
     <h4><strong>现场提示</strong></h4>
     <form class="xianchang form-horizontal" action="?z=admin/xianchang/"  method="post">
     <table class="table table-bordered table-condensed  table-condensed">
+        <tr class="active">
+            <td width="50">ID</td>
+            <td width="150">排序</td>
+            <td width="200">起始时间</td>
+            <td width="250">主题</td>
+            <td>内容</td>
+        </tr>
         {foreach from =$res key=key item=item name=foo}
             <tr class="active">
-                <td><input name="rc[{$smarty.foreach.foo.index+1}][id]" value="{$smarty.foreach.foo.index+1}"> {$key}</td>
-                <td><input name="rc[{$smarty.foreach.foo.index+1}][sort]" value="{$item['sort']}">{$key}</td>
-                <td><input name="rc[{$smarty.foreach.foo.index+1}][tm]" value="{$item['tm']}">{$key}</td>
-                <td><input name="rc[{$smarty.foreach.foo.index+1}][title]" value="{$item['title']}">{$key}</td>
-                <td><input name="rc[{$smarty.foreach.foo.index+1}][nr]" value="{$item['nr']}">{$key}</td>
+                <td>{$smarty.foreach.foo.index+1}</td>
+                <td><input size="10" name="rc[{$item['id']}][sort]" value="{$item['sort']}"></td>
+                <td>
+                <input size="5" name="rc[{$item['id']}][timeb]" value="{$item['timeb']}"> -
+                <input size="5" name="rc[{$item['id']}][timee]" value="{$item['timee']}"></td>
+                <td><input name="rc[{$item['id']}][title]" value="{$item['title']}"></td>
+                <td><input size="64" name="rc[{$item['id']}][nr]" value="{$item['nr']}"></td>
             </tr>
         {/foreach}
+        <tr class="active">
+            <td></td>
+            <td><input size="10" name="rc[9999][sort]" value=""></td>
+            <td><input size="5" name="rc[9999][timeb]" value=""> -
+          <input size="5" name="rc[9999][timee]" value=""></td>
+            <td><input name="rc[9999][title]" value=""></td>
+            <td><input name="rc[9999][nr]" value=""></td>
+        </tr>
+        <tr class="active">
+            <td></td>
+            <td><input size="10" name="rc[8888][sort]" value=""></td>
+            <td><input size="5" name="rc[8888][timeb]" value="" placeholder="10:30"> -
+           <input size="5" name="rc[8888][timee]" value="" placeholder="11:00"></td>
+            <td><input name="rc[8888][title]" value=""></td>
+            <td><input name="rc[8888][nr]" value=""></td>
+        </tr>
     </table>
     </form>
 <a class="mmmbtr btn btn-primary ">提交</a>

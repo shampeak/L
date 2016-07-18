@@ -148,7 +148,7 @@ input[type=radio]:checked{
 /*首页*/
 .main .banner-box img{
 	width:100%;
-	height: 6.3125rem;
+	height: 4.2125rem;
 }
 
 .main .nav-container{
@@ -375,7 +375,7 @@ a.btn-disable{
 	height: 100%;
 }
 .main-user h2{
-	margin-top:0.78125rem;
+	margin-top:0.28125rem;
 	font-size:0.40625rem;
 	color: #696969;
 }
@@ -460,11 +460,11 @@ a.btn-disable{
 	color: #ffa200;
 }
 .main-user .btn-box{
-	margin: 0.78125rem auto 0;
+	margin: 0.28125rem auto 0;
 	text-align: center;
 }
 #report{
-    margin:0.78125rem auto;
+    margin:0.28125rem auto;
 }
 #report li{
 	text-align: center;

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-28 05:48:05
+/* Smarty version 3.1.29, created on 2016-07-19 00:31:14
   from "C:\www\Grace\L\App\Views\Home\Index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57719f15b037c8_86823955',
+  'unifunc' => 'content_578d0452ae05e0_32305567',
   'file_dependency' => 
   array (
     'e86e7267da14eedc75088a1be9562e616c0e002f' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Home\\Index.tpl',
-      1 => 1467064081,
+      1 => 1468804358,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_57719f15b037c8_86823955 ($_smarty_tpl) {
+function content_578d0452ae05e0_32305567 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,10 +42,12 @@ function content_57719f15b037c8_86823955 ($_smarty_tpl) {
 		<div class="banner-box"><img src="/static/images/jifen.png"></div>
 		<div class="nav-container">
 			<ul class="clearfix">
-				<li><a href="?z=home/qiandao" class="nav-sign"><span>整点签到</span></a></li>
-				<li><a href="?z=home/zhishi" class="nav-question"><span>知识问答</span></a></li>
+				<!--li><a href="?z=home/qiandao" class="nav-sign"><span>整点签到</span></a></ li-->
+                
+				<li><a href="?z=home/zhuanjia" class="nav-question"><span>专家介绍</span></a></li>
+                <li><a href="?z=home/qiandao" class="nav-sign"><span>游戏互动</span></a></li>
+				<li><a href="?z=home/xianchang" class="nav-user"><span>现场指导</span></a></li>
 				<li><a href="?z=home/diaocha" class="nav-survey"><span>问卷调查</span></a></li>
-				<li><a href="?z=home/ziliao" class="nav-user"><span>资料完善</span></a></li>
 			</ul>
 		</div>
 	</div>

@@ -33,21 +33,20 @@
 
                 {foreach from=$res item=value name=foo}
 				<li>
-					<h3>{$smarty.foreach.foo.index+1}、{$value['title']}</h3>
+					<h4>{$smarty.foreach.foo.index+1}、{$value['title']}</h4>
 					<div class="choose-item">
-                    
 {if $value['optionA'] neq ''}
 <input type="radio" name="choose[{$value['id']}]" value="A" {if $da['da'][$value['id']] eq 'A'}checked{/if}>
 <label for="">{$value['optionA']}</label>
-{/if}
+{/if}<br>
 {if $value['optionB'] neq ''}
 <input type="radio" name="choose[{$value['id']}]" value="B" {if $da['da'][$value['id']] eq 'B'}checked{/if}>
 <label for="">{$value['optionB']}</label>
-{/if}
+{/if}<br>
 {if $value['optionC'] neq ''}
 <input type="radio" name="choose[{$value['id']}]" value="C" {if $da['da'][$value['id']] eq 'C'}checked{/if}>
 <label for="">{$value['optionC']}</label>
-{/if}
+{/if}<br>
 {if $value['optionD'] neq ''}
 <input type="radio" name="choose[{$value['id']}]" value="D" {if $da['da'][$value['id']] eq 'D'}checked{/if}>
 <label for="">{$value['optionC']}</label>

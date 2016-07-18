@@ -42,7 +42,9 @@
 
 <address>
   <strong>电话咨询 :</strong><br>
-  马小姐 <a href="tel://18601212206">18601212206</a>、 <a href="tel://01085616983">010-85616983</a> 转 8188
+  马小姐 <br>
+<a href="tel://18601212206">18601212206</a><br>
+<a href="tel://01085616983">010-85616983</a> 转 8188
 </address>
 <address>
   <strong>QQ咨询 :</strong><br>

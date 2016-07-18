@@ -17,8 +17,9 @@
 	<!-- 内容区 -->
 	<div class="main main-user">
 		<form action="?z=home/ziliao" class="ziliao" method="post">
-		<h2>完善个人资料，可获得10分奖励</h2>
+		
 		<div class="portrait-box">
+        <h2>完善个人资料，可获得10分奖励</h2>
 			<label for="file-img" class="img-box" {if $userinfo['headimg'] neq ''}style="display:none"{/if}><span>上传头像</span></label>
             
             <input type="file" name="file" capture="camera" id="file-img" />

@@ -26,30 +26,16 @@
         <div class="col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-
-
-                    9:00-9:10   开场
-                    9:10-9:50  演讲主题：XXXXXX     渠成  Netconcepts 中国创始人兼CEO
-                    9:50-10:30 演讲主题：XXXX       Zac  知名网络营销专家、《SEO实战密码》作者
-                    10:30-11:00  颁奖
-                    11:00-11:40  演讲主题：XXXX     刘禾
-                    11:40-12：00  抽奖
-                    12:00-14:00   午餐
-                    14:00 - 14:45  主题演讲：XXXXXX     曹继忠   58到家在线电商总经理
-                    14:45 - 15:30  主题演讲：XXXXXX     宋星  知名数据分析专家、网站分析在中国创始人
-                    15:30-15:50  抽奖
-                    15:50 - 16:30   主题演讲：XXXXXX      朱定平 合生元品牌事业部总经理
-                    16:30- 17:10  主题演讲：XXXXXX      郭庄  Netconcepts副总裁兼首席咨询师
-                    17:10-17:50   主题演讲：XXXXXX     待定
-                    17:50   会议结束
-
-
-
-
-
-
-
-
+<table class="table table-striped table-condensed">
+{foreach from=$res key=key item=item}
+<tr class="active">
+    <td width="95"><span class="red">{$item['timeb']}</span> - <span class="red">{$item['timee']}</span></td>
+    <td><spna class="blue">{$item['title']}</span></td>
+    <td>{$item['nr']}</td>
+    
+</tr>
+{/foreach}
+</table>
                 </div>
             </div>
 

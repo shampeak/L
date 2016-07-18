@@ -12,44 +12,62 @@ class Admin extends BaseController {
     {
         $rc = req('Post')['rc'];
 
+
         foreach($rc as $key=>$value){
-            if(empty($value['tm']) && empty($value['title']) && empty($value['nr']) ){
+            if(empty($value['timeb']) && empty($value['timee']) && empty($value['title']) && empty($value['nr']) ){
+
                 unset($rc[$key]);
-            }else{
-                $_rc[] = $value;
             }
         }
 
-        foreach($_rc as $value){
-            $_v[] = $value['sort'];
+        //åˆ é™¤æ‰€æœ‰æ•°æ®
+        app('db')->query("delete from xianchang");
+        foreach($rc as $key => $value){
+            app('db')->autoExecute('xianchang',[
+                'sort'=>$value['sort'],
+                'timeb'=>$value['timeb'],
+                'timee'=>$value['timee'],
+                'title'=>$value['title'],
+                'nr'=>$value['nr'],
+            ],'INSERT');
         }
-        array_multisort($_v,SORT_ASC,$_rc);
 
-        D($_rc);
+        //ç„¶åinsertæ‰€æœ‰æ•°æ®
 //D($rc);
 
-        app('Mmcfile')->file('file.json')->set($_rc);
+/*
+ *
+
+9:00-9:10   å¼€åœº
+9:10-9:50  æ¼”è®²ä¸»é¢˜ï¼šXXXXXX
+9:50-10:30 æ¼”è®²ä¸»é¢˜ï¼šXXXX
+10:30-11:00  é¢å¥–
+11:00-11:40  æ¼”è®²ä¸»é¢˜ï¼šXXXX     åˆ˜ç¦¾
+11:40-12ï¼š00  æŠ½å¥–
+12:00-14:00   åˆé¤
+
+
+
+15:30-15:50  æŠ½å¥–
+
+
+
+
+
+
+ *
+ */
 
         $this->AjaxReturn();
     }
 
-    //µ÷²éÎÊ¾í
+
     public function doXianchang()
     {
 
-        $res =  app('Mmcfile')->file('file.json')->get();
-print_r($res);
+        $res =  app('db')->getall("select * from xianchang order by sort,id");
+
 //D($res);
-        //ÅÅĞò
-        $res = $res?:array();
-
-        //¶Ôsort×Ö¶ÎÅÅĞò
-
-
-        //»ñÈ¡ÄÚÈİ
-        $res[] = [];
-        $res[] = [];
-
         view('',[
             'res' => $res
         ]);

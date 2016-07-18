@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-27 22:47:22
+/* Smarty version 3.1.29, created on 2016-07-18 23:01:33
   from "C:\www\Grace\L\App\Views\Admin\User.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57713c7a457a16_58598866',
+  'unifunc' => 'content_578cef4daadb30_20873183',
   'file_dependency' => 
   array (
     'ae88ec5f6560ad51143841b14f7aa30d608ad72b' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Admin\\User.tpl',
-      1 => 1467038387,
+      1 => 1468843900,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57713c7a457a16_58598866 ($_smarty_tpl) {
+function content_578cef4daadb30_20873183 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
@@ -62,9 +62,6 @@ function content_57713c7a457a16_58598866 ($_smarty_tpl) {
  src="http://html5shim.googlecode.com/svn/trunk/html5.js"><?php echo '</script'; ?>
 >
     <![endif]-->
-
-    <!-- Google Fonts call. Font Used Open Sans -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
     <!-- DataTables Initialization -->
     <?php echo '<script'; ?>
@@ -126,7 +123,9 @@ function content_57713c7a457a16_58598866 ($_smarty_tpl) {
             <ul class="nav navbar-nav">
                 <li class="active"><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
-                <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li>
+                <!-- li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li -->
+                <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
+                <li><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -150,6 +149,9 @@ function content_57713c7a457a16_58598866 ($_smarty_tpl) {
     <th width="90">序号</th>
     <th width="150">姓名</th>
     <th width="180">手机号</th>
+    <th>密码</th>
+    <th>code</th>
+    <th>url</th>
     <th width="90">性别</th>
     <th>公司</th>
     <th>职位</th>
@@ -177,6 +179,14 @@ $__foreach_value_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 </td>
     <td><?php echo $_smarty_tpl->tpl_vars['value']->value['mobile'];?>
 </td>
+    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['mima'];?>
+</td>
+    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['code'];?>
+</td>
+    <td><a href="http://jifen.netconcepts.cn/?code=<?php echo $_smarty_tpl->tpl_vars['value']->value['code'];?>
+" target="_blank">http://jifen.netconcepts.cn/?code=<?php echo $_smarty_tpl->tpl_vars['value']->value['code'];?>
+</a></td>
+    
     <td><?php if ($_smarty_tpl->tpl_vars['value']->value['gender'] == 1) {?>男<?php } else { ?>女<?php }?></td>
     <td><?php echo $_smarty_tpl->tpl_vars['value']->value['company'];?>
 </td>

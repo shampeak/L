@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-28 06:21:53
+/* Smarty version 3.1.29, created on 2016-07-19 01:17:05
   from "C:\www\Grace\L\App\Views\Home\Ziliao.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5771a701f02639_99855255',
+  'unifunc' => 'content_578d0f115008b2_43715539',
   'file_dependency' => 
   array (
     'b3df21e9dad53c9ae3816dd60ecd40799a69ee2c' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Home\\Ziliao.tpl',
-      1 => 1467064220,
+      1 => 1468862222,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5771a701f02639_99855255 ($_smarty_tpl) {
+function content_578d0f115008b2_43715539 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,8 +43,9 @@ function content_5771a701f02639_99855255 ($_smarty_tpl) {
 	<!-- 内容区 -->
 	<div class="main main-user">
 		<form action="?z=home/ziliao" class="ziliao" method="post">
-		<h2>完善个人资料，可获得10分奖励</h2>
+		
 		<div class="portrait-box">
+        <h2>完善个人资料，可获得10分奖励</h2>
 			<label for="file-img" class="img-box" <?php if ($_smarty_tpl->tpl_vars['userinfo']->value['headimg'] != '') {?>style="display:none"<?php }?>><span>上传头像</span></label>
             
             <input type="file" name="file" capture="camera" id="file-img" />

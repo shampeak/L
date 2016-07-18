@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-28 06:21:47
+/* Smarty version 3.1.29, created on 2016-07-19 01:25:34
   from "C:\www\Grace\L\App\Views\Home\Diaocha.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5771a6fb6f3001_31022583',
+  'unifunc' => 'content_578d110ed9f916_87220497',
   'file_dependency' => 
   array (
     'de7b6c6fa352ab519e69d3d7aee8017d8f666522' => 
     array (
       0 => 'C:\\www\\Grace\\L\\App\\Views\\Home\\Diaocha.tpl',
-      1 => 1467064148,
+      1 => 1468862732,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5771a6fb6f3001_31022583 ($_smarty_tpl) {
+function content_578d110ed9f916_87220497 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +35,14 @@ function content_5771a6fb6f3001_31022583 ($_smarty_tpl) {
 	<?php echo '<script'; ?>
  src="/static/js/flexible.js"><?php echo '</script'; ?>
 >
+<style>
+.clearfix{
+	margin-bottom: 0px;
+}
+</style>    
+         <link rel="stylesheet" href="/assets/bootstrap-3.3.5/css/bootstrap.min.css">
+
+    
 </head>
 <body>
 
@@ -65,9 +73,9 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']++;
 $__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 ?>
 				<li>
-					<p class="question"><?php echo (isset($_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index'] : null)+1;?>
+					<h4><?php echo (isset($_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index'] : null)+1;?>
 、<?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
-</p>
+</h4>
 					<div class="choose-item">
                     
 <?php if ($_smarty_tpl->tpl_vars['value']->value['optionA'] != '') {?>
