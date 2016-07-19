@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
+
+
+
+<title>无标题文档</title>
+</head>
+
+<body>
+<table width="98%" border="1">
+  <tr>
+    <td>页面元素</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><p>基于用户ID</p>
+      <p>基于controller.mothed识别</p>
+    <p>基于菜单数组</p></td>
+    <td valign="top"><p>数据</p>
+    <pre>
+//基于用户id
+$user = [
+    userinfo => [
+    	uid       => '',
+        nickname  => '',
+        groupid   => '',
+        username  => '',
+        groupname => '',
+    ],
+    tasks   => [],
+    message => [],
+    notice  => []
+]</pre>
+菜单识别
+    <pre>
+//基于菜单识别
+$menu = [
+    用户管理 =&gt; [
+        controller =&gt; [
+            'mothed'=&gt;项目
+        ]
+    ],
+    数据管理 =&gt; [
+        dt =&gt; [
+            'list' =&gt; 数据列表,
+            'list2' =&gt; 数据列表2,
+            'list3' =&gt; 数据列表3,
+            'list4' =&gt; 数据列表4,
+        ]
+    ],
+    系统设置 =&gt; [
+    ],
+]</pre>
+    页面识别 controller.mothed
+    <pre>
+//基于菜单识别
+$pagecf = [
+    path =&gt; [path],
+    path =&gt; [title],
+    path =&gt; [subtitle],
+    path =&gt; [rule],
+    path =&gt; [notice],
+]</pre>
+
+</td>
+  </tr>
+  <tr>
+    <td><p>3 :－－－－－－－－－－－－－－－－－－－－</p>
+      <p> <a href="3/index.shtml">仪表盘</a></p>
+      <p><a href="3/userlist.shtml">用户管理</a></p>
+      <p></p>
+      <p>2 :－－－－－－－－－－－－－－－－－－－－</p>
+      <p> <a href="2/grouplist.shtml">组管理</a></p>
+      <p> <a href="2/rbaclist.shtml">权限元数据</a></p>
+      <p> <a href="2/pwlist.shtml">权限管理</a></p>
+      <p> <a href="2/rulelist.shtml">rule 管理</a></p>
+    <p></p></td>
+    <td valign="top"><p>1 :－－－－－－－－－－－－－－－－－－－－</p>
+      <p><a href="1/regsign.shtml">注册</a></p>
+      <p> <a href="1/login.shtml">登录</a></p>
+      <p> <a href="1/404.shtml">404</a></p>
+      <p>
+        <!--#include file="test.shtml"-->
+    </p></td>
+  </tr>
+  <tr>
+    <td><p>页面结构</p>
+      <table width="513" border="1">
+        <tr>
+          <td colspan="2" bgcolor="#CCCCCC">common_asset_head</td>
+        </tr>
+        <tr>
+          <td colspan="2">common_head</td>
+        </tr>
+        <tr>
+          <td>sitebar_user</td>
+          <td>content_header</td>
+        </tr>
+        <tr>
+          <td width="236">sitebar_search</td>
+          <td width="261">content_header_warn</td>
+        </tr>
+        <tr>
+          <td>sitebar_menu</td>
+          <td>content_header_box</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>content_nr</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>content_footer</td>
+        </tr>
+        <tr>
+          <td colspan="2" bgcolor="#CCCCCC">common_dialog</td>
+        </tr>
+        <tr>
+          <td colspan="2" bgcolor="#CCCCCC">common_asset_bottom</td>
+        </tr>
+    </table></td>
+    <td><p>&nbsp;</p>
+    <p>参数 [碎片]</p>
+    <table width="513" border="1">
+      <tr>
+        <td colspan="2" bgcolor="#CCCCCC">controller / mothed</td>
+      </tr>
+      <tr>
+        <td colspan="2">$user - 等 其他</td>
+      </tr>
+      <tr>
+        <td>$user</td>
+        <td>content_header [name / des]</td>
+      </tr>
+      <tr>
+        <td width="236">sitebar_search [无] </td>
+        <td width="261">content_header_notice [nr]</td>
+      </tr>
+      <tr>
+        <td>controller / mothed</td>
+        <td>content_header_box [nr router]</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>content_nr [controller / mothed]</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>content_footer [无]</td>
+      </tr>
+      <tr>
+        <td colspan="2" bgcolor="#CCCCCC">common_dialog [controller / mothed]</td>
+      </tr>
+      <tr>
+        <td colspan="2" bgcolor="#CCCCCC">controller / mothed</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="375" border="1">
+  <tr>
+    <td><h1 id="widget">Widget</h1></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>参数说明</td>
+    <td><p>&nbsp;</p>
+    <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td>显式参数</td>
+    <td><p>controller<br />
+    mothed<br />
+    action</p></td>
+  </tr>
+  <tr>
+    <td>隐式参数</td>
+    <td><p>$user<br />
+$router<br />
+$group<br />
+    $cookie</p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<pre id="line1">&lt;link href=&quot;http://cdn.bootcss.com/bootstrap/3.0.3/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt; </pre>
+<p><br />
+</p>
+
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;<br />$(document).ready(function(){
+<br />})
+
+function showAjaxModal(url,title)  <span id="line1663"> 
+</span>{  <span id="line1664"> </span>	
+    //console.log(url);  <span id="line1665"> </span>	
+    //.append
+
+    jQuery('#modal-7').modal('show', {backdrop: 'static'});  <span id="line1666"> </span>	
+  <span id="line1667"> </span>	
+    jQuery.ajax({  <span id="line1668"> </span>		
+        url: url,  <span id="line1669"> </span>		
+        success: function(response)  <span id="line1670"> </span>		
+        {  <span id="line1671"> </span>			
+            console.log(url);  <span id="line1672"> </span>			
+            jQuery('#modal-7 .modal-title').html(title);  <span id="line1673"> </span>			
+            jQuery('#modal-7 .modal-body').html(response);  <span id="line1674"> </span>			
+            var JS = $(&quot;script[type='text/dialog']&quot;).html();  <span id="line1675"> </span>			
+            eval(JS);												
+            //sytle  <span id="line1676"> </span>		
+    }  <span id="line1677"> </span>	
+    });  <span id="line1678"> 
+</span>}
+
+
+//提交添加组<br />$('.form_submit').click(function(){<br />    var res = $.ajax({<br />        url : '/s/user/userlist',<br />        type: 'post',<br />        data: {<br />        uname 	: $(&quot;input[name='uname']&quot;).val(),<br />        pwd 	: $(&quot;input[name='pwd']&quot;).val(),<br />        tname 	: $(&quot;input[name='tname']&quot;).val(),<br />        groupid : $(&quot;select[name='groupid']&quot;).val(),<br />        },<br />        dataType: &quot;json&quot;,<br />        async:false,<br />        cache:false<br />    }).responseJSON;
+<br />    //console.log(res);<br />    //==========================
+<br />    if(res.code&lt;0){<br />        alert(res.msg);<br />        return false;<br />    }else{<br />        location.reload();<br />        return true;<br />    }<br />})
+
+&lt;/script&gt;
+</pre>
+<p></p>
+<p></p>
+<p>&nbsp;</p>
+<pre id="line2">&lt;script src=&quot;http://cdn.bootcss.com/jquery/2.0.2/jquery.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;!-- jQuery UI 1.10.3 --&gt;  <span id="line922"> </span>       
+&lt;script src=&quot;http://cdn.bootcss.com/jqueryui/1.10.3/jquery-ui.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;  <span id="line923"> </span>        
+&lt;!-- Bootstrap --&gt;  <span id="line924"> </span>        
+&lt;script src=&quot;http://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt; </pre>
+<pre id="line3">function showAjaxModal(url,title)<br />{<br />    if ( $(&quot;#modal-sham&quot;).length &gt; 0 ) {<br />    } else {<br />        $(document.body).append(&quot;&lt;!-- Modal sham (Ajax Modal)--&gt;&lt;div class=\&quot;modal fade\&quot; id=\&quot;modal-sham\&quot;&gt;&lt;div class=\&quot;modal-dialog\&quot;&gt;&lt;div class=\&quot;modal-content\&quot;&gt;&lt;div class=\&quot;modal-header\&quot;&gt;&lt;button type=\&quot;button\&quot; class=\&quot;close\&quot; data-dismiss=\&quot;modal\&quot; aria-hidden=\&quot;true\&quot;&gt;&amp;times;&lt;/button&gt;&lt;h4 class=\&quot;modal-title\&quot;&gt;Title&lt;/h4&gt;&lt;/div&gt;&lt;div class=\&quot;modal-body\&quot;&gt;Content is loading...&lt;/div&gt;&lt;div class=\&quot;modal-footer\&quot;&gt;&lt;button type=\&quot;button\&quot; class=\&quot;btn btn-white modal_close\&quot; data-dismiss=\&quot;modal\&quot;&gt;关闭&lt;/button&gt;&lt;button type=\&quot;button\&quot; class=\&quot;btn btn-info modal_ok\&quot;&gt;确定&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&quot;);
+    }<br />    jQuery('#modal-sham').modal('show', {backdrop: 'static'});<br />    jQuery.ajax({<br />        url: url,<br />        success: function(response)<br />        {<br />            console.log(url);<br />            jQuery('#modal-sham .modal-title').html(title);<br />            jQuery('#modal-sham .modal-body').html(response);<br />            var JS = $(&quot;script[type='text/dialog']&quot;).html();<br />            eval(JS);<br />        }<br />    });<br />}<br />
+//调用
+$('.shamtest').click(function(){<br />	showAjaxModal('/test2.html','ceshiyi2')<br />})</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p> </p>
+<p>&nbsp;</p>
+
+
+<a class="shamtest">test</a>
+<a class="shamtest2">test2</a>
+<script src="http://cdn.bootcss.com/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+ 
+	function showAjaxModal(url,title)   
+	{   	
+		if ( $("#modal-sham").length > 0 ) {
+			
+		} else {
+				$(document.body).append("<!-- Modal sham (Ajax Modal)--><div class=\"modal fade\" id=\"modal-sham\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button><h4 class=\"modal-title\">Title</h4></div><div class=\"modal-body\">Content is loading...</div><div class=\"modal-footer\"><button type=\"button\" class=\"btn btn-white modal_close\" data-dismiss=\"modal\">关闭</button><button type=\"button\" class=\"btn btn-info modal_ok\">确定</button></div></div></div></div>");
+		}
+		jQuery('#modal-sham').modal('show', {backdrop: 'static'});   	
+		jQuery.ajax({   		
+			url: url,   		
+			success: function(response)   		
+			{
+				console.log(url);   			
+				jQuery('#modal-sham .modal-title').html(title);   			
+				jQuery('#modal-sham .modal-body').html(response);   			
+				var JS = $("script[type='text/dialog']").html();   			
+				eval(JS);												
+			}   	
+		});   
+	}
+	
+	 
+	$('.shamtest2').click(function(){
+		showAjaxModal('readme.shtml','ceshiyi')
+	})
+	 
+	$('.shamtest').click(function(){
+		showAjaxModal('readme.shtml','ceshiyi2')
+	})
+ 
+ 
+})
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+             <div class="col-xs-12">
+<div class="alert alert-danger alert-dismissable">
+<i class="fa fa-ban"></i>
+<button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
+<b>Alert!</b>
+Danger alert preview. This alert is dismissable. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+</div>                    
+</div>   

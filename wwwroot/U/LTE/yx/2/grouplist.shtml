@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AdminLTE | Simple Tables</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+  
+<!--#include virtual = "../sp/common_asset_head.shtml" -->
+
+    </head>
+<body class="skin-black">
+        
+<!--#include virtual = "../sp/common_header.shtml" -->
+
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="left-side sidebar-offcanvas">                
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+<!--#include virtual = "../sp/sitebar_user.shtml" -->
+<!--#include virtual = "../sp/sitebar_search.shtml" -->
+<!--#include virtual = "../sp/sitebar_menu.shtml" -->
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side">                
+
+<!--#include virtual = "../sp/content_header.shtml" -->
+            
+                <!-- Main content -->
+                <section class="content">
+                  <!-- /.row -->
+                    <div class="row">
+                            
+<!-- 通用提示框 -->
+<!--#include virtual = "../sp/content_header_notice.shtml" -->
+
+<!-- 操作框 -->
+<!--#include virtual = "../sp/content_header_box.shtml" -->
+                    
+<!-- 主体内容 -->                    
+<!--#include virtual = "grouplist_content.shtml" -->
+                       
+<!-- 页脚 -->                        
+<!--#include virtual = "../sp/content_footer.shtml" -->
+
+                  </div>
+                </section><!-- /.content -->                
+            </aside><!-- /.right-side -->
+        </div><!-- ./wrapper -->
+
+    <!--#include virtual = "../sp/common_asset_bottom.shtml" -->
+    <!--#include virtual = "../sp/common_dialog.shtml" -->
+<!-- jQuery 2.0.2 -->
+<a class="shamtest">test</a>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.shamtest').click(function(){
+            showAjaxModal('/test.html','ceshiyi2')
+        })
+
+
+    })
+</script>
+
+</body>
+</html>
