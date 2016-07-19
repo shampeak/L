@@ -55,7 +55,7 @@
 	<!-- /内容区 -->
 
 
-	{include file="footer.tpl" title=foo}
+	{include file="footer3.tpl" title=foo}
 
 
 </body>

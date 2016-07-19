@@ -75,7 +75,7 @@
 
 
 
-{include file="footer.tpl" title=foo}
+{include file="footer4.tpl" title=foo}
 
 
 <script src="/static/js/jquery.js"></script>

@@ -3,8 +3,8 @@
 <br><br>
 	<!-- 底部 -->
     <style>
-	.footer ul li:nth-of-type(1) a{
-	background:url(/static/images/icon-myscore_b.png) no-repeat center 0.1875rem;
+	.footer ul li:nth-of-type(4) a{
+	background:url(/static/images/icon-rank_b.png) no-repeat center 0.1875rem;
 	background-size: 0.78125rem auto;
 }
     </style>

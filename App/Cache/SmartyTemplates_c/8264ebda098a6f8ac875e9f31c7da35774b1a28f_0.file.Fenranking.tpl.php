@@ -1,26 +1,26 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-19 17:56:03
+/* Smarty version 3.1.29, created on 2016-07-19 19:09:59
   from "E:\phpleague\Grace\L\App\Views\Home\Fenranking.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578df933d56229_05677215',
+  'unifunc' => 'content_578e0a871bd4e0_94298797',
   'file_dependency' => 
   array (
     '8264ebda098a6f8ac875e9f31c7da35774b1a28f' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Home\\Fenranking.tpl',
-      1 => 1468922162,
+      1 => 1468926527,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:footer.tpl' => 1,
+    'file:footer4.tpl' => 1,
   ),
 ),false)) {
-function content_578df933d56229_05677215 ($_smarty_tpl) {
+function content_578e0a871bd4e0_94298797 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -128,7 +128,7 @@ $_smarty_tpl->tpl_vars['key'] = $__foreach_item_0_saved_key;
 
 
 
-<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>'foo'), 0, false);
+<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:footer4.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>'foo'), 0, false);
 ?>
 
 
