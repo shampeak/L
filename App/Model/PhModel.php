@@ -22,19 +22,18 @@ class PhModel
 //        2 : 签到
 //        3 : 资料
 //        4 : diaocha
-//        5 : 知识
-//        6 : 送出的
-//        7 : 收到的
 
-
-
+//            5 : 知识
+//            6 : 送出的
+//            7 : 收到的
 
         //索引 也是基础分   + 资料
         $_rc = app('db')->getall('select * from user');
         foreach($_rc as $key=>$value){
             $v['uid'] = $value['uid'];
-            $v['fen'] =  Model('fen')->fen($value['uid']);
+            $v['fen'] =  $value['fen'];//Model('fen')->fen($value['uid']);
             $v['headimg'] = $value['headimg'];
+            $v['name'] = $value['name'];
             $_v[] = $v;
         }
 

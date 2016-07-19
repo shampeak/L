@@ -38,6 +38,8 @@ class Home extends BaseController {
         $res = saddslashes($res);
         app('db')->autoExecute('s_da',$res,'INSERT');
 
+        Model('fen')->fen($uid);
+
         $this->AjaxReturn([
             'code'=> 200,
             'msg'=>"调查问卷完成"

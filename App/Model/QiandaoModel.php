@@ -32,6 +32,9 @@ class QiandaoModel
             $res['uid'] = $uid;
             $res['tm']  =  date('Y-m-d', time())." ".date('H', $this->tm).":00:00";      //需要记录的时间 是个字符串
             app('db')->autoExecute('qiandao',$res,'INSERT');
+
+            Model('fen')->fen($uid);
+
             return true;
         }else{
             return false;

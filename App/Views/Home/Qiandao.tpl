@@ -46,11 +46,11 @@
 
 <div class="btn-sign-box">
     <a href="javascript:void(0)" class="btn-sign{if $triger eq 0}disable{/if}">签到</a>
-    <div class="sign-score">+5</div>
+    <div class="sign-score">+2</div>
 </div>
 <div class="sign-tips">
     <p>签到说明 : 签到时间 9点 - 15点</p>
-    <p>签到环节，每成功签到一次可获得5分奖励</p>
+    <p>签到环节，每成功签到一次可获得2分奖励</p>
 </div>
 </div>
 

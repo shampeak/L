@@ -27,7 +27,7 @@
 <link href="/assets/LTE/css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
 </head>
-<body  style="font-size: 14px;">
+<body>
 
 
 
@@ -79,7 +79,10 @@
 
 
 <script src="/static/js/jquery.js"></script>
+<script src="/assets/LTE/js/AdminLTE/app.js" type="text/javascript"></script>
+<script>
 
+</script>
 
 </body>
 </html>

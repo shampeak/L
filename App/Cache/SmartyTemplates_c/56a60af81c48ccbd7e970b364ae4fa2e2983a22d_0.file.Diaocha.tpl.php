@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-15 16:43:31
+/* Smarty version 3.1.29, created on 2016-07-19 15:59:23
   from "E:\phpleague\Grace\L\App\Views\Home\Diaocha.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5788a233667b13_70563383',
+  'unifunc' => 'content_578ddddbdded42_11916375',
   'file_dependency' => 
   array (
     '56a60af81c48ccbd7e970b364ae4fa2e2983a22d' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Home\\Diaocha.tpl',
-      1 => 1468571608,
+      1 => 1468915155,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5788a233667b13_70563383 ($_smarty_tpl) {
+function content_578ddddbdded42_11916375 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,30 +73,29 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']++;
 $__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 ?>
 				<li>
-					<h3><?php echo (isset($_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index'] : null)+1;?>
+					<h4><?php echo (isset($_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index'] : null)+1;?>
 、<?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
-</h3>
+</h4>
 					<div class="choose-item">
-                    
 <?php if ($_smarty_tpl->tpl_vars['value']->value['optionA'] != '') {?>
 <input type="radio" name="choose[<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 ]" value="A" <?php if ($_smarty_tpl->tpl_vars['da']->value['da'][$_smarty_tpl->tpl_vars['value']->value['id']] == 'A') {?>checked<?php }?>>
 <label for=""><?php echo $_smarty_tpl->tpl_vars['value']->value['optionA'];?>
 </label>
-<?php }
-if ($_smarty_tpl->tpl_vars['value']->value['optionB'] != '') {?>
+<?php }?><br>
+<?php if ($_smarty_tpl->tpl_vars['value']->value['optionB'] != '') {?>
 <input type="radio" name="choose[<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 ]" value="B" <?php if ($_smarty_tpl->tpl_vars['da']->value['da'][$_smarty_tpl->tpl_vars['value']->value['id']] == 'B') {?>checked<?php }?>>
 <label for=""><?php echo $_smarty_tpl->tpl_vars['value']->value['optionB'];?>
 </label>
-<?php }
-if ($_smarty_tpl->tpl_vars['value']->value['optionC'] != '') {?>
+<?php }?><br>
+<?php if ($_smarty_tpl->tpl_vars['value']->value['optionC'] != '') {?>
 <input type="radio" name="choose[<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 ]" value="C" <?php if ($_smarty_tpl->tpl_vars['da']->value['da'][$_smarty_tpl->tpl_vars['value']->value['id']] == 'C') {?>checked<?php }?>>
 <label for=""><?php echo $_smarty_tpl->tpl_vars['value']->value['optionC'];?>
 </label>
-<?php }
-if ($_smarty_tpl->tpl_vars['value']->value['optionD'] != '') {?>
+<?php }?><br>
+<?php if ($_smarty_tpl->tpl_vars['value']->value['optionD'] != '') {?>
 <input type="radio" name="choose[<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 ]" value="D" <?php if ($_smarty_tpl->tpl_vars['da']->value['da'][$_smarty_tpl->tpl_vars['value']->value['id']] == 'D') {?>checked<?php }?>>
 <label for=""><?php echo $_smarty_tpl->tpl_vars['value']->value['optionC'];?>
@@ -121,7 +120,7 @@ $_smarty_tpl->tpl_vars['value'] = $__foreach_foo_0_saved_item;
 				<a active=<?php echo $_smarty_tpl->tpl_vars['active']->value;?>
  href="javascript:void(0)" class="<?php if ($_smarty_tpl->tpl_vars['active']->value == 1) {?>btn-submit<?php } else { ?>btn-disable<?php }?> shamsub">提交</a>
 				<?php if ($_smarty_tpl->tpl_vars['active']->value == 0) {?>
-                <span>得分：<strong>10分</strong></span>
+                <span>您已经填写完成,得分：<strong>10分</strong></span>
                 <?php }?>
 			</div>
             </form>

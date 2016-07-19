@@ -57,6 +57,9 @@ class Home extends BaseController {
 
         $res = req('Post');
         app('db')->autoExecute('user',$res,'UPDATE',"uid = $uid");
+
+        Model('fen')->fen($uid);
+
         $this->AjaxReturn([
             'code' => -100,
             'msg'   => '修改完成'

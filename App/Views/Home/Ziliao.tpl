@@ -19,7 +19,7 @@
 		<form action="?z=home/ziliao" class="ziliao" method="post">
 		
 		<div class="portrait-box">
-        <h2>完善个人资料，可获得10分奖励</h2>
+        <center><h2>完善个人资料，可获得20分奖励</h2></center>
 			<label for="file-img" class="img-box" {if $userinfo['headimg'] neq ''}style="display:none"{/if}><span>上传头像</span></label>
             
             <input type="file" name="file" capture="camera" id="file-img" />
@@ -28,13 +28,14 @@
                 <img src="{$userinfo['headimg']}">
                 </li>{/if}
 			</ul>
+            <center>点击头像进行修改</center>
 		</div>
 			<div class="user-form-box">
             
 				<div class="sex">
-					性别：
+					<h2>性别：
 					<input name="gender" type="radio" id="male" value="1" {if $userinfo['gender'] eq 1}checked{/if}><label for="male">男</label>
-				  <input type="radio" name="gender" id="female" value="0" {if $userinfo['gender'] eq 0}checked{/if}><label for="female">女</label>
+				  <input type="radio" name="gender" id="female" value="0" {if $userinfo['gender'] neq 1}checked{/if}><label for="female">女</label></h2>
 			  </div>
 				<div class="form-list">
 					<ul>

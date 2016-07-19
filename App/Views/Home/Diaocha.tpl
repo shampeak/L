@@ -24,7 +24,7 @@
 	<div class="main main-question">
 		<div class="main-title">
 			<h1>关于本次SEO排行榜大会的调查问卷</h1>
-			<h2>说明：完成全部调查问卷的填写可以积10分奖励</h2>
+			<h2>说明：完成全部调查问卷的填写可以积30分奖励</h2>
 		</div>
 		<div class="question-box">
         <form class="diaocha form-horizontal" action="?z=home/diaocha"  method="post">
@@ -60,7 +60,7 @@
 			<div class="submit-box">
 				<a active={$active} href="javascript:void(0)" class="{if $active eq 1}btn-submit{else}btn-disable{/if} shamsub">提交</a>
 				{if $active eq 0}
-                <span>得分：<strong>10分</strong></span>
+                <span>您已经填写完成,得分：<strong>30分</strong></span>
                 {/if}
 			</div>
             </form>
