@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="yes" name="apple-touch-fullscreen">
 	<meta content="telephone=no,email=no" name="format-detection">
@@ -13,8 +16,10 @@
 .clearfix{
 	margin-bottom: 0px;
 }
-</style>    
-         <link rel="stylesheet" href="/assets/bootstrap-3.3.5/css/bootstrap.min.css">
+</style>
+	<link rel="stylesheet" href="/assets/bootstrap-3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/color.css">
+	<link href="/assets/LTE/css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
     
 </head>
@@ -22,10 +27,8 @@
 
 	<!-- 内容区 -->
 	<div class="main main-question">
-		<div class="main-title">
-			<h1>关于本次SEO排行榜大会的调查问卷</h1>
-			<h2>说明：完成全部调查问卷的填写可以积30分奖励</h2>
-		</div>
+		<!-- center><h1>调查问卷</h1></center -->
+		<h3>说明：完成全部调查问卷的填写可以积30分奖励</h3>
 		<div class="question-box">
         <form class="diaocha form-horizontal" action="?z=home/diaocha"  method="post">
 
@@ -49,7 +52,11 @@
 {/if}<br>
 {if $value['optionD'] neq ''}
 <input type="radio" name="choose[{$value['id']}]" value="D" {if $da['da'][$value['id']] eq 'D'}checked{/if}>
-<label for="">{$value['optionC']}</label>
+<label for="">{$value['optionD']}</label>
+{/if}<br>
+{if $value['optionE'] neq ''}
+<input type="radio" name="choose[{$value['id']}]" value="E" {if $da['da'][$value['id']] eq 'E'}checked{/if}>
+<label for="">{$value['optionE']}</label>
 {/if}
 					</div>
 				</li>
@@ -65,8 +72,10 @@
 			</div>
             </form>
 		</div>
-		
+
 	</div>
+	<br>
+
 	<!-- /内容区 -->
 	{include file="footer.tpl" title=foo}
 </body>

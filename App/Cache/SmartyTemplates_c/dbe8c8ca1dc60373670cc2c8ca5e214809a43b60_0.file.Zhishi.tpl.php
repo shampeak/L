@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-18 19:09:30
+/* Smarty version 3.1.29, created on 2016-07-21 11:30:31
   from "E:\phpleague\Grace\L\App\Views\Admin\Zhishi.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578cb8eae40092_30593469',
+  'unifunc' => 'content_579041d7abc367_46096887',
   'file_dependency' => 
   array (
     'dbe8c8ca1dc60373670cc2c8ca5e214809a43b60' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Zhishi.tpl',
-      1 => 1468840167,
+      1 => 1469071671,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_578cb8eae40092_30593469 ($_smarty_tpl) {
+function content_579041d7abc367_46096887 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
@@ -72,7 +72,7 @@ function content_578cb8eae40092_30593469 ($_smarty_tpl) {
  type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             $('#dt1').dataTable({
-                "aaSorting": [[ 0, "desc" ]],
+                "aaSorting": [[ 1, "desc" ]],
                 "aLengthMenu": [[30, 50, -1], [30, 50, "All"]],
                 "iDisplayLength":30,			//一页多少条
                 "bAutoWidth": true,	//自动宽度
@@ -155,6 +155,7 @@ function content_578cb8eae40092_30593469 ($_smarty_tpl) {
                 <li><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
                 <!-- li class="active"><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li -->
+                <li  class="active"><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>嘉宾提问</a></li>
                 <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
                 <li><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
 
@@ -179,6 +180,8 @@ function content_578cb8eae40092_30593469 ($_smarty_tpl) {
                 <thead>
                 <tr>
                     <th width="90">排序</th>
+                    <th>嘉宾姓名</th>
+                    <th>演讲题目</th>
                     <th>问题</th>
                     <th>选项A</th>
                     <th>选项B</th>
@@ -203,6 +206,10 @@ $__foreach_value_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 ?>
                     <tr>
                         <td><?php echo $_smarty_tpl->tpl_vars['value']->value['sort'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['jiab'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['value']->value['jiatitle'];?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
 </td>

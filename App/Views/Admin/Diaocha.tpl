@@ -87,6 +87,7 @@
                 <li><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li class="active"><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
                 <!-- li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li -->
+                <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>嘉宾提问</a></li>
                 <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
                 <li><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
 
@@ -116,6 +117,7 @@
     <th>选项B</th>
     <th>选项C</th>
     <th>选项D</th>
+    <th>选项E</th>
     <th width="120">操作</th>
 </tr>
 </thead>
@@ -128,6 +130,7 @@
     <td>{$value['optionB']}</td>
     <td>{$value['optionC']}</td>
     <td>{$value['optionD']}</td>
+    <td>{$value['optionE']}</td>
     <td>
 <a class="shambox" rel="?z=admin/diaocha/edit&id={$value['id']}">信息</a>
 <!-- a class="shamboxl" rel="/admin/userzhishi?uid={$value['uid']}">知识</a>

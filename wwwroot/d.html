@@ -1,35 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>TIME-CZG</title>
-
-</head>
-
-<body>
-
-
-
-</div>
-
-<a href="#" onclick="weixinAddContact('gh_1a9acbdbea37')">test </a>
-
-<script>
-function weixinAddContact(name){
-        WeixinJSBridge.invoke("addContact", {webtype: "1",username: name}, function(e) {
-            WeixinJSBridge.log(e.err_msg);
-            //e.err_msg:add_contact:added 已经添加
-            //e.err_msg:add_contact:cancel 取消添加
-            //e.err_msg:add_contact:ok 添加成功
-            if(e.err_msg == 'add_contact:added' || e.err_msg == 'add_contact:ok'){
-            //关注成功，或者已经关注过
-            }
-        })
-}
-</script>
-
-
-
-
-</body>
+<!DOCTYPE html>    
+<html>    
+<head>    
+<meta charset="utf-8" />    
+<title>div图层样式</title>    
+<style>    
+.div-relative{position:relative; color:#000; border:1px solid #000; width:500px; height:400px}    
+.div-a{ position:absolute; left:30px; top:30px; background:#F00; width:200px; height:100px}    
+/* css注释说明： 背景为红色 */    
+.div-b{ position:absolute; left:50px; top:60px; background:#FF0; width:400px; height:200px}    
+/* 背景为黄色 */    
+.div-c{ position:absolute; left:80px; top:80px; background:#00F; width:300px; height:300px}    
+/* DIV背景颜色为蓝色 */    
+</style>    
+</head>    
+<body>    
+<div class="div-relative">    
+<div class="div-a">我背景为红色</div>    
+<div class="div-b">我背景为黄色</div>    
+<div class="div-c">我背景为蓝色</div>    
+</div>    
+</body>    
 </html>

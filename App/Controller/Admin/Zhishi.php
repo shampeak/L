@@ -12,7 +12,7 @@ class Admin extends BaseController {
     public function doZhishi()
     {
         view('',[
-            'res'=>app('db')->getall("select * from s_zhishi order by sort desc,id desc")
+            'res'=>app('db')->getall("select * from s_zhishi order by jiab,sort desc,id desc")
         ]);
     }
 

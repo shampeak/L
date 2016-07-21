@@ -37,7 +37,7 @@ class FenModel
         $fen += $this->ziliao($uid);        //资料分
         $fen += $this->qiandao($uid);       //签到分
 
-//        $fen += $this->zhishi($uid);       //知识
+        $fen += $this->zhishi($uid);       //知识
 //        $fen += $this->receive($uid);       //收到的分
 //        $fen -= $this->send($uid);          //送出的分
 
@@ -92,6 +92,14 @@ class FenModel
         return $res;
     }
 
+    //计算有用户的知识分
+    public function zhishi($uid = 0)
+    {
+        //核对该用户的答案计算积分
+        $sql = "SELECT fen FROM `s_da` where `type` = 'zhishi' and uid = $uid";
+        $fen = app('db')->getone($sql);
+        return intval($fen);
+    }
 
 
     ///====================================
@@ -125,14 +133,6 @@ class FenModel
         return intval($fen);
     }
 
-    //计算有用户的知识分
-    public function zhishi($uid = 0)
-    {
-        //核对该用户的答案计算积分
-        $sql = "SELECT fen FROM `s_da` where `type` = 'zhishi' and uid = $uid";
-        $fen = app('db')->getone($sql);
-        return intval($fen);
-    }
 
 
 

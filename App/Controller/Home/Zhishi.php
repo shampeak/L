@@ -52,6 +52,7 @@ class Home extends BaseController {
         $res = saddslashes($res);
         app('db')->autoExecute('s_da',$res,'INSERT');
 
+        Model('fen')->fen($uid);
 
         $this->AjaxReturn([
             'code'=> 200,
@@ -64,17 +65,13 @@ class Home extends BaseController {
     {
         $uid = Model('auth')->uid();        //获取用户id
 
+        //嘉宾分组列表
+        $jiab = app('db')->getall("SELECT jiab,jiatitle FROM `s_zhishi` group by jiab");
 
-//        $info['page']       = intval(req('Get')['page']);
-//        $info['pagesize']   = 10;
-//        $info['pagecount']  = app('db')->getOne("SELECT count(*) FROM `s_zhishi`");
-//
-//        $pageinfo = Model('page')->get($info);
 
-        //$res = app('db')->getall("SELECT * FROM `s_zhishi` order by sort desc,id desc limit ".$pageinfo['limit']);
+
         $res = app('db')->getall("SELECT * FROM `s_zhishi` order by sort desc,id desc");
 //D($res);
-
 
         //检查是否已经提交过答案
         $da = app('db')->getrow("select * from s_da where type = 'zhishi' and uid = $uid");
@@ -84,11 +81,11 @@ class Home extends BaseController {
 
 
         view('',[
-//            'page'  => $pageinfo['page']  ,
-//            'pageinfo'=> $pageinfo,
             'da'    => $da,
             'active'=> $active,
-            'res'   => $res
+            'res'   => $res,
+            'jiab'   => $jiab,        //嘉宾名字
+
         ]);
 
     }

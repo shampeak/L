@@ -28,14 +28,20 @@
       <input type="text" name="optionC" class="form-control">
     </div>
   </div>
-  
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">选项D</label>
-    <div class="col-sm-10">
-      <input type="text" name="optionD" class="form-control">
-    </div>
-  </div>
-  
+
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">选项D</label>
+            <div class="col-sm-10">
+              <input type="text" name="optionD" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">选项E</label>
+            <div class="col-sm-10">
+              <input type="text" name="optionE" class="form-control">
+            </div>
+          </div>
+
   <div class="form-group">
     <label for="inputPassword3" class="col-sm-2 control-label">排序</label>
     <div class="col-sm-10">

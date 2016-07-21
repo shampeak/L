@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-23 16:18:35
+/* Smarty version 3.1.29, created on 2016-07-21 11:21:38
   from "E:\phpleague\Grace\L\App\Views\Admin\Zhishi_add.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576b9b5b892680_19944138',
+  'unifunc' => 'content_57903fc292bef8_97375287',
   'file_dependency' => 
   array (
     '8ea731c1db4d9ade016992b3c9234115a322b8dc' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Zhishi_add.tpl',
-      1 => 1466669910,
+      1 => 1469070903,
       2 => 'file',
     ),
   ),
@@ -19,11 +19,26 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576b9b5b892680_19944138 ($_smarty_tpl) {
+function content_57903fc292bef8_97375287 ($_smarty_tpl) {
 ?>
 <div class="row">
     <div class="col-md-12">
-        <form class="zhishiadd form-horizontal" action="/admin/zhishi/add/"  method="post">
+        <form class="zhishiadd form-horizontal" action="?z=admin/zhishi/add/"  method="post">
+
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">嘉宾姓名</label>
+            <div class="col-sm-10">
+              <input type="text" name="jiab" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">演讲题目</label>
+            <div class="col-sm-10">
+              <input type="text" name="jiatitle" class="form-control">
+            </div>
+          </div>
+
+
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">title</label>
     <div class="col-sm-10">

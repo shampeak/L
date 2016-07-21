@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
@@ -10,6 +12,9 @@
     <link rel="stylesheet" href="/static/css/qa_style.css">
     <script src="/static/js/flexible.js"></script>
     <link rel="stylesheet" href="/static/css/style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="/assets/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/color.css">
+    <link href="/assets/LTE/css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -53,7 +58,8 @@
     <p>签到环节，每成功签到一次可获得2分奖励</p>
 </div>
 </div>
-
+    <br>
+    <br>
 {include file="footer.tpl" title=foo}
 
 

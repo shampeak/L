@@ -2,6 +2,20 @@
     <div class="col-md-12">
         <form class="zhishiedit form-horizontal" action="?z=admin/zhishi/edit/"  method="post">
 
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">嘉宾姓名</label>
+                <div class="col-sm-10">
+                    <input type="text" name="jiab" class="form-control" value="{$row['jiab']}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">演讲题目</label>
+                <div class="col-sm-10">
+                    <input type="text" name="jiatitle" class="form-control" value="{$row['jiatitle']}">
+                </div>
+            </div>
+
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">title</label>
                 <div class="col-sm-10">

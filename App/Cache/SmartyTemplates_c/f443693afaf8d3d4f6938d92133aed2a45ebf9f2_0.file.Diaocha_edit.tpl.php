@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-23 14:57:49
+/* Smarty version 3.1.29, created on 2016-07-20 16:58:19
   from "E:\phpleague\Grace\L\App\Views\Admin\Diaocha_edit.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576b886dad39d1_96713094',
+  'unifunc' => 'content_578f3d2bcc5ac7_14584958',
   'file_dependency' => 
   array (
     'f443693afaf8d3d4f6938d92133aed2a45ebf9f2' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Diaocha_edit.tpl',
-      1 => 1466665066,
+      1 => 1469005042,
       2 => 'file',
     ),
   ),
@@ -19,11 +19,11 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576b886dad39d1_96713094 ($_smarty_tpl) {
+function content_578f3d2bcc5ac7_14584958 ($_smarty_tpl) {
 ?>
 <div class="row">
     <div class="col-md-12">
-        <form class="diaochaedit form-horizontal" action="/admin/diaocha/edit/"  method="post">
+        <form class="diaochaedit form-horizontal" action="?z=admin/diaocha/edit/"  method="post">
 
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">title</label>
@@ -64,7 +64,14 @@ function content_576b886dad39d1_96713094 ($_smarty_tpl) {
 ">
                 </div>
             </div>
-            
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">选项E</label>
+                <div class="col-sm-10">
+                    <input type="text" name="optionE" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['optionE'];?>
+">
+                </div>
+            </div>
+
             <div class="form-group">
                 <label for="inputPassword3" class="col-sm-2 control-label">排序</label>
                 <div class="col-sm-10">

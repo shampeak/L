@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome SEO排行榜大会</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=8">
-    <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0 , maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="/assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/media.css"/>

@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
@@ -17,14 +20,9 @@
 	margin-bottom: 0px;
 }
 </style>
-     <link rel="stylesheet" href="/assets/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/bootstrap-3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/color.css">
-
- <link href="http://cdn.bootcss.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<!-- Ionicons -->
-<link href="/assets/LTE/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-<!-- Theme style -->
-<link href="/assets/LTE/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/LTE/css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body  style="font-size: 14px;">
@@ -32,7 +30,7 @@
 
 
 
-<div class="container">
+<div class="container" style="background:#FFF">
 
 
     <div class="row">
@@ -40,18 +38,26 @@
 		        <table class="table">
                     <tr>
                         <td> <img class="img-circle" height="80" width="80" alt="User Image" src="{$user['headimg']}"></th>
-                        <td><h4>{$user['name']},您目前排名是<span class="red">{$pm}</span>…… 要加油哦!!</h4></td>
+                        <td><h4>{$user['name']},您目前排名是第<span class="red">{$pm}</span>名!</h4>
+                        <h4>要加油哦!!</h4></td>
                     </tr>
                 </table>
 		</div>    
         <div class="col-xs-12">
-            <p class="lead">积分排行</p>
+            <!-- center><h1>积分排行</h1></center -->
+            <center style="margin-bottom: 20px;"><img src="/static/qw.jpg" height="40"></center -->
             <div class="table-responsive">
                 <table class="table">
-					{foreach from=$rc key=key item=item}
                     <tr>
-                        <th style="width:50%">{$rc[$key]['name']} :</th>
-                        <td>{$rc[$key]['fen']}分</td>
+                        <td>名次</th>
+                        <td style="width:50%">姓名</th>
+                        <td>积分</td>
+                    </tr>
+					{foreach from=$rc key=key item=item}
+                    <tr >
+                        <td><span {if $key<3}class="white b_red"{else}{/if}>NO.{$key+1}</span></th>
+                        <td>{$rc[$key]['name']}</th>
+                        <td><span class="red">{$rc[$key]['fen']}</span>分</td>
                     </tr>
                     {/foreach}
 
@@ -61,18 +67,12 @@
     </div><!-- /.row -->
 
 </div>
-
-
-
-
-
-
-
-
-
-
 </div>
 
+<br>
+<br>
+<br>
+<br>
 
 
 {include file="footer4.tpl" title=foo}

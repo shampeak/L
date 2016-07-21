@@ -29,4 +29,15 @@ class Home extends BaseController {
         ]);
     }
 
+    public function doHuodonglist()
+    {
+        view('',[
+            'res'=> $res
+        ]);
+    }
+
+
+
+
+
 }

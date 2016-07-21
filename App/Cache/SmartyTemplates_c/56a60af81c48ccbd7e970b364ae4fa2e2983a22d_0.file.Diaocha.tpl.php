@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-19 15:59:23
+/* Smarty version 3.1.29, created on 2016-07-21 15:34:51
   from "E:\phpleague\Grace\L\App\Views\Home\Diaocha.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578ddddbdded42_11916375',
+  'unifunc' => 'content_57907b1b1da9b5_25163107',
   'file_dependency' => 
   array (
     '56a60af81c48ccbd7e970b364ae4fa2e2983a22d' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Home\\Diaocha.tpl',
-      1 => 1468915155,
+      1 => 1469009113,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_578ddddbdded42_11916375 ($_smarty_tpl) {
+function content_57907b1b1da9b5_25163107 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,8 +39,10 @@ function content_578ddddbdded42_11916375 ($_smarty_tpl) {
 .clearfix{
 	margin-bottom: 0px;
 }
-</style>    
-         <link rel="stylesheet" href="/assets/bootstrap-3.3.5/css/bootstrap.min.css">
+</style>
+	<link rel="stylesheet" href="/assets/bootstrap-3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/color.css">
+	<link href="/assets/LTE/css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
     
 </head>
@@ -48,10 +50,8 @@ function content_578ddddbdded42_11916375 ($_smarty_tpl) {
 
 	<!-- 内容区 -->
 	<div class="main main-question">
-		<div class="main-title">
-			<h1>关于本次SEO排行榜大会的调查问卷</h1>
-			<h2>说明：完成全部调查问卷的填写可以积10分奖励</h2>
-		</div>
+		<!-- center><h1>调查问卷</h1></center -->
+		<h3>说明：完成全部调查问卷的填写可以积30分奖励</h3>
 		<div class="question-box">
         <form class="diaocha form-horizontal" action="?z=home/diaocha"  method="post">
 
@@ -98,7 +98,13 @@ $__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 <?php if ($_smarty_tpl->tpl_vars['value']->value['optionD'] != '') {?>
 <input type="radio" name="choose[<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 ]" value="D" <?php if ($_smarty_tpl->tpl_vars['da']->value['da'][$_smarty_tpl->tpl_vars['value']->value['id']] == 'D') {?>checked<?php }?>>
-<label for=""><?php echo $_smarty_tpl->tpl_vars['value']->value['optionC'];?>
+<label for=""><?php echo $_smarty_tpl->tpl_vars['value']->value['optionD'];?>
+</label>
+<?php }?><br>
+<?php if ($_smarty_tpl->tpl_vars['value']->value['optionE'] != '') {?>
+<input type="radio" name="choose[<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+]" value="E" <?php if ($_smarty_tpl->tpl_vars['da']->value['da'][$_smarty_tpl->tpl_vars['value']->value['id']] == 'E') {?>checked<?php }?>>
+<label for=""><?php echo $_smarty_tpl->tpl_vars['value']->value['optionE'];?>
 </label>
 <?php }?>
 					</div>
@@ -120,13 +126,15 @@ $_smarty_tpl->tpl_vars['value'] = $__foreach_foo_0_saved_item;
 				<a active=<?php echo $_smarty_tpl->tpl_vars['active']->value;?>
  href="javascript:void(0)" class="<?php if ($_smarty_tpl->tpl_vars['active']->value == 1) {?>btn-submit<?php } else { ?>btn-disable<?php }?> shamsub">提交</a>
 				<?php if ($_smarty_tpl->tpl_vars['active']->value == 0) {?>
-                <span>您已经填写完成,得分：<strong>10分</strong></span>
+                <span>您已经填写完成,得分：<strong>30分</strong></span>
                 <?php }?>
 			</div>
             </form>
 		</div>
-		
+
 	</div>
+	<br>
+
 	<!-- /内容区 -->
 	<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>'foo'), 0, false);
 ?>

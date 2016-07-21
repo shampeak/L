@@ -36,7 +36,7 @@
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             $('#dt1').dataTable({
-                "aaSorting": [[ 0, "desc" ]],
+                "aaSorting": [[ 1, "desc" ]],
                 "aLengthMenu": [[30, 50, -1], [30, 50, "All"]],
                 "iDisplayLength":30,			//一页多少条
                 "bAutoWidth": true,	//自动宽度
@@ -118,6 +118,7 @@
                 <li><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
                 <!-- li class="active"><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li -->
+                <li  class="active"><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>嘉宾提问</a></li>
                 <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
                 <li><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
 
@@ -142,6 +143,8 @@
                 <thead>
                 <tr>
                     <th width="90">排序</th>
+                    <th>嘉宾姓名</th>
+                    <th>演讲题目</th>
                     <th>问题</th>
                     <th>选项A</th>
                     <th>选项B</th>
@@ -155,6 +158,8 @@
                 {foreach from=$res item=$value}
                     <tr>
                         <td>{$value['sort']}</td>
+                        <td>{$value['jiab']}</td>
+                        <td>{$value['jiatitle']}</td>
                         <td>{$value['title']}</td>
                         <td>{$value['optionA']}</td>
                         <td>{$value['optionB']}</td>

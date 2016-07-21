@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-23 16:22:01
+/* Smarty version 3.1.29, created on 2016-07-21 11:17:26
   from "E:\phpleague\Grace\L\App\Views\Admin\Zhishi_edit.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_576b9c29d53a45_86264454',
+  'unifunc' => 'content_57903ec6417b37_46655135',
   'file_dependency' => 
   array (
     '041feb42004a18b1c33759714070ee095e0a21ea' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Zhishi_edit.tpl',
-      1 => 1466670118,
+      1 => 1469070938,
       2 => 'file',
     ),
   ),
@@ -19,11 +19,27 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_576b9c29d53a45_86264454 ($_smarty_tpl) {
+function content_57903ec6417b37_46655135 ($_smarty_tpl) {
 ?>
 <div class="row">
     <div class="col-md-12">
-        <form class="zhishiedit form-horizontal" action="/admin/zhishi/edit/"  method="post">
+        <form class="zhishiedit form-horizontal" action="?z=admin/zhishi/edit/"  method="post">
+
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">嘉宾姓名</label>
+                <div class="col-sm-10">
+                    <input type="text" name="jiab" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['jiab'];?>
+">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">演讲题目</label>
+                <div class="col-sm-10">
+                    <input type="text" name="jiatitle" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['jiatitle'];?>
+">
+                </div>
+            </div>
 
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">title</label>
