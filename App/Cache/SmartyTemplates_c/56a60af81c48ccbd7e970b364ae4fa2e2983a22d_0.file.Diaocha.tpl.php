@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-21 15:34:51
+/* Smarty version 3.1.29, created on 2016-07-22 09:25:19
   from "E:\phpleague\Grace\L\App\Views\Home\Diaocha.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57907b1b1da9b5_25163107',
+  'unifunc' => 'content_579175ff8f5656_35698603',
   'file_dependency' => 
   array (
     '56a60af81c48ccbd7e970b364ae4fa2e2983a22d' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Home\\Diaocha.tpl',
-      1 => 1469009113,
+      1 => 1469086606,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,15 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_57907b1b1da9b5_25163107 ($_smarty_tpl) {
+function content_579175ff8f5656_35698603 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="yes" name="apple-touch-fullscreen">
 	<meta content="telephone=no,email=no" name="format-detection">

@@ -103,7 +103,7 @@ body {
 
 
       <footer>
-      <p class="text-right">@sham &copy;2016 注册 | 忘记密码</p>
+      <p class="text-right">@sham &copy;2016</p>
       </footer>
 
 </div> <!-- /container -->

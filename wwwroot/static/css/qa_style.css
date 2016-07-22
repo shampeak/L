@@ -69,8 +69,8 @@ html,body{
 	border-top:2px solid #e6e6e6;
 	background:#f7f7f7;
 	position: absolute;
-	bottom:0;
-	left:0;
+	bottom:0px;
+	left:0px;
 }
 .footer ul {
 	width: 100%;

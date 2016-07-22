@@ -31,10 +31,11 @@
 <table class="table table-striped table-condensed">
 {foreach from=$res key=key item=item}
 <tr class="active">
+    <td width="50">{if $key<3}<small class="badge pull-right bg-red">new</small>{/if}</td>
     <td width="95"><span class="red">{$item['timeb']}</span> - <span class="red">{$item['timee']}</span></td>
     <td><spna class="blue">{$item['title']}</span></td>
     <td>{$item['nr']}</td>
-    
+
 </tr>
 {/foreach}
 </table>

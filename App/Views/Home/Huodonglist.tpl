@@ -40,7 +40,8 @@
         <div class="col-xs-8">
             <div style="height: auto;text-align: center">
                 <a href="/?z=home/qiandao" type="button" class="btn btn-info btn-lg btn-block" style="margin-top:80px;margin-bottom:20px;">整点签到</a>
-                <a href="/?z=home/zhishi" type="button" class="btn btn-danger btn-lg btn-block" style="margin-bottom:80px;">嘉宾提问</a>
+                <a href="/?z=home/zhishi" type="button" class="btn btn-danger btn-lg btn-block" style="margin-bottom:20px;">嘉宾提问</a>
+                <a href="/?z=home/choujiang" type="button" class="btn btn-danger btn-lg btn-block" style="margin-bottom:80px;">游戏抽奖</a>
             </div>
 		</div>
         <div class="col-xs-2">
