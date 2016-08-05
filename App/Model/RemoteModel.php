@@ -37,8 +37,9 @@ class RemoteModel
             //daoru
             $res['name']    = $value['name'];
             $res['mobile']  = $value['tel'];
-            $res['company'] = $value['postion'];
+            $res['company'] = $value['company'];
             $res['title']   = $value['postion'];
+            $res['email']   = $value['email'];
             $res['createAt'] = time();
         //获取随机数
 
@@ -49,7 +50,6 @@ class RemoteModel
             $res['code'] = $this->vcode($res['code']);
             $res['code'] = $this->vcode($res['code']);
             $res['code'] = $this->vcode($res['code']);
-
 
 
             app('db')->autoExecute('user',$res,'INSERT');

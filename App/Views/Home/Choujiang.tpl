@@ -7,7 +7,7 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
-    <title>专家介绍</title>
+    <title>抽奖</title>
 
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/qa_style.css">
@@ -29,44 +29,29 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
-            <table class="table table-striped table-condensed">
-                <tr class="active">
-                    <td width="95"><span class="red">9:00</span> - <span class="red">9:10</span></td>
-                    <td><spna class="blue">开场</span></td>
-                    <td></td>
+    {if $res eq ''}
+    <center><span style="padding-top:200px;margin-top: 200px;">抽奖活动还未开始!!</span></center>
+    {/if}
+    {foreach from=$res key=key item=item}
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+<center><img class="img-circle" width="140" height="140" alt="头像" src="{$user[$item['uid']]['headimg']}">
+    <h4 class="media-heading" style="margin-top: 20px;margin-bottom: 20px;"><button class="btn btn-primary">{$user[$item['uid']]['name']}</button> </h4>
+<h4 class="media-heading">{$user[$item['uid']]['title']}</h4>
+<h3 class="media-heading" style="margin-bottom:20px;margin-top: 10px;">{$user[$item['uid']]['company']}</h3></center>
+<p style="font-size: 16px">
+{if $user[$item['uid']]['fen'] neq ''}积分 : {$user[$item['uid']]['fen']}<br>{/if}
+{if $user[$item['uid']]['weixin'] neq ''}微信号 : {$user[$item['uid']]['weixin']}<br>{/if}
+{if $item['des'] neq ''}中奖 : {$item['des']}<br>{/if}
+{if $item['tm'] neq ''}中奖时间 : {$item['tm']|date_format:"%Y-%m-%d %H:%M:%S"}<br>{/if}
 
-                </tr>
-                <tr class="active">
-                    <td width="95"><span class="red">9:10</span> - <span class="red">9:50</span></td>
-                    <td><spna class="blue">演讲主题：XXXXXX</span></td>
-                    <td>渠成  Netconcepts 中国创始人兼CEO</td>
-
-                </tr>
-                <tr class="active">
-                    <td width="95"><span class="red">9:50</span> - <span class="red">10:30</span></td>
-                    <td><spna class="blue">演讲主题：XXXX </span></td>
-                    <td>Zac  知名网络营销专家、《SEO实战密码》作者</td>
-
-                </tr>
-                <tr class="active">
-                    <td width="95"><span class="red">10:30</span> - <span class="red">11:00</span></td>
-                    <td><spna class="blue">颁奖</span></td>
-                    <td></td>
-
-                </tr>
-
-            </table>
-        </div>
-
-
-
-
-    </div>
-    </div>
-
-
-
+</p>
+                </div>	
+            </div>
+		</div>
+    {/foreach}
+	</div>
 </div>
 
 <br>
@@ -81,6 +66,7 @@
 <script>
 
 </script>
+
 
 </body>
 </html>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-21 11:06:12
+/* Smarty version 3.1.29, created on 2016-08-05 14:32:03
   from "E:\phpleague\Grace\L\App\Views\Admin\User.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57903c24d77ea8_76464058',
+  'unifunc' => 'content_57a432e3e5e706_37411805',
   'file_dependency' => 
   array (
     'e3018e58ea9e08a83539189170b37426c6461d85' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\User.tpl',
-      1 => 1469070328,
+      1 => 1470378694,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57903c24d77ea8_76464058 ($_smarty_tpl) {
+function content_57a432e3e5e706_37411805 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
@@ -124,8 +124,10 @@ function content_57903c24d77ea8_76464058 ($_smarty_tpl) {
                 <li class="active"><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
                 <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>嘉宾提问</a></li>
-                <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
+                <li><a href="?z=admin/choujiang"><i class="icon-lock icon-white"></i>抽奖</a></li>
                 <li><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
+                <li><a href="?z=admin/message/"><i class="icon-th icon-white"></i>消息</a></li>
+                <li><a href="?z=admin/time/"><i class="icon-th icon-white"></i>时间</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -140,7 +142,11 @@ function content_57903c24d77ea8_76464058 ($_smarty_tpl) {
 
 <h4><strong>用户管理</strong></h4>
 
-<a class="shambox" rel="?z=admin/user/add">添加用户</a>
+    <a class="shambox" rel="?z=admin/user/add">添加用户</a>
+    <a class="shambox btn btn-primary" rel="?z=admin/user/message">发送短消息</a>
+    <a class="shambox btn btn-primary" rel="?z=admin/user/messagetest">短消息测试[没有次数限制]</a>
+    <a class="btn btn-primary" href="?z=admin/user/dr">导入</a>
+    <!-- a class="shambox btn btn-primary" rel="?z=admin/user/mailtest">邮件测试[没有次数限制]</a -->
 
 
 <table class="display" id="dt1">
@@ -156,6 +162,7 @@ function content_57903c24d77ea8_76464058 ($_smarty_tpl) {
     <th>公司</th>
     <th>职位</th>
     <th>微信号</th>
+    <th>Email</th>
     <th width="220">操作</th>
 </tr>
 </thead>
@@ -193,6 +200,8 @@ $__foreach_value_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
     <td><?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
 </td>
     <td><?php echo $_smarty_tpl->tpl_vars['value']->value['weixin'];?>
+</td>
+    <td><?php echo $_smarty_tpl->tpl_vars['value']->value['email'];?>
 </td>
     <td>
 <a class="shambox" rel="?z=admin/user/edit&uid=<?php echo $_smarty_tpl->tpl_vars['value']->value['uid'];?>

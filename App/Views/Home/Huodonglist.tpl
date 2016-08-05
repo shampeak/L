@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" href="/static/css/style.css" media="screen" type="text/css" />
 
+
+
 <style>
 .clearfix{
 	margin-bottom: 0px;
@@ -50,7 +52,7 @@
 
 </div>
 
-
+<br><br><br>
 
 
 {include file="footer.tpl" title=foo}

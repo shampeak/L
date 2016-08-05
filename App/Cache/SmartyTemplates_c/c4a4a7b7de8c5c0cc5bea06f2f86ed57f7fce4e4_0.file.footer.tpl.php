@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-22 17:54:52
+/* Smarty version 3.1.29, created on 2016-08-05 14:49:21
   from "E:\phpleague\Grace\L\App\Views\footer.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5791ed6c16d5f7_63414740',
+  'unifunc' => 'content_57a436f1a64b79_16076751',
   'file_dependency' => 
   array (
     'c4a4a7b7de8c5c0cc5bea06f2f86ed57f7fce4e4' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\footer.tpl',
-      1 => 1469181169,
+      1 => 1470379759,
       2 => 'file',
     ),
   ),
@@ -19,34 +19,35 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5791ed6c16d5f7_63414740 ($_smarty_tpl) {
+function content_57a436f1a64b79_16076751 ($_smarty_tpl) {
 ?>
-
-	<!-- 底部 -->
-    <style>
-	.footer ul li:nth-of-type(1) a{
-	background:url(/static/images/1.png) no-repeat center 0.1275rem;
-	background-size: 0.78125rem auto;
-	}
-    </style>
-	<div class="footer navbar-fixed-bottom">
-		<ul class="clearfix">
-			<li><a href="/?z=home/Index"><span style="color:#214b8e">首页</span></a></li>
-			<li><a href="/?z=home/hezuo"><span>洽谈合作</span></a></li>
-			<li><a href="/?z=home/ziliao"><span>完善资料</span></a></li>
-			<li><a href="/?z=home/fenranking"><span>积分排行</span></a></li>
-		</ul>
-	</div>
-	<!-- /底部 -->
-    
-    
-    <!-- div class="footer">
-		<ul class="clearfix">
-			<li><a href="/?z=home/"><span>首页</span></a></li>
-			<li><a href="/?z=home/hezuo"><span>洽谈合作</span></a></li>
-			<li><a href="/?z=home/ziliao"><span>完善资料</span></a></li>
-			<li><a href="/?z=home/fenranking"><span>积分排行</span></a></li>
-		</ul>
-	</div>
-	<!-- /底部 --><?php }
+<div class="nav">
+	<ul class="clearfix">
+		<li class="nav-item">
+			<a href="/?z=home/Index" class="nav-itemlink">
+				<img class="icon" src="../assets2/img/a-active.png" alt="" />
+				<p class="txt active">首页</p>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="/?z=home/hezuo" class="nav-itemlink">
+				<img class="icon" src="assets2/img/d.png" alt="" />
+				<p class="txt">洽谈合作</p>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="/?z=home/ziliao" class="nav-itemlink">
+				<img class="icon" src="assets2/img/c.png" alt="" />
+				<p class="txt">完善资料</p>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="/?z=home/fenranking" class="nav-itemlink">
+				<img class="icon" src="assets2/img/b.png" alt="" />
+				<p class="txt">积分排行</p>
+			</a>
+		</li>
+	</ul>
+</div>
+	<?php }
 }

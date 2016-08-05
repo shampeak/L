@@ -87,8 +87,10 @@
                 <li class="active"><a href="?z=admin/user"><i class="icon-home icon-white"></i>用户管理</a></li>
                 <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
                 <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>嘉宾提问</a></li>
-                <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
+                <li><a href="?z=admin/choujiang"><i class="icon-lock icon-white"></i>抽奖</a></li>
                 <li><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
+                <li><a href="?z=admin/message/"><i class="icon-th icon-white"></i>消息</a></li>
+                <li><a href="?z=admin/time/"><i class="icon-th icon-white"></i>时间</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -103,7 +105,11 @@
 
 <h4><strong>用户管理</strong></h4>
 
-<a class="shambox" rel="?z=admin/user/add">添加用户</a>
+    <a class="shambox" rel="?z=admin/user/add">添加用户</a>
+    <a class="shambox btn btn-primary" rel="?z=admin/user/message">发送短消息</a>
+    <a class="shambox btn btn-primary" rel="?z=admin/user/messagetest">短消息测试[没有次数限制]</a>
+    <a class="btn btn-primary" href="?z=admin/user/dr">导入</a>
+    <!-- a class="shambox btn btn-primary" rel="?z=admin/user/mailtest">邮件测试[没有次数限制]</a -->
 
 
 <table class="display" id="dt1">
@@ -119,6 +125,7 @@
     <th>公司</th>
     <th>职位</th>
     <th>微信号</th>
+    <th>Email</th>
     <th width="220">操作</th>
 </tr>
 </thead>
@@ -136,6 +143,7 @@
     <td>{$value['company']}</td>
     <td>{$value['title']}</td>
     <td>{$value['weixin']}</td>
+    <td>{$value['email']}</td>
     <td>
 <a class="shambox" rel="?z=admin/user/edit&uid={$value['uid']}">用户信息</a>
 <!-- a class="shamboxl" rel="/admin/userzhishi?uid={$value['uid']}">知识</a>

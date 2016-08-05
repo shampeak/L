@@ -8,6 +8,7 @@ class Home extends BaseController {
         parent::__construct();
     }
 
+    //ֻ��һ����ҳ,û�е�¼��ת��¼����
 
     public function doFenranking()
     {

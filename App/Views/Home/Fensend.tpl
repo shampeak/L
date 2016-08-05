@@ -36,7 +36,7 @@
 	<!-- /内容区 -->
 </form>
 <br>
-<br>
+<br><br>
 	{include file="footer.tpl" title=foo}
 
 </body>

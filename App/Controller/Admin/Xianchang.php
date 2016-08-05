@@ -65,7 +65,7 @@ class Admin extends BaseController {
     public function doXianchang()
     {
 
-        $res =  app('db')->getall("select * from xianchang order by sort,id");
+        $res =  app('db')->getall("select * from xianchang order by sort desc,id");
 
 //D($res);
         view('',[

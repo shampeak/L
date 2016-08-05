@@ -68,8 +68,10 @@
                 <li><a href="/admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
                 <!-- li><a href="/admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li -->
                 <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>嘉宾提问</a></li>
-                <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
+                <li><a href="?z=admin/choujiang"><i class="icon-lock icon-white"></i>抽奖</a></li>
                 <li class="active"><a href="/admin/qiandao"><i class="icon-user icon-white"></i>整点签到</a></li>
+                <li><a href="?z=admin/message/"><i class="icon-th icon-white"></i>消息</a></li>
+                <li><a href="?z=admin/time/"><i class="icon-th icon-white"></i>时间</a></li>
 
             </ul>
         </div><!--/.nav-collapse -->

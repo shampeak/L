@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-21 11:30:31
+/* Smarty version 3.1.29, created on 2016-08-05 14:32:01
   from "E:\phpleague\Grace\L\App\Views\Admin\Zhishi.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_579041d7abc367_46096887',
+  'unifunc' => 'content_57a432e1c56a94_33328673',
   'file_dependency' => 
   array (
     'dbe8c8ca1dc60373670cc2c8ca5e214809a43b60' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Zhishi.tpl',
-      1 => 1469071671,
+      1 => 1470378694,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_579041d7abc367_46096887 ($_smarty_tpl) {
+function content_57a432e1c56a94_33328673 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html><head>
@@ -156,8 +156,10 @@ function content_579041d7abc367_46096887 ($_smarty_tpl) {
                 <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
                 <!-- li class="active"><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li -->
                 <li  class="active"><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>嘉宾提问</a></li>
-                <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
+                <li><a href="?z=admin/choujiang"><i class="icon-lock icon-white"></i>抽奖</a></li>
                 <li><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
+                <li><a href="?z=admin/message/"><i class="icon-th icon-white"></i>消息</a></li>
+                <li><a href="?z=admin/time/"><i class="icon-th icon-white"></i>时间</a></li>
 
             </ul>
         </div><!--/.nav-collapse -->

@@ -7,7 +7,7 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
-    <title>现场提醒</title>
+    <title>会议议程</title>
 
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/qa_style.css">
@@ -27,7 +27,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-
+<br>
 <table class="table table-striped table-condensed">
 {foreach from=$res key=key item=item}
 <tr class="active">
@@ -47,7 +47,7 @@
 
 
 <br>
-<br>
+<br><br>
 {include file="footer.tpl" title=foo}
 
 <script src="/static/js/jquery.js"></script>

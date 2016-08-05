@@ -41,7 +41,12 @@ class UserModel
         return $res;
     }
 
-
+    public function infofromlogin($login = '')
+    {
+        $login = saddslashes($login);
+        $info = app('db')->getrow("select * from user where mobile = '$login'");
+        return $info;
+    }
 
     public function userinfo($userid = 0)
     {

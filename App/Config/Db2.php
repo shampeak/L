@@ -4,10 +4,10 @@
 
 return [
 
-        'hostname'      => '123123',         //服务器地址
+        'hostname'      => '115.29.146.146',         //服务器地址
         'port'          => '3306',              //端口
         'username'      => 'root',              //用户名
-        'password'      => '123123',              //密码
+        'password'      => 'acti30nium',              //密码
         'database'      => 'attend',                //数据库名
         'charset'       => 'utf8',              //字符集设置
         'pconnect'      => 1,                   //1  长连接模式 0  短连接

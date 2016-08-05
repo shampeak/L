@@ -57,31 +57,38 @@ body {
 }
 </style>
   </head>
-
+<script type="text/javascript"> 
+  /*
+	
+	*/
+</script> 
   <body>
 
 <div class="container">
     <div class="row">
-    <form class="form-signin ulogin" method="post"  action="">
+    <form class="form-signin vu ulogin" method="post"  action="/?z=home/login" style="max-width: 380px;">
 		    <table width="100%">
                 <tr>
-                  <td><h2 class="form-signin-heading">请登录</h2></td>
+                  <td colspan="2"><h2 class="form-signin-heading">请登录</h2></td>
                 </tr>
                 <tr>
-                  <td><label for="inputEmail" class="sr-only">手机号</label>
-            <input name="login" type="text" id="inputEmail" class="form-control" placeholder="请输入手机号" required autofocus></td>
+                    <td colspan="2" style="padding: 10px 0;"><label for="inputEmail" class="sr-only">手机号</label>
+                        <input name="login" type="text" id="inputEmail" class="loginmobile form-control" placeholder="请输入手机号" required autofocus></td>
+                 
+                </tr>
+
+                <tr>
+                  <td style="padding: 10px 0;"><label for="inputPassword" class="sr-only">密码</label>
+            <input name="password" type="password" id="inputPassword" class="form-control" placeholder="请输入密码" required style="margin: 0;"></td>
+                  <td style="text-align: right;"><input  type="button" class="btn btn-primary getpassword" value="获取密码" style="padding: 10px 12px;"></td>
                 </tr>
                 <tr>
-                  <td><label for="inputPassword" class="sr-only">密码</label>
-            <input name="password" type="password" id="inputPassword" class="form-control" placeholder="请输入密码" required></td>
-                </tr>
-                <tr>
-                  <td><div class="checkbox" style="padding-left:40px">
+                  <td colspan="2"><div class="checkbox" style="padding-left:22px">
                 <input type="checkbox" value="remember-me">记住用户名
             </div></td>
                 </tr>
                 <tr>
-                  <td><a class=" combit btn btn-lg btn-primary btn-block">登录</a></td>
+                  <td colspan="2"><a class=" combit btn btn-lg btn-primary btn-block">登录</a></td>
                 </tr>
             </table>
             
@@ -108,10 +115,72 @@ body {
 
 </div> <!-- /container -->
 
- <script type="text/javascript" charset="utf-8">
-        $(document).ready(function () {
-     
+<script type="text/javascript" charset="utf-8">
 
+function validatemobile(mobile)
+    {
+        if(mobile.length==0)
+        {
+           alert('请输入手机号码！');
+           //document.form1.mobile.focus();
+           return false;
+        }    
+        if(mobile.length!=11)
+        {
+            alert('请输入有效的手机号码！');
+            //document.form1.mobile.focus();
+            return false;
+        }
+		return true;
+    }
+	var countdown=60; 
+	function settime() { 
+		if (countdown == 0) { 
+			$('.getpassword').removeAttr("disabled");    
+			$('.getpassword').val("免费获取验证码"); 
+			countdown = 60;
+			return false;
+			//exit;
+		} else { 
+			$('.getpassword').attr("disabled","true");
+			$('.getpassword').val("重新发送(" + countdown + ")"); 
+			countdown--; 
+		} 
+		console.log(countdown);
+		setTimeout(function() { 
+								settime() 
+							},1000) 
+	} 
+
+	$(document).ready(function () {
+		$('.getpassword').click(function(){
+			if(!validatemobile($('.loginmobile').val())){
+				return false;
+			};
+			
+			var tag = '.vu';
+			$.ajax({
+				type: "POST",
+				url: '/?z=home/login/mima',
+				data: $(tag).serialize(),
+				dataType:'json',
+				success: function(data){
+					if(data.code > 0){
+						settime();
+					}else{
+						if(data.code == -300){
+							return false;
+						}else{
+							alert(data.msg);
+							}
+					}
+					},
+				error : function() {
+					   alert("异常！");
+				  }
+			});
+		});
+		
 		$('.combit').click(function(){
 			var tag = '.ulogin';
 			$.ajax({

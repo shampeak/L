@@ -25,11 +25,11 @@ class Home extends BaseController {
         $myid = app('db')->getcol("select infoid from message where uid = $uid");
 
         //获取未读消息
-        $midc = app('db')->getcol("select id from xianchang");       //所有的消息
+        //$midc = app('db')->getcol("select id from xianchang");       //所有的消息
 
         //想减少
-        $rc = array_diff($midc,$myid);
-        $count = count($rc);
+        //$rc = array_diff($midc,$myid);
+       // $count = count($rc);
 
         view('',[
             'count' => $count

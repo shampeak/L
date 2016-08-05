@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-21 11:06:19
+/* Smarty version 3.1.29, created on 2016-08-05 14:31:58
   from "E:\phpleague\Grace\L\App\Views\Admin\Yc.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57903c2b826126_13845250',
+  'unifunc' => 'content_57a432def1d905_67241228',
   'file_dependency' => 
   array (
     '91735c918db17d845e29db6fe9b5cdc00b69df51' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\Yc.tpl',
-      1 => 1469070363,
+      1 => 1470378694,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57903c2b826126_13845250 ($_smarty_tpl) {
+function content_57a432def1d905_67241228 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'E:\\phpleague\\Grace\\L\\App\\Library\\Smarty\\plugins\\modifier.date_format.php';
 ?>
 <!doctype html>
@@ -126,8 +126,10 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'E:\\phpleague\\Gr
                 <li><a href="?z=admin/diaocha/"><i class="icon-th icon-white"></i>调查问卷</a></li>
                 <!-- li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>知识问答</a></li -->
                 <li><a href="?z=admin/zhishi"><i class="icon-lock icon-white"></i>嘉宾提问</a></li>
-                <li><a href="?z=admin/xianchang"><i class="icon-lock icon-white"></i>现场提示</a></li>
+                <li><a href="?z=admin/choujiang"><i class="icon-lock icon-white"></i>抽奖</a></li>
                 <li class="active"><a href="?z=admin/yc/"><i class="icon-th icon-white"></i>远程数据</a></li>
+                <li><a href="?z=admin/message/"><i class="icon-th icon-white"></i>消息</a></li>
+                <li><a href="?z=admin/time/"><i class="icon-th icon-white"></i>时间</a></li>
 
             </ul>
         </div><!--/.nav-collapse -->

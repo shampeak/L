@@ -28,7 +28,7 @@ class PhModel
 //            7 : 收到的
 
         //索引 也是基础分   + 资料
-        $_rc = app('db')->getall('select * from user');
+        $_rc = app('db')->getall('select * from user order by fen desc,uid desc limit 10');
         foreach($_rc as $key=>$value){
             $v['uid'] = $value['uid'];
             $v['fen'] =  $value['fen'];//Model('fen')->fen($value['uid']);

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-28 16:54:42
+/* Smarty version 3.1.29, created on 2016-07-28 10:38:03
   from "E:\phpleague\Grace\L\App\Views\Admin\User_add.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57723b525e7472_69586003',
+  'unifunc' => 'content_5799700b70e9c7_58116490',
   'file_dependency' => 
   array (
     '8931f615b471a6946ef67aa866edc1103e2a8b32' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\User_add.tpl',
-      1 => 1467082122,
+      1 => 1469673434,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57723b525e7472_69586003 ($_smarty_tpl) {
+function content_5799700b70e9c7_58116490 ($_smarty_tpl) {
 ?>
 <div class="row">
     <div class="col-md-12">
@@ -84,6 +84,14 @@ function content_57723b525e7472_69586003 ($_smarty_tpl) {
       <input type="text" name="weixin" class="form-control">
     </div>
   </div>
+
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="text" name="email" class="form-control">
+            </div>
+          </div>
+
 <input type="hidden" id="tag" name='act' value="update">
         </form>
 

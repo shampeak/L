@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-28 18:45:51
+/* Smarty version 3.1.29, created on 2016-07-28 10:37:51
   from "E:\phpleague\Grace\L\App\Views\Admin\User_edit.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5772555f046b89_66229299',
+  'unifunc' => 'content_57996fff466258_30570661',
   'file_dependency' => 
   array (
     '3696471377daff61b137bef6f4dcd7521f080529' => 
     array (
       0 => 'E:\\phpleague\\Grace\\L\\App\\Views\\Admin\\User_edit.tpl',
-      1 => 1467082122,
+      1 => 1469673463,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5772555f046b89_66229299 ($_smarty_tpl) {
+function content_57996fff466258_30570661 ($_smarty_tpl) {
 ?>
 <div class="row">
     <div class="col-md-12">
@@ -81,14 +81,23 @@ function content_5772555f046b89_66229299 ($_smarty_tpl) {
 ">
     </div>
   </div>
-  
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">微信号</label>
-    <div class="col-sm-10">
-      <input type="text" name="weixin" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['weixin'];?>
+
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">微信号</label>
+                <div class="col-sm-10">
+                    <input type="text" name="weixin" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['weixin'];?>
 ">
-    </div>
-  </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" name="email" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['row']->value['email'];?>
+">
+                </div>
+            </div>
+
+
           <input type="hidden" id="tag" name='uid' value="<?php echo $_smarty_tpl->tpl_vars['row']->value['uid'];?>
 ">
           <input type="hidden" id="tag" name='act' value="update">
